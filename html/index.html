@@ -1,0 +1,685 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>XTEP NEPAL | Official Store</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#c6c6c7",
+              "on-primary": "#ffffff",
+              "on-tertiary-container": "#fdfdfd",
+              background: "#fbf9f9",
+              "error-container": "#ffdad6",
+              error: "#ba1a1a",
+              "on-secondary-container": "#636262",
+              "surface-bright": "#fbf9f9",
+              outline: "#936e69",
+              "on-secondary-fixed": "#1c1b1b",
+              primary: "#bc0002",
+              "on-tertiary-fixed-variant": "#454747",
+              "secondary-container": "#e2dfde",
+              "on-background": "#1b1c1c",
+              "surface-variant": "#e4e2e2",
+              "tertiary-fixed": "#e2e2e2",
+              "surface-tint": "#c00002",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f2f0f0",
+              "surface-container-high": "#e9e8e7",
+              "secondary-fixed-dim": "#c8c6c5",
+              "on-primary-fixed": "#410000",
+              "primary-fixed-dim": "#ffb4a8",
+              "on-tertiary-fixed": "#1a1c1c",
+              surface: "#fbf9f9",
+              "on-primary-container": "#fffbff",
+              "on-tertiary": "#ffffff",
+              "primary-fixed": "#ffdad5",
+              "inverse-surface": "#303031",
+              "on-secondary-fixed-variant": "#474746",
+              secondary: "#5f5e5e",
+              "surface-container": "#efeded",
+              "on-surface": "#1b1c1c",
+              "tertiary-container": "#737575",
+              "inverse-primary": "#ffb4a8",
+              "secondary-fixed": "#e5e2e1",
+              "surface-container-highest": "#e4e2e2",
+              "surface-dim": "#dbdad9",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#930001",
+              tertiary: "#5b5c5d",
+              "on-error-container": "#93000a",
+              "outline-variant": "#e8bcb6",
+              "on-surface-variant": "#5e3f3a",
+              "primary-container": "#e61911",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#f5f3f3",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "stack-lg": "32px",
+              gutter: "24px",
+              "container-max": "1280px",
+              "stack-md": "16px",
+              "section-gap": "120px",
+              "margin-desktop": "64px",
+              "stack-sm": "8px",
+              "margin-mobile": "20px",
+            },
+            fontFamily: {
+              "headline-lg-mobile": ["Montserrat"],
+              "stat-lg": ["Montserrat"],
+              "headline-lg": ["Montserrat"],
+              "body-md": ["Inter"],
+              "headline-md": ["Montserrat"],
+              "label-bold": ["Montserrat"],
+              "body-lg": ["Inter"],
+              "display-hero": ["Montserrat"],
+            },
+            fontSize: {
+              "headline-lg-mobile": [
+                "32px",
+                { lineHeight: "1.2", fontWeight: "800" },
+              ],
+              "stat-lg": [
+                "56px",
+                {
+                  lineHeight: "1",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "900",
+                },
+              ],
+              "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "800" }],
+              "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+              "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "700" }],
+              "label-bold": [
+                "14px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "0.05em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+              "display-hero": [
+                "72px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "900",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .performance-gradient {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 0, 0, 1) 0%,
+          rgba(27, 28, 28, 1) 100%
+        );
+      }
+      .accent-glow:hover {
+        box-shadow: 0 0 20px rgba(230, 25, 17, 0.4);
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .text-outline {
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-white"
+  >
+    <!-- Top Navigation -->
+    <nav
+      class="bg-surface-container-lowest sticky top-0 z-50 border-b border-surface-variant"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin-desktop max-w-[1440px] mx-auto h-[80px]"
+      >
+        <div
+          class="text-headline-md font-black tracking-tighter text-on-surface"
+        >
+          XTEP NEPAL
+        </div>
+        <div class="hidden md:flex items-center space-x-8">
+          <a
+            class="text-primary font-bold border-b-2 border-primary pb-1 font-label-bold text-label-bold"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold"
+            href="#"
+            >Shop</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold"
+            href="#"
+            >Xtep Stories</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold"
+            href="#"
+            >Xtep Lab</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors font-label-bold text-label-bold"
+            href="#"
+            >Store Locator</a
+          >
+        </div>
+        <div class="flex items-center space-x-6">
+          <button
+            class="hover:bg-surface-container-low p-2 transition-all duration-200 rounded-full"
+          >
+            <span class="material-symbols-outlined">shopping_cart</span>
+          </button>
+          <button class="md:hidden">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <header
+      class="relative w-full h-[85vh] bg-inverse-surface overflow-hidden flex items-center"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover opacity-70"
+          data-alt="A cinematic action shot of elite marathon runners in mid-stride on a professional asphalt track at dawn. The atmosphere is charged with kinetic energy, featuring high-contrast lighting that highlights their athletic form and high-performance Xtep footwear. The color palette is dominated by deep blacks and cool grays, with bright performance-neon accents flashing from the shoes. The overall mood is intense, professional, and captures the essence of world-leading sportswear technology."
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaJYfBVIwIKm6xsZsoplVtWPrxLJmTSSlC0hbkApSdwazYDhl34iRxSqS8DIw0ql4RQVJgMAEMkZivK2BusXGPRzuYoLiHtCEXeZNQ6ttwZfbv1ruQaI58HlqpS4dMBr6Fz1ZHOPUzs_eIysNtUpTOtR9uz2j4EbJ398otFxIa5XLLP95vkaumQESmUVZl3jblt7LywpjPAUV6I4qSrIbdGdz4Prw4lAOXhGOhlX9d6F_K2-4IdnUyE8BhOsISqPvfHMVfp1_liKY"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent"
+        ></div>
+      </div>
+      <div
+        class="relative z-10 px-margin-desktop max-w-[1440px] mx-auto w-full"
+      >
+        <div class="max-w-4xl">
+          <span
+            class="text-primary-fixed-dim font-label-bold text-label-bold mb-4 block tracking-[0.2em] uppercase"
+            >Global Performance Leaders</span
+          >
+          <h1
+            class="text-on-primary font-display-hero text-[56px] md:text-display-hero mb-8 uppercase leading-[1.05]"
+          >
+            To become the world's leading
+            <span class="text-outline">performance</span> and fashion sportswear
+            brand.
+          </h1>
+          <div class="flex flex-wrap gap-4">
+            <button
+              class="bg-primary-container text-on-primary px-10 py-5 font-bold uppercase hover:bg-on-primary hover:text-primary-container transition-all transform active:scale-95"
+            >
+              Explore 160X Series
+            </button>
+            <button
+              class="border border-on-primary text-on-primary px-10 py-5 font-bold uppercase hover:bg-on-primary hover:text-inverse-surface transition-all"
+            >
+              Watch Lab Story
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- The World of Xtep: Category Grid -->
+    <section class="py-section-gap px-margin-desktop max-w-[1440px] mx-auto">
+      <div class="flex justify-between items-end mb-12">
+        <div>
+          <h2 class="font-headline-lg text-headline-lg uppercase mb-2">
+            The World of Xtep
+          </h2>
+          <p class="text-on-surface-variant font-body-lg">
+            Engineered for every dimension of your movement.
+          </p>
+        </div>
+        <a
+          class="text-label-bold font-label-bold border-b-2 border-primary pb-1 hover:text-primary-container transition-all"
+          href="#"
+          >View All Categories</a
+        >
+      </div>
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-[1000px] md:h-[800px]"
+      >
+        <div
+          class="md:col-span-2 md:row-span-2 group relative overflow-hidden bg-surface-container"
+        >
+          <img
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            data-alt="..."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTa9Br9o_g6I0cQ4OacHfszcRa8rO_3lgIZoyBxwCqm19zAFf1RT1tTUuBDBLFOyV_eCOR9P7ndT1YtWHFyvn_YdvMPa23mzoDo754KFmnLMCnvymohqKyX2KlgW0mFawlfKFyJ-W0LtWVcao71HkIJtRe-T3uFMLbirVuHG0nxfJQ8GTmWl4LFtBq-FuWOx_HH7ckVPWFsI7SC21mMF87yG1XdMyWO26WUKFJE84cHnbNKeMjdUQbMXxZ9FS8d98w59AhTgI-kTc"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all"
+          ></div>
+          <div class="absolute bottom-10 left-10 text-on-primary">
+            <h3 class="text-headline-lg font-headline-lg uppercase">Running</h3>
+            <button
+              class="mt-4 bg-on-primary text-primary-container px-6 py-3 font-bold text-label-bold opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all"
+            >
+              Shop Running
+            </button>
+          </div>
+        </div>
+        <div
+          class="md:col-span-2 group relative overflow-hidden bg-surface-container"
+        >
+          <img
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            data-alt="..."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSr5IUBbctz3a3ssPpf4tTp8Gwz7qt_xMA_gjXMrd3VNidGf8NLHskDzkwgpSU27H8PK_LNdqOD70rgS5i56f9rz5pcXsy_RUuE14_4yItMwhGeVk2z-eNjHRiMfrXVCux_5XVkq2XxXbt5NQXjM4_iPep7UAhRK2PcQdmIrdNjlcJ7utCeLYmKqSzYYS_MktTxMgyzZfGbL1aei1KZLOCgYYCREK5XC7Twq-sTGenYH2Nj6D1WHO9RfzHg3LWaz3K1UtJwkeX2yE"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all"
+          ></div>
+          <div class="absolute bottom-8 left-8 text-on-primary">
+            <h3 class="text-headline-md font-headline-md uppercase">
+              Training
+            </h3>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden bg-surface-container">
+          <img
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            data-alt="..."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj-gmJUDEOB8T02iLGC-3GaC_3yAObhLV_Sd20aP_Wn8ebz3EFT1INc9jDzub7QuL-ZUlIc37wbu8Cban0sMcvk0FAHy3lSlof2mZwsEuepFidUncWEP3QsmRIlVrLyompxIDk1bAeA-tW6IST1FJ5eNZ2BOc0JdfBhhooKDplRMNiU9fQmrLQWq6rhKOSrKzl6iKQEm92vzqKgjAhLO1MD1ae9RDYWntGqtNqCZeLv1AkFKtIDBz86nHJDkPhxwQIfMUDmMVhE80"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all"
+          ></div>
+          <div class="absolute bottom-8 left-8 text-on-primary">
+            <h3 class="text-headline-md font-headline-md uppercase">
+              Basketball
+            </h3>
+          </div>
+        </div>
+        <div class="group relative overflow-hidden bg-surface-container">
+          <img
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            data-alt="..."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4JrcQ3S-2ynS6Vd2ORftz_fP8S1Y_6cHEoaRo_O1PRmk-gyGe_3RHnoT3bZzMCZwH_SLNXatkVFN1wBKJD4ICOO7gNdapufQQgq0yLIIT6Jsh9BL2__ZJn9yV2_ccgCYnWOgJ1F7dThB5L9mRoSovp4k-3D9P7zVOFb_Re7fho1idl1nvHIMq7kmhAVKUR1ShH6Kd_CCkvJIt4ye5bNom3xpsIuhL5mZqp3V_S_VezhAk9wRq0SbDFA03D5pjx3rQE7b5J463BzE"
+          />
+          <div
+            class="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-all"
+          ></div>
+          <div class="absolute bottom-8 left-8 text-on-primary">
+            <h3 class="text-headline-md font-headline-md uppercase">
+              Lifestyle
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Top Sellers Carousel -->
+    <section class="bg-surface-container-low py-section-gap">
+      <div class="px-margin-desktop max-w-[1440px] mx-auto">
+        <div class="flex justify-between items-center mb-12">
+          <h2 class="font-headline-lg text-headline-lg uppercase">
+            Top Sellers in Nepal
+          </h2>
+          <div class="flex space-x-4">
+            <button
+              class="w-12 h-12 border border-on-surface flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-all"
+            >
+              <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+            <button
+              class="w-12 h-12 border border-on-surface flex items-center justify-center hover:bg-primary-container hover:text-on-primary transition-all"
+            >
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </div>
+        </div>
+        <div class="flex overflow-x-auto hide-scrollbar gap-gutter pb-8">
+          <!-- Product Card 1 -->
+          <div
+            class="min-w-[320px] bg-surface-container-lowest group transition-all border border-transparent hover:border-outline-variant"
+          >
+            <div
+              class="relative aspect-square overflow-hidden bg-surface-bright"
+            >
+              <img
+                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform"
+                data-alt="..."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv1ZkTHQMgCjDgGKqCDxdFcSXgbM9hLlWUjg51QqiwYFXSqfRvJhZCWot2CiffO3YXMO4MHIicrjkeQZXMq4-gk_UhfbfO51fh_R4x9jP9AYE6BMPpXWja6gZaV9R6Dq-t99QGO3GSC-ptMJAnAhmmwF-JhR7urEGeojE9saXRSO4taCjGZ2lAdjgQfkaFOZKa-mjSumrT3WagECtI8JaGINukW91Y-iDKqzcvqapX_La9ns9KUVlbdMPhcpT4E6xiqMnBSpLDT4U"
+              />
+              <div
+                class="absolute top-4 left-4 bg-primary-container text-on-primary px-3 py-1 font-label-bold text-[12px]"
+              >
+                NEW ARRIVAL
+              </div>
+              <div
+                class="absolute inset-0 bg-inverse-surface/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8"
+              >
+                <button
+                  class="w-full bg-primary-container text-on-primary py-4 font-bold uppercase active:scale-95 transition-transform"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+            <div class="p-6">
+              <p
+                class="text-label-bold font-label-bold text-on-surface-variant mb-2 uppercase"
+              >
+                Running / Performance
+              </p>
+              <h4 class="font-headline-md text-headline-md mb-4">
+                160X 5.0 PRO
+              </h4>
+              <div class="flex justify-between items-center">
+                <span
+                  class="font-headline-md text-[20px] text-primary-container"
+                  >NPR 18,500</span
+                >
+                <span
+                  class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors"
+                  >favorite</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Product Card 2 -->
+          <div
+            class="min-w-[320px] bg-surface-container-lowest group transition-all border border-transparent hover:border-outline-variant"
+          >
+            <div
+              class="relative aspect-square overflow-hidden bg-surface-bright"
+            >
+              <img
+                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform"
+                data-alt="..."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEUYsaP-Vlv3Jf6kBzoyVFJiNni4vtIcY47gPgsME3HzzVvBh0A1M3eIh1bUqQlDL8TsUKEg0Wvev_ycID3QXUPGX3rcFBNk0HfXVedLIL-eoXP8eFzl-wvQ3FKsJPaIEIL8WxjkAerbfUWP32hncz8zLuLdIXI2At1Hbfe1u6MbtrYHNnrRgH2YjtfUvAstZd6QBGuezsQInqyVGoFIuor9ci2yoB29xXCJRfzDeRozAMHS3XFN2zJNohh3_h1qhtVkVEeGkgGQw"
+              />
+              <div
+                class="absolute top-4 left-4 bg-inverse-surface text-on-primary px-3 py-1 font-label-bold text-[12px]"
+              >
+                LAB TESTED
+              </div>
+              <div
+                class="absolute inset-0 bg-inverse-surface/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8"
+              >
+                <button
+                  class="w-full bg-primary-container text-on-primary py-4 font-bold uppercase active:scale-95 transition-transform"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+            <div class="p-6">
+              <p
+                class="text-label-bold font-label-bold text-on-surface-variant mb-2 uppercase"
+              >
+                Training / Core
+              </p>
+              <h4 class="font-headline-md text-headline-md mb-4">
+                X-TRAIN KINETIC
+              </h4>
+              <div class="flex justify-between items-center">
+                <span
+                  class="font-headline-md text-[20px] text-primary-container"
+                  >NPR 12,900</span
+                >
+                <span
+                  class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors"
+                  >favorite</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Product Card 3 -->
+          <div
+            class="min-w-[320px] bg-surface-container-lowest group transition-all border border-transparent hover:border-outline-variant"
+          >
+            <div
+              class="relative aspect-square overflow-hidden bg-surface-bright"
+            >
+              <img
+                class="w-full h-full object-contain mix-blend-multiply group-hover:scale-105 transition-transform"
+                data-alt="..."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQD2oggnjtvUMooA4PmPZR9oGo7eELt5bznv8JFUBClBnWLvc7iBoWQ6WY2hgUPfIqJn63Vf2M1BJzFwQn6IGLr6jVm4jibkCTEmNOU5kJtuYFKX66tHbTkfWeckVT4SFkEl4QLWa6qi1VI1m4v3nN7ZEk-ejhRPdoj4bLaaH1rtoD2os9jKxqwfLj6hvKs5oOWgz3KGnI-Zh42aLHYY_2HJdE8laCs7nKW9IsQPmT_Osnm_2ptYwwpTfAaIwzOI1-8vcH0Zi7OrY"
+              />
+              <div
+                class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-bold text-[12px]"
+              >
+                BEST SELLER
+              </div>
+              <div
+                class="absolute inset-0 bg-inverse-surface/90 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-8"
+              >
+                <button
+                  class="w-full bg-primary-container text-on-primary py-4 font-bold uppercase active:scale-95 transition-transform"
+                >
+                  Add to Cart
+                </button>
+              </div>
+            </div>
+            <div class="p-6">
+              <p
+                class="text-label-bold font-label-bold text-on-surface-variant mb-2 uppercase"
+              >
+                Basketball / Jump
+              </p>
+              <h4 class="font-headline-md text-headline-md mb-4">
+                HOOPS MASTER PRO
+              </h4>
+              <div class="flex justify-between items-center">
+                <span
+                  class="font-headline-md text-[20px] text-primary-container"
+                  >NPR 15,200</span
+                >
+                <span
+                  class="material-symbols-outlined text-secondary cursor-pointer hover:text-primary transition-colors"
+                  >favorite</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- B2B Section: Partner With Us -->
+    <section class="bg-primary-container py-24">
+      <div
+        class="px-margin-desktop max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="mb-12 md:mb-0 max-w-2xl">
+          <h2
+            class="text-on-primary font-headline-lg text-headline-lg uppercase mb-4 leading-tight"
+          >
+            Partner With XTEP Nepal
+          </h2>
+          <p class="text-on-primary opacity-80 font-body-lg">
+            Join the fastest-growing performance brand in South Asia. We are
+            looking for franchise and wholesale partners across major cities in
+            Nepal including Kathmandu, Pokhara, and Butwal.
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4 w-full md:w-auto">
+          <button
+            class="bg-on-primary text-primary-container px-12 py-6 font-bold uppercase hover:bg-inverse-surface hover:text-on-primary transition-all active:scale-95"
+          >
+            Franchise Inquiry
+          </button>
+          <button
+            class="border-2 border-on-primary text-on-primary px-12 py-6 font-bold uppercase hover:bg-on-primary hover:text-primary-container transition-all active:scale-95"
+          >
+            Wholesale Portal
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-inverse-surface text-on-primary w-full py-section-gap">
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-[1440px] mx-auto"
+      >
+        <div class="col-span-1 md:col-span-1">
+          <div class="text-headline-md font-black text-primary-fixed-dim mb-8">
+            XTEP NEPAL
+          </div>
+          <p class="text-on-tertiary-container opacity-70 font-body-md mb-8">
+            The official importer and distributor of XTEP performance and
+            lifestyle sportswear in Nepal.
+          </p>
+          <div class="flex space-x-4">
+            <div
+              class="w-10 h-10 border border-surface-variant flex items-center justify-center hover:text-primary-fixed-dim cursor-pointer transition-colors"
+            >
+              <span class="material-symbols-outlined">public</span>
+            </div>
+            <div
+              class="w-10 h-10 border border-surface-variant flex items-center justify-center hover:text-primary-fixed-dim cursor-pointer transition-colors"
+            >
+              <span class="material-symbols-outlined">share</span>
+            </div>
+            <div
+              class="w-10 h-10 border border-surface-variant flex items-center justify-center hover:text-primary-fixed-dim cursor-pointer transition-colors"
+            >
+              <span class="material-symbols-outlined">mail</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h4
+            class="text-headline-md font-headline-md uppercase mb-6 text-[18px]"
+          >
+            Explore
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-on-tertiary-container opacity-70 hover:opacity-100 hover:text-primary-fixed-dim transition-all block"
+                href="#"
+                >Customer Service</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-tertiary-container opacity-70 hover:opacity-100 hover:text-primary-fixed-dim transition-all block"
+                href="#"
+                >Shipping &amp; Returns</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-tertiary-container opacity-70 hover:opacity-100 hover:text-primary-fixed-dim transition-all block"
+                href="#"
+                >Xtep Lab Tech</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-headline-md font-headline-md uppercase mb-6 text-[18px]"
+          >
+            Legal
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-on-tertiary-container opacity-70 hover:opacity-100 hover:text-primary-fixed-dim transition-all block"
+                href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-tertiary-container opacity-70 hover:opacity-100 hover:text-primary-fixed-dim transition-all block"
+                href="#"
+                >Terms of Service</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-on-tertiary-container opacity-70 hover:opacity-100 hover:text-primary-fixed-dim transition-all block"
+                href="#"
+                >Sustainability</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-headline-md font-headline-md uppercase mb-6 text-[18px]"
+          >
+            Newsletter
+          </h4>
+          <p
+            class="text-on-tertiary-container opacity-70 mb-6 text-label-bold uppercase"
+          >
+            Stay ahead of the pack
+          </p>
+          <form class="relative">
+            <input
+              class="w-full bg-transparent border-b border-surface-variant py-4 focus:border-primary-fixed-dim focus:ring-0 outline-none uppercase font-label-bold text-label-bold"
+              placeholder="ENTER EMAIL"
+              type="email"
+            />
+            <button
+              class="absolute right-0 top-1/2 -translate-y-1/2 text-primary-fixed-dim"
+            >
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div
+        class="mt-24 pt-8 border-t border-surface-variant/20 px-margin-desktop max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center text-label-bold font-label-bold text-on-tertiary-container opacity-50 gap-4"
+      >
+        <div>© 2024 XTEP NEPAL. ALL RIGHTS RESERVED.</div>
+        <div class="flex space-x-8">
+          <span>NPR / NEPAL</span>
+          <span>ENGLISH</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const productCards = document.querySelectorAll(".group");
+        productCards.forEach((card) => {
+          card.addEventListener("mouseenter", () => {
+            card.style.transform = "translateY(-4px)";
+          });
+          card.addEventListener("mouseleave", () => {
+            card.style.transform = "translateY(0)";
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

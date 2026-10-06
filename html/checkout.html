@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout | XTEP NEPAL</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        input:focus {
+            outline: none;
+            border-bottom-color: #000000 !important;
+            ring: 0 !important;
+        }
+        .step-transition {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .sticky-summary {
+            position: sticky;
+            top: 2rem;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-background": "#1a1c1c",
+                      "surface-container-lowest": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "on-surface": "#1a1c1c",
+                      "performance-neon": "#D1FF00",
+                      "surface-alt": "#F5F5F5",
+                      "on-secondary-fixed-variant": "#930007",
+                      "surface-container": "#eeeeee",
+                      "inverse-primary": "#c6c6c6",
+                      "on-surface-variant": "#4c4546",
+                      "error-container": "#ffdad6",
+                      "secondary-fixed": "#ffdad5",
+                      "on-tertiary": "#ffffff",
+                      "background": "#f9f9f9",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "outline-variant": "#cfc4c5",
+                      "secondary-fixed-dim": "#ffb4aa",
+                      "on-primary-fixed-variant": "#474747",
+                      "tertiary": "#000000",
+                      "on-tertiary-container": "#738e00",
+                      "secondary-container": "#e90614",
+                      "surface-tint": "#5e5e5e",
+                      "primary": "#000000",
+                      "on-secondary-container": "#fffbff",
+                      "primary-fixed": "#e2e2e2",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-tertiary-fixed": "#171e00",
+                      "xtep-red": "#E60012",
+                      "on-primary-container": "#848484",
+                      "outline": "#7e7576",
+                      "surface-bright": "#f9f9f9",
+                      "tertiary-fixed-dim": "#aed500",
+                      "primary-container": "#1b1b1b",
+                      "surface-container-low": "#f3f3f3",
+                      "on-tertiary-fixed-variant": "#3d4d00",
+                      "surface": "#f9f9f9",
+                      "inverse-surface": "#2f3131",
+                      "on-primary": "#ffffff",
+                      "surface-container-high": "#e8e8e8",
+                      "tertiary-container": "#171e00",
+                      "surface-dim": "#dadada",
+                      "secondary": "#bc000c",
+                      "tertiary-fixed": "#c7f300",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "inverse-on-surface": "#f1f1f1",
+                      "on-primary-fixed": "#1b1b1b",
+                      "surface-variant": "#e2e2e2",
+                      "asphalt-gray": "#333333",
+                      "on-secondary-fixed": "#410001",
+                      "on-secondary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "unit": "4px",
+                      "section-gap": "120px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Hanken Grotesk"],
+                      "label-caps": ["JetBrains Mono"],
+                      "headline-md": ["Sora"],
+                      "price-display": ["Sora"],
+                      "headline-lg": ["Sora"],
+                      "display-hero": ["Sora"],
+                      "headline-lg-mobile": ["Sora"],
+                      "body-md": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "price-display": ["20px", {"lineHeight": "24px", "fontWeight": "700"}],
+                      "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "display-hero": ["84px", {"lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased">
+<!-- Minimalist Header -->
+<header class="fixed top-0 w-full z-50 bg-surface h-20 flex items-center px-margin-mobile md:px-margin-desktop border-b border-outline-variant">
+<div class="flex items-center justify-between w-full max-w-[1440px] mx-auto">
+<a class="text-headline-md font-black tracking-tighter text-primary" href="/">XTEP NEPAL</a>
+<div class="flex items-center gap-2 text-on-surface-variant group cursor-pointer" onclick="window.history.back()">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span class="font-label-caps text-label-caps uppercase">Return to Store</span>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Left Column: Checkout Form -->
+<div class="lg:col-span-7 space-y-12">
+<!-- Step 1: Shipping -->
+<section class="space-y-8" id="shipping-section">
+<div class="flex items-center gap-4">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">1</span>
+<h2 class="font-headline-md text-headline-md uppercase tracking-tight">Shipping Details</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline p-3 font-body-md focus:border-primary transition-colors" placeholder="Arjun Thapa" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Phone Number</label>
+<input class="w-full bg-transparent border-0 border-b border-outline p-3 font-body-md focus:border-primary transition-colors" placeholder="+977 98XXXXXXXX" type="tel"/>
+</div>
+<div class="md:col-span-2 space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Delivery Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline p-3 font-body-md focus:border-primary transition-colors" placeholder="Street name, House No, Landmark" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">City</label>
+<select class="w-full bg-transparent border-0 border-b border-outline p-3 font-body-md focus:border-primary transition-colors appearance-none">
+<option>Kathmandu</option>
+<option>Lalitpur</option>
+<option>Bhaktapur</option>
+<option>Pokhara</option>
+<option>Butwal</option>
+</select>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Region/Province</label>
+<input class="w-full bg-transparent border-0 border-b border-outline p-3 font-body-md focus:border-primary transition-colors" placeholder="Bagmati Province" type="text"/>
+</div>
+</div>
+</section>
+<!-- Step 2: Delivery Method -->
+<section class="space-y-8 pt-8 border-t border-outline-variant" id="delivery-section">
+<div class="flex items-center gap-4">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">2</span>
+<h2 class="font-headline-md text-headline-md uppercase tracking-tight">Delivery Method</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="relative flex items-center p-6 border border-outline-variant cursor-pointer hover:bg-surface-alt transition-all group">
+<input checked="" class="sr-only peer" name="delivery" type="radio"/>
+<div class="flex flex-col gap-1">
+<span class="font-bold text-body-lg uppercase">Standard Delivery</span>
+<span class="text-on-surface-variant text-sm">2-4 Business Days</span>
+</div>
+<span class="ml-auto font-price-display text-price-display">NPR 150</span>
+<div class="absolute inset-0 border-2 border-transparent peer-checked:border-primary pointer-events-none"></div>
+</label>
+<label class="relative flex items-center p-6 border border-outline-variant cursor-pointer hover:bg-surface-alt transition-all group">
+<input class="sr-only peer" name="delivery" type="radio"/>
+<div class="flex flex-col gap-1">
+<span class="font-bold text-body-lg uppercase">Express (Inside Valley)</span>
+<span class="text-on-surface-variant text-sm">Within 24 Hours</span>
+</div>
+<span class="ml-auto font-price-display text-price-display">NPR 350</span>
+<div class="absolute inset-0 border-2 border-transparent peer-checked:border-primary pointer-events-none"></div>
+</label>
+</div>
+</section>
+<!-- Step 3: Payment -->
+<section class="space-y-8 pt-8 border-t border-outline-variant" id="payment-section">
+<div class="flex items-center gap-4">
+<span class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-bold">3</span>
+<h2 class="font-headline-md text-headline-md uppercase tracking-tight">Payment Information</h2>
+</div>
+<div class="space-y-4">
+<!-- Card Payment -->
+<div class="border border-outline-variant">
+<button class="w-full flex items-center justify-between p-6 hover:bg-surface-alt transition-colors" onclick="togglePayment('card')">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">credit_card</span>
+<span class="font-bold uppercase tracking-wider">Credit / Debit Card</span>
+</div>
+<span class="material-symbols-outlined transition-transform" id="card-chevron">expand_more</span>
+</button>
+<div class="hidden p-6 pt-0 space-y-6" id="card-form">
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Card Number</label>
+<input class="w-full bg-transparent border-0 border-b border-outline p-3 font-body-md focus:border-primary" placeholder="0000 0000 0000 0000" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Expiry Date</label>
+<input class="w-full bg-transparent border-0 border-b border-outline p-3 font-body-md focus:border-primary" placeholder="MM/YY" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">CVV</label>
+<input class="w-full bg-transparent border-0 border-b border-outline p-3 font-body-md focus:border-primary" placeholder="***" type="password"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Wallet Payment -->
+<div class="border border-outline-variant">
+<button class="w-full flex items-center justify-between p-6 hover:bg-surface-alt transition-colors" onclick="togglePayment('wallet')">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+<span class="font-bold uppercase tracking-wider">eSewa / Khalti</span>
+</div>
+<span class="material-symbols-outlined transition-transform" id="wallet-chevron">expand_more</span>
+</button>
+<div class="hidden p-6 pt-0 flex gap-4" id="wallet-form">
+<div class="flex-1 p-4 border border-outline-variant flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
+<img alt="eSewa" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN4mYaiPIw9L0ygVPINGVdsALSscWYq5n7avjvVUW1-lRdzzWz-VleHx174yWcEmTVDTnBCEp5QBzRuD2cmXTZxV6Pn2yTKm57KvZaFEulpR4pjhwKV_m1VTmSnkpghxFriGzTU_OireqjNt_LB2HICs_g0U6q9WrGr2BToG0u3UZjSmslcmB7xWPuN4fXmJFBHi7gskVXcrVxPK1g1WglM24J6TFWY6AnME5E7MDdG2rhFbJFKdDlXrEMYsgrFRONYJyMj1an7_4"/>
+</div>
+<div class="flex-1 p-4 border border-outline-variant flex items-center justify-center grayscale hover:grayscale-0 transition-all cursor-pointer">
+<img alt="Khalti" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm66UVP3B0R2yNwc-fkEtwRRrYqbkCHxviEeo3GFnOELLYZ1i9G4bzRMbH2RQjUqAaND3iiecsymvbVVAeZVaYQNnJX4GnbhRXpcbrOaC_UPufZMOycsXesdXcDcrRcYYYbHdXEyru8NlBEf3sjJLYr9Rzr66x07DSVnNLWLkjTRQtdRQ0usyAxytLbZJT8YJgm3XhztHPmQ_vqvh3-EE4ckJjhpcr-5BMUPdoFGpw9DX30V64hOQmxdfr0KEivZ8CxZB3hjnCYek"/>
+</div>
+</div>
+</div>
+<!-- COD -->
+<div class="border border-outline-variant">
+<button class="w-full flex items-center justify-between p-6 hover:bg-surface-alt transition-colors" onclick="togglePayment('cod')">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined">payments</span>
+<span class="font-bold uppercase tracking-wider">Cash on Delivery</span>
+</div>
+<input class="accent-primary w-5 h-5" name="payment-method" type="radio"/>
+</button>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Order Summary (Sticky) -->
+<div class="lg:col-span-5 relative">
+<div class="sticky-summary bg-surface-container-low p-8 space-y-8">
+<h3 class="font-headline-md text-[20px] uppercase tracking-tighter border-b border-outline-variant pb-4">Order Summary</h3>
+<!-- Items -->
+<div class="space-y-6 max-h-[300px] overflow-y-auto pr-2 custom-scrollbar">
+<div class="flex gap-4">
+<div class="w-20 h-24 bg-surface-alt shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up side view of a technical Xtep performance running shoe in a stark, clean studio setting. The lighting is crisp and surgical, highlighting the mesh texture and aerodynamic silhouette. The background is a minimalist light gray to emphasize the high-performance engineering of the product. The color palette is modern, dominated by deep black and vibrant performance neon accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3m0RhOCMx9-9Ai8kCZ2Pf_y797nuFJ6SHB72E3lcU9sEHw3-84JxCbDLd3JcxjuBa0j-w4VQK2ORP0M0sDwUgO9lj4fOfSt9GGXL95Fl8Xx3kZzARFIwdYZog8K4GOxcJtME8Xdo_ieL2RS9fnNxk2N61dvZVKfNe1giijow8lAgbeG5arfa_P2ndxyLfFR4Eady8Q8ar0mJa_gCXoklvTz8w0enNCoX28EzY3fgunA1hMasdQ8vT58Zo83BrVX6X5KghfY3gdys"/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<h4 class="font-bold text-body-md leading-tight">XTEP 160X 5.0 PRO</h4>
+<p class="text-sm text-on-surface-variant uppercase">Size: EU 42 | Black/Neon</p>
+</div>
+<span class="font-price-display text-body-lg">NPR 18,500</span>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-20 h-24 bg-surface-alt shrink-0 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Professional athletic training apparel displayed in a high-contrast minimalist studio environment. The garment features precise technical stitching and high-performance moisture-wicking fabric. Soft overhead lighting creates subtle highlights on the material's texture, maintaining a clean light-mode aesthetic. The atmosphere conveys premium reliability and sporting excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvWcJKHRTzFoZ5PbXUk13SLP0TF9W2ssOJiPOf0zeNFYEdZg8eJKsYHmma213NWqs4XX30xsEkbnD8c9XCSqpapgkIi8xVledDpYdibk-T_JiKvsoVdHLH0rm4LTnqQhhInE1-wXaJoNIc31onIrqXBLG_fpMjWXQo4aE6zs0BVztmeloqExuNLI6puHF_JGts12DKVzJaCq7icP3GA6pP8CyUjd9A_rF1h-bmyUxhTdJMXKc7Sr2pTcanOCA7cP2W1SiSwHPLavg"/>
+</div>
+<div class="flex flex-col justify-between py-1">
+<div>
+<h4 class="font-bold text-body-md leading-tight">PERFORMANCE TRAINING TEE</h4>
+<p class="text-sm text-on-surface-variant uppercase">Size: Large | Slate</p>
+</div>
+<span class="font-price-display text-body-lg">NPR 3,200</span>
+</div>
+</div>
+</div>
+<!-- Totals -->
+<div class="space-y-4 pt-4 border-t border-outline-variant">
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant uppercase font-label-caps">Subtotal</span>
+<span class="font-price-display">NPR 21,700</span>
+</div>
+<div class="flex justify-between text-body-md">
+<span class="text-on-surface-variant uppercase font-label-caps">Shipping</span>
+<span class="font-price-display">NPR 150</span>
+</div>
+<div class="flex justify-between pt-4 border-t border-primary">
+<span class="font-headline-md text-[18px] uppercase font-black">Total</span>
+<span class="font-display-hero text-[28px] text-primary">NPR 21,850</span>
+</div>
+</div>
+<!-- Action -->
+<div class="space-y-4 pt-4">
+<button class="w-full py-5 bg-xtep-red text-on-primary font-headline-md text-[18px] uppercase tracking-widest hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+<span>Place Order</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<p class="text-center text-[11px] text-on-surface-variant font-label-caps leading-relaxed">
+                            BY PLACING THIS ORDER, YOU AGREE TO OUR <a class="underline hover:text-primary" href="#">TERMS &amp; CONDITIONS</a> AND <a class="underline hover:text-primary" href="#">PRIVACY POLICY</a>.
+                        </p>
+</div>
+<!-- Trust Badges -->
+<div class="flex justify-center gap-6 pt-6 grayscale opacity-60">
+<span class="material-symbols-outlined" title="Secure Payment">lock</span>
+<span class="material-symbols-outlined" title="Fast Shipping">local_shipping</span>
+<span class="material-symbols-outlined" title="24/7 Support">support_agent</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Simple Footer -->
+<footer class="w-full bg-primary py-12 px-margin-mobile md:px-margin-desktop">
+<div class="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<span class="text-on-primary font-label-caps text-label-caps opacity-60">© 2024 XTEP NEPAL. ENGINEERED FOR PERFORMANCE.</span>
+<div class="flex gap-8">
+<a class="text-on-primary font-label-caps text-label-caps hover:text-performance-neon transition-colors" href="#">PRIVACY</a>
+<a class="text-on-primary font-label-caps text-label-caps hover:text-performance-neon transition-colors" href="#">TERMS</a>
+<a class="text-on-primary font-label-caps text-label-caps hover:text-performance-neon transition-colors" href="#">HELP</a>
+</div>
+</div>
+</footer>
+<script>
+        function togglePayment(type) {
+            const forms = {
+                card: document.getElementById('card-form'),
+                wallet: document.getElementById('wallet-form')
+            };
+            const chevrons = {
+                card: document.getElementById('card-chevron'),
+                wallet: document.getElementById('wallet-chevron')
+            };
+
+            // Hide others
+            Object.keys(forms).forEach(key => {
+                if(key !== type) {
+                    forms[key].classList.add('hidden');
+                    if(chevrons[key]) chevrons[key].style.transform = 'rotate(0deg)';
+                }
+            });
+
+            // Toggle selected
+            if(forms[type]) {
+                const isHidden = forms[type].classList.toggle('hidden');
+                chevrons[type].style.transform = isHidden ? 'rotate(0deg)' : 'rotate(180deg)';
+            }
+        }
+
+        // Add scroll animation to sticky header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body></html>

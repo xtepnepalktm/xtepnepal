@@ -1,0 +1,1084 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Men's Performance Running | XTEP NEPAL</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#fffbff",
+              "error-container": "#ffdad6",
+              "secondary-fixed-dim": "#ffb4aa",
+              "surface-dim": "#dadada",
+              "surface-container": "#eeeeee",
+              "surface-container-highest": "#e2e2e2",
+              "primary-fixed": "#e2e2e2",
+              "on-error-container": "#93000a",
+              background: "#f9f9f9",
+              secondary: "#bc000c",
+              "on-error": "#ffffff",
+              error: "#ba1a1a",
+              surface: "#f9f9f9",
+              "on-tertiary-fixed-variant": "#3d4d00",
+              "inverse-on-surface": "#f1f1f1",
+              "surface-tint": "#5e5e5e",
+              "asphalt-gray": "#333333",
+              "inverse-primary": "#c6c6c6",
+              "surface-variant": "#e2e2e2",
+              "on-primary-fixed-variant": "#474747",
+              "on-tertiary-container": "#738e00",
+              "on-tertiary": "#ffffff",
+              "on-primary": "#ffffff",
+              outline: "#7e7576",
+              "tertiary-fixed-dim": "#aed500",
+              "primary-container": "#1b1b1b",
+              "surface-container-lowest": "#ffffff",
+              "on-surface": "#1a1c1c",
+              "primary-fixed-dim": "#c6c6c6",
+              primary: "#000000",
+              "xtep-red": "#E60012",
+              "inverse-surface": "#2f3131",
+              "on-background": "#1a1c1c",
+              "on-secondary-fixed-variant": "#930007",
+              "on-primary-fixed": "#1b1b1b",
+              "surface-container-high": "#e8e8e8",
+              "outline-variant": "#cfc4c5",
+              "surface-container-low": "#f3f3f3",
+              "tertiary-fixed": "#c7f300",
+              "secondary-container": "#e90614",
+              "on-primary-container": "#848484",
+              "performance-neon": "#D1FF00",
+              "on-secondary-fixed": "#410001",
+              "tertiary-container": "#171e00",
+              "on-tertiary-fixed": "#171e00",
+              "on-surface-variant": "#4c4546",
+              "surface-alt": "#F5F5F5",
+              tertiary: "#000000",
+              "secondary-fixed": "#ffdad5",
+              "surface-bright": "#f9f9f9",
+              "on-secondary": "#ffffff",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              unit: "4px",
+              "section-gap": "120px",
+              gutter: "24px",
+              "margin-mobile": "20px",
+              "margin-desktop": "64px",
+            },
+            fontFamily: {
+              "body-lg": ["Hanken Grotesk"],
+              "price-display": ["Sora"],
+              "headline-lg-mobile": ["Sora"],
+              "label-caps": ["JetBrains Mono"],
+              "headline-md": ["Sora"],
+              "body-md": ["Hanken Grotesk"],
+              "headline-lg": ["Sora"],
+              "display-hero": ["Sora"],
+            },
+            fontSize: {
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "price-display": [
+                "20px",
+                { lineHeight: "24px", fontWeight: "700" },
+              ],
+              "headline-lg-mobile": [
+                "32px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "label-caps": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.1em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "headline-lg": [
+                "48px",
+                {
+                  lineHeight: "52px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "display-hero": [
+                "84px",
+                {
+                  lineHeight: "90px",
+                  letterSpacing: "-0.04em",
+                  fontWeight: "800",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+      .active-filter-border {
+        box-shadow: inset 0 0 0 2px #e60012;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav
+      class="bg-surface dark:bg-primary docked full-width top-0 z-50 border-b border-outline-variant dark:border-asphalt-gray sticky"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-full mx-auto"
+      >
+        <a
+          class="font-display-hero text-headline-md tracking-tighter text-primary dark:text-on-primary"
+          href="/"
+          >XTEP NEPAL</a
+        >
+        <div class="hidden lg:flex gap-8 items-center">
+          <a
+            class="font-body-md text-body-md text-secondary dark:text-secondary-container font-bold border-b-2 border-secondary hover:text-secondary transition-colors duration-200"
+            href="#"
+            >Running</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-performance-neon transition-colors duration-200"
+            href="#"
+            >Training</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-performance-neon transition-colors duration-200"
+            href="#"
+            >Basketball</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-performance-neon transition-colors duration-200"
+            href="#"
+            >Lifestyle</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant hover:text-secondary dark:hover:text-performance-neon transition-colors duration-200"
+            href="#"
+            >Collections</a
+          >
+        </div>
+        <div class="flex items-center gap-6">
+          <div
+            class="hidden md:flex items-center border-b border-outline px-2 py-1"
+          >
+            <span class="material-symbols-outlined text-outline">search</span>
+            <input
+              class="bg-transparent border-none focus:ring-0 text-sm font-body-md"
+              placeholder="Search Performance"
+              type="text"
+            />
+          </div>
+          <div class="flex items-center gap-4">
+            <button
+              class="material-symbols-outlined hover:text-secondary transition-all"
+            >
+              location_on
+            </button>
+            <button
+              class="material-symbols-outlined hover:text-secondary transition-all relative"
+            >
+              shopping_cart
+              <span
+                class="absolute -top-2 -right-2 bg-xtep-red text-white text-[12px] w-4 h-4 rounded-full flex items-center justify-center"
+                >2</span
+              >
+            </button>
+            <button
+              class="material-symbols-outlined hover:text-secondary transition-all"
+            >
+              person
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="max-w-full mx-auto px-margin-desktop py-8">
+      <!-- Breadcrumbs & Header -->
+      <header class="mb-10">
+        <nav
+          class="flex items-center gap-2 font-label-caps text-label-caps text-on-surface-variant uppercase mb-4"
+        >
+          <a class="hover:text-primary" href="#">Home</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <a class="hover:text-primary" href="#">Men</a>
+          <span class="material-symbols-outlined text-sm">chevron_right</span>
+          <span class="text-on-surface">Running Shoes</span>
+        </nav>
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between gap-4"
+        >
+          <div>
+            <h1
+              class="font-headline-lg text-headline-lg uppercase tracking-tight"
+            >
+              Men's Performance Running
+            </h1>
+            <p class="font-body-md text-on-surface-variant mt-1">
+              142 items found
+            </p>
+          </div>
+          <div class="flex items-center gap-4">
+            <span class="font-label-caps text-label-caps uppercase"
+              >Sort By</span
+            >
+            <div class="relative group">
+              <button
+                class="flex items-center justify-between gap-8 border-b-2 border-primary px-2 py-1 font-body-md font-bold"
+              >
+                Best Sellers
+                <span class="material-symbols-outlined">expand_more</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="flex gap-10">
+        <!-- Sidebar Filters -->
+        <aside class="w-72 flex-shrink-0">
+          <div class="sticky top-24 space-y-10">
+            <!-- Category Accordion -->
+            <section>
+              <div
+                class="flex items-center justify-between mb-4 pb-2 border-b border-outline-variant"
+              >
+                <h3 class="font-label-caps text-label-caps uppercase">
+                  Category
+                </h3>
+                <span class="material-symbols-outlined">remove</span>
+              </div>
+              <ul class="space-y-3 font-body-md">
+                <li>
+                  <a
+                    class="flex items-center justify-between text-secondary font-bold"
+                    href="#"
+                    >Running
+                    <span class="material-symbols-outlined text-sm"
+                      >check</span
+                    ></a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-secondary transition-colors" href="#"
+                    >Basketball</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-secondary transition-colors" href="#"
+                    >Training</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-secondary transition-colors" href="#"
+                    >Lifestyle</a
+                  >
+                </li>
+              </ul>
+            </section>
+            <!-- Size Selector -->
+            <section>
+              <h3
+                class="font-label-caps text-label-caps uppercase mb-4 pb-2 border-b border-outline-variant"
+              >
+                Size (EU)
+              </h3>
+              <div class="grid grid-cols-4 gap-2">
+                <button
+                  class="aspect-square border border-outline-variant flex items-center justify-center font-label-caps hover:border-primary transition-all"
+                >
+                  39
+                </button>
+                <button
+                  class="aspect-square border border-outline-variant flex items-center justify-center font-label-caps hover:border-primary transition-all"
+                >
+                  40
+                </button>
+                <button
+                  class="aspect-square border border-outline-variant flex items-center justify-center font-label-caps hover:border-primary transition-all active-filter-border"
+                >
+                  41
+                </button>
+                <button
+                  class="aspect-square border border-outline-variant flex items-center justify-center font-label-caps hover:border-primary transition-all"
+                >
+                  42
+                </button>
+                <button
+                  class="aspect-square border border-outline-variant flex items-center justify-center font-label-caps hover:border-primary transition-all"
+                >
+                  43
+                </button>
+                <button
+                  class="aspect-square border border-outline-variant flex items-center justify-center font-label-caps hover:border-primary transition-all"
+                >
+                  44
+                </button>
+                <button
+                  class="aspect-square border border-outline-variant flex items-center justify-center font-label-caps hover:border-primary transition-all"
+                >
+                  45
+                </button>
+                <button
+                  class="aspect-square border border-outline-variant flex items-center justify-center font-label-caps hover:border-primary transition-all opacity-30 cursor-not-allowed"
+                >
+                  46
+                </button>
+              </div>
+            </section>
+            <!-- Technology Filters -->
+            <section>
+              <h3
+                class="font-label-caps text-label-caps uppercase mb-4 pb-2 border-b border-outline-variant"
+              >
+                Technology
+              </h3>
+              <div class="space-y-2">
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input
+                    class="w-4 h-4 rounded-none border-outline checked:bg-xtep-red"
+                    type="checkbox"
+                  />
+                  <span
+                    class="font-body-md group-hover:text-secondary transition-colors"
+                    >160X Series</span
+                  >
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input
+                    checked=""
+                    class="w-4 h-4 rounded-none border-outline checked:bg-xtep-red"
+                    type="checkbox"
+                  />
+                  <span
+                    class="font-body-md group-hover:text-secondary transition-colors"
+                    >Carbon Plate</span
+                  >
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input
+                    class="w-4 h-4 rounded-none border-outline checked:bg-xtep-red"
+                    type="checkbox"
+                  />
+                  <span
+                    class="font-body-md group-hover:text-secondary transition-colors"
+                    >Feather Foam</span
+                  >
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input
+                    class="w-4 h-4 rounded-none border-outline checked:bg-xtep-red"
+                    type="checkbox"
+                  />
+                  <span
+                    class="font-body-md group-hover:text-secondary transition-colors"
+                    >Dynamic Foam</span
+                  >
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input
+                    class="w-4 h-4 rounded-none border-outline checked:bg-xtep-red"
+                    type="checkbox"
+                  />
+                  <span
+                    class="font-body-md group-hover:text-secondary transition-colors"
+                    >Ace Cushioning</span
+                  >
+                </label>
+              </div>
+            </section>
+            <!-- Price Range Slider -->
+            <section>
+              <h3
+                class="font-label-caps text-label-caps uppercase mb-4 pb-2 border-b border-outline-variant"
+              >
+                Price Range (NPR)
+              </h3>
+              <div class="mt-2 h-1 bg-surface-variant relative">
+                <div
+                  class="absolute inset-y-0 left-0 right-1/4 bg-xtep-red"
+                ></div>
+                <div
+                  class="absolute -top-1.5 left-0 w-4 h-4 bg-primary rounded-full"
+                ></div>
+                <div
+                  class="absolute -top-1.5 right-1/4 w-4 h-4 bg-primary rounded-full"
+                ></div>
+              </div>
+              <div
+                class="flex justify-between mt-4 font-label-caps text-[12px]"
+              >
+                <span>NPR 5,000</span>
+                <span>NPR 25,000</span>
+              </div>
+            </section>
+            <!-- Color Filter -->
+            <section>
+              <h3
+                class="font-label-caps text-label-caps uppercase mb-4 pb-2 border-b border-outline-variant"
+              >
+                Color
+              </h3>
+              <div class="flex flex-wrap gap-3">
+                <button
+                  class="w-8 h-8 rounded-full bg-white border border-outline-variant flex items-center justify-center"
+                  title="White"
+                >
+                  <div
+                    class="w-6 h-6 rounded-full bg-white border border-gray-100"
+                  ></div>
+                </button>
+                <button
+                  class="w-8 h-8 rounded-full bg-black border border-black flex items-center justify-center active-filter-border"
+                  title="Black"
+                >
+                  <div class="w-6 h-6 rounded-full bg-black"></div>
+                </button>
+                <button
+                  class="w-8 h-8 rounded-full bg-xtep-red flex items-center justify-center"
+                  title="Xtep Red"
+                >
+                  <div class="w-6 h-6 rounded-full bg-xtep-red"></div>
+                </button>
+                <button
+                  class="w-8 h-8 rounded-full bg-performance-neon flex items-center justify-center"
+                  title="Neon Green"
+                >
+                  <div class="w-6 h-6 rounded-full bg-performance-neon"></div>
+                </button>
+                <button
+                  class="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center"
+                  title="Pro Blue"
+                >
+                  <div class="w-6 h-6 rounded-full bg-blue-600"></div>
+                </button>
+              </div>
+            </section>
+          </div>
+        </aside>
+        <!-- Product Grid -->
+        <div class="flex-grow">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter"
+          >
+            <!-- Product Card 1 -->
+            <div class="group cursor-pointer relative">
+              <div class="aspect-[4/5] bg-surface-alt relative overflow-hidden">
+                <img
+                  class="w-full h-full object-cover mix-blend-multiply transition-transform duration-700 group-hover:scale-110"
+                  data-alt="A professional high-performance Xtep running shoe in vibrant red and white, captured in a clean studio setting with clinical bright lighting. The shoe features advanced carbon fiber texture on the sole and lightweight mesh upper. The atmosphere is professional, energetic, and premium, emphasizing athletic engineering excellence and speed."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfHnQbtEfDcdi4Cn0MZ_vH562Xen3nmnyIl2e3GrkucZBOPvsN791tF49rM56tXCHpVOBYCXo5jg5kRxHA--qQTB8CFPlce-Bu55fFqZFnO7SrxenHn5nkbXpEk5PnSiYBsUzP3fLQS3EbpimUblVldlMVQyTmxH9mVv1fDHHAE4VS7S4wBJ-wLJz14Rn6M1UEcsWKGYmSLqLy2KvO9tbVHwINV1lPfFCR7UFHHPC-BOOMNjTyJapqCpKWRVc1hKaN6eTU_RhY-0A"
+                />
+                <div class="absolute top-4 left-4 flex flex-col gap-2">
+                  <span
+                    class="bg-xtep-red text-white font-label-caps text-[12px] px-3 py-1"
+                    >160X TECH</span
+                  >
+                </div>
+                <!-- Quick Add Overlay -->
+                <div
+                  class="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-primary bg-opacity-95 text-white p-4"
+                >
+                  <p class="font-label-caps text-[12px] mb-3 text-center">
+                    QUICK ADD TO BAG
+                  </p>
+                  <div class="flex justify-center gap-2">
+                    <button class="text-xs hover:text-performance-neon">
+                      41
+                    </button>
+                    <button class="text-xs hover:text-performance-neon">
+                      42
+                    </button>
+                    <button class="text-xs hover:text-performance-neon">
+                      43
+                    </button>
+                    <button class="text-xs hover:text-performance-neon">
+                      44
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4">
+                <h3
+                  class="font-headline-md text-[16px] uppercase tracking-tight mb-1"
+                >
+                  Xtep 160X 5.0 PRO
+                </h3>
+                <div class="flex items-center gap-2 mb-2">
+                  <div
+                    class="w-3 h-3 rounded-full bg-xtep-red border border-outline"
+                  ></div>
+                  <div
+                    class="w-3 h-3 rounded-full bg-white border border-outline"
+                  ></div>
+                  <span
+                    class="text-[12px] text-on-surface-variant font-label-caps"
+                    >2 COLORS</span
+                  >
+                </div>
+                <p class="font-price-display text-price-display">NPR 22,500</p>
+              </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="group cursor-pointer relative">
+              <div class="aspect-[4/5] bg-surface-alt relative overflow-hidden">
+                <img
+                  class="w-full h-full object-cover mix-blend-multiply transition-transform duration-700 group-hover:scale-110"
+                  data-alt="A sleek black performance running sneaker from Xtep with reflective silver accents, positioned against a high-contrast white background. The studio lighting is sharp, creating dramatic highlights on the technical fabric and the aerodynamic shape of the shoe. The visual style is minimal, tactical, and high-performance, consistent with the brand's lab-engineered identity."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkgbecPCHiyPXCo7i5Y9eQQX2SODWWtL57kZVRPuG86-GOar5exQH_3KyylcalL4jkRRQUb8C7JZB5ZlWFPa_PS9AjKfeeM4KUgewbVHX0ylh4zQQAFnzDPwF8Tb9XYR-35AXbUNtX4LRlmvVcStby9ovgJREoZF4sJZ78ZlVUQYHaoT9SGkh77n4tVDeQn9IAGyhwL25rNbpd8DpImRl5VJGY_mWJJKKrxFqAJdO2U97LwSK-yo07GQUwL0VLmd9nF5oUjZoFpo8"
+                />
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="bg-performance-neon text-primary font-label-caps text-[12px] px-3 py-1"
+                    >NEW ARRIVAL</span
+                  >
+                </div>
+                <div
+                  class="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-primary bg-opacity-95 text-white p-4"
+                >
+                  <p class="font-label-caps text-[12px] mb-3 text-center">
+                    QUICK ADD TO BAG
+                  </p>
+                  <div class="flex justify-center gap-2">
+                    <button class="text-xs hover:text-performance-neon">
+                      39
+                    </button>
+                    <button class="text-xs hover:text-performance-neon">
+                      40
+                    </button>
+                    <button class="text-xs hover:text-performance-neon">
+                      41
+                    </button>
+                    <button class="text-xs hover:text-performance-neon">
+                      42
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4">
+                <h3
+                  class="font-headline-md text-[16px] uppercase tracking-tight mb-1"
+                >
+                  Ultra Fast Ace V2
+                </h3>
+                <div class="flex items-center gap-2 mb-2">
+                  <div
+                    class="w-3 h-3 rounded-full bg-black border border-outline"
+                  ></div>
+                  <div
+                    class="w-3 h-3 rounded-full bg-blue-600 border border-outline"
+                  ></div>
+                </div>
+                <div class="flex items-center gap-3">
+                  <p
+                    class="font-price-display text-price-display text-xtep-red"
+                  >
+                    NPR 14,800
+                  </p>
+                  <p
+                    class="font-body-md text-sm text-on-surface-variant line-through"
+                  >
+                    NPR 18,500
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="group cursor-pointer relative">
+              <div class="aspect-[4/5] bg-surface-alt relative overflow-hidden">
+                <img
+                  class="w-full h-full object-cover mix-blend-multiply transition-transform duration-700 group-hover:scale-110"
+                  data-alt="Technical running shoe featuring a complex multi-color mesh in cyan and electric lime green, presented in a crisp commercial photography style. The shoe sits on a stark white pedestal under intense, bright light that emphasizes the texture of the cushioning and the aggressive tread pattern. The overall mood is futuristic and performance-driven."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJZTj7SiOZxYfi8WVmG7IZTz3PLmYVFkZKbZaQ8h461RtA-Pf7zprgwq_eBs-Sv_ZP7Vqb16RPLwQYO8EzWqoFiESlZoui5LJhZSOYXU7HP9uaBYfvu_g5j5Ixgy5SKHnlB9Uthn9cc3fahUUNaNIzEVCQyxM9KXHNbepyC9j3ItgSMAVRbYBLFwiV7MNTQcmZUXJBgddkyNZhH4rmet7LS86ABR3cuWndph2uQ9g7Iah2Xh_jmL-fw4vn_Ep03d5mCYIqjvMxBZU"
+                />
+                <div
+                  class="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-primary bg-opacity-95 text-white p-4"
+                >
+                  <p class="font-label-caps text-[12px] mb-3 text-center">
+                    QUICK ADD TO BAG
+                  </p>
+                  <div class="flex justify-center gap-2">
+                    <button class="text-xs hover:text-performance-neon">
+                      42
+                    </button>
+                    <button class="text-xs hover:text-performance-neon">
+                      43
+                    </button>
+                    <button class="text-xs hover:text-performance-neon">
+                      44
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4">
+                <h3
+                  class="font-headline-md text-[16px] uppercase tracking-tight mb-1"
+                >
+                  Xtep Ace Cushioning
+                </h3>
+                <div class="flex items-center gap-2 mb-2">
+                  <div
+                    class="w-3 h-3 rounded-full bg-performance-neon border border-outline"
+                  ></div>
+                </div>
+                <p class="font-price-display text-price-display">NPR 16,200</p>
+              </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="group cursor-pointer relative">
+              <div class="aspect-[4/5] bg-surface-alt relative overflow-hidden">
+                <img
+                  class="w-full h-full object-cover mix-blend-multiply transition-transform duration-700 group-hover:scale-110"
+                  data-alt="A minimalist white marathon shoe from Xtep's professional line with a thick carbon-infused foam midsole. The product is photographed against a pure white background with soft, diffused top-lighting that highlights its sleek profile and aerodynamic design. The visual tone is high-end, clean, and technologically advanced."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw_6pdGpywJpJmVbXS7RCjms_S1agGq31Wxftj1l8xBt49ELj62e3Z6KuQckIOK-TpCVmMLf3ARKHsGn-SicyxtpDuQXaGX90HsIdfLmoLxLkGaoUM6bCu_7Flq2fC7jsI_AVaCywy3dci6BOnpvsh2rAHwAnTq__8WKBkxVs6XsnhsstC9FZugUlSFgxCCF7IR7RR4n90aL4Df2lWtseBTEIu0OvE9T9Ld9EKQbMf0Oe456i16OxctxGe64pjv1aTbQ37JT-0rBo"
+                />
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="bg-black text-white font-label-caps text-[12px] px-3 py-1"
+                    >LIMITED EDITION</span
+                  >
+                </div>
+                <div
+                  class="absolute inset-x-0 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-primary bg-opacity-95 text-white p-4"
+                >
+                  <p class="font-label-caps text-[12px] mb-3 text-center">
+                    QUICK ADD TO BAG
+                  </p>
+                  <div class="flex justify-center gap-2">
+                    <button class="text-xs hover:text-performance-neon">
+                      41
+                    </button>
+                    <button class="text-xs hover:text-performance-neon">
+                      43
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-4">
+                <h3
+                  class="font-headline-md text-[16px] uppercase tracking-tight mb-1"
+                >
+                  Xtep 260 Marathon
+                </h3>
+                <div class="flex items-center gap-2 mb-2">
+                  <div
+                    class="w-3 h-3 rounded-full bg-white border border-outline"
+                  ></div>
+                  <div
+                    class="w-3 h-3 rounded-full bg-asphalt-gray border border-outline"
+                  ></div>
+                </div>
+                <p class="font-price-display text-price-display">NPR 19,900</p>
+              </div>
+            </div>
+            <!-- Repeated cards for grid layout demonstration -->
+            <!-- Product Card 5 -->
+            <div class="group cursor-pointer relative">
+              <div class="aspect-[4/5] bg-surface-alt relative overflow-hidden">
+                <img
+                  class="w-full h-full object-cover mix-blend-multiply transition-transform duration-700 group-hover:scale-110"
+                  data-alt="Vivid blue performance training shoe from Xtep with dynamic white stripes, showcased on a high-key light background. The image style is bright and clinical, capturing the engineered mesh textures and the specialized grip patterns on the sole. The color palette is dominated by electric blue and stark whites with high contrast."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuASf7vdxphH1E5JZ6koCK-Gq-R_F-MQtOkCRPxn9NvzRgIsBNc_67szDkeegaGk7HKgQJhHFfWXfMwMeF0-Gg3ki6qrqW6kMBrG_IWqwAA-9QFqGvidmv5JDFdp0M_PDqU3kZgNlymbIcCm0arKSE4EPy4m-OUW8nzgA9mHItauNg99teqJf-_Nh4m4M-xJFpvWA23Rf9ei_HBIztxWBAM4W5ZttsYUnlqhWV-phq3NtA-FN7V4rtC1zgydVFOAGPv06WaLuz0Ipjc"
+                />
+              </div>
+              <div class="mt-4">
+                <h3
+                  class="font-headline-md text-[16px] uppercase tracking-tight mb-1"
+                >
+                  Dynamic Trainer X
+                </h3>
+                <div class="flex items-center gap-2 mb-2">
+                  <div
+                    class="w-3 h-3 rounded-full bg-blue-600 border border-outline"
+                  ></div>
+                </div>
+                <p class="font-price-display text-price-display">NPR 12,500</p>
+              </div>
+            </div>
+            <!-- Product Card 6 -->
+            <div class="group cursor-pointer relative">
+              <div class="aspect-[4/5] bg-surface-alt relative overflow-hidden">
+                <img
+                  class="w-full h-full object-cover mix-blend-multiply transition-transform duration-700 group-hover:scale-110"
+                  data-alt="Technical athletic sneaker in grayscale tones with bold red branding, presented in a minimalist high-end e-commerce style. The photography uses strong directional light to create deep blacks and crisp highlights on the shoe's complex layering of materials. The atmosphere is serious, athletic, and sophisticated."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLW8NqGJZfypfEEQIWtjIwyb3juYv8BbBC-XHMHNZUQXHQn1aViWj3GNgJuXq6qrFNzLobGjqIuPvuWrdWgTHog2NuM-o1hxnrh3eZDe-bot-lNNjiPq9hZ3373suNHXwpY0wZbEcesgcU1g05XglnmbSMwH41e7x6VIBs14O7I86BrpKeEi1vZ-4z2iHR_znEPCx5RYVUzjtTepUCLB85MypKQkUjYM7t1hapTZLsITQlY_RJm7fKSFur8kmb_YwhSMRpZ-y7h2w"
+                />
+                <div class="absolute top-4 left-4">
+                  <span
+                    class="bg-xtep-red text-white font-label-caps text-[12px] px-3 py-1"
+                    >BEST SELLER</span
+                  >
+                </div>
+              </div>
+              <div class="mt-4">
+                <h3
+                  class="font-headline-md text-[16px] uppercase tracking-tight mb-1"
+                >
+                  Pro Flight Carbon
+                </h3>
+                <div class="flex items-center gap-2 mb-2">
+                  <div
+                    class="w-3 h-3 rounded-full bg-asphalt-gray border border-outline"
+                  ></div>
+                  <div
+                    class="w-3 h-3 rounded-full bg-black border border-outline"
+                  ></div>
+                </div>
+                <p class="font-price-display text-price-display">NPR 28,000</p>
+              </div>
+            </div>
+            <!-- Product Card 7 -->
+            <div class="group cursor-pointer relative">
+              <div class="aspect-[4/5] bg-surface-alt relative overflow-hidden">
+                <img
+                  class="w-full h-full object-cover mix-blend-multiply transition-transform duration-700 group-hover:scale-110"
+                  data-alt="All-white ultra-lightweight running shoe with transparent mesh panels, captured in a clinical studio setting with bright light-mode aesthetics. The shoe is angled to show its sharp aerodynamic profile and the thin specialized racing sole. The visual style is surgical and high-tech, emphasizing speed and minimal weight."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBf9m7sOqhj0AGo58l322bsjhsmThcah_aeXPuOvWvBFNBD-eQEIkXP5FPYE6IcbAwV2CH5_S1XTLwjOdpWdlWFyISEZlde6J7-rb335hdZn71_qzS2OWMel9iIvwOGGNtU5oqzdNUEMZhVPJre_gSMRGm-0qbCX2wIJwN5tEHRM-xPqjx1SAXIcHIySesxDOiCBUJiVLe87kErU72uZtXqdN-ZlY8_u_c3SM6Ph9pquZ-heqHisnMX156j5VJwhwaREWt-4kGwlc"
+                />
+              </div>
+              <div class="mt-4">
+                <h3
+                  class="font-headline-md text-[16px] uppercase tracking-tight mb-1"
+                >
+                  Cloud Racer Ultra
+                </h3>
+                <div class="flex items-center gap-2 mb-2">
+                  <div
+                    class="w-3 h-3 rounded-full bg-white border border-outline"
+                  ></div>
+                </div>
+                <p class="font-price-display text-price-display">NPR 24,900</p>
+              </div>
+            </div>
+            <!-- Product Card 8 -->
+            <div class="group cursor-pointer relative">
+              <div class="aspect-[4/5] bg-surface-alt relative overflow-hidden">
+                <img
+                  class="w-full h-full object-cover mix-blend-multiply transition-transform duration-700 group-hover:scale-110"
+                  data-alt="Performance training shoe with a vibrant lime green upper and black accents, displayed against a pure white backdrop. The lighting is crisp and modern, creating a focused, high-performance look. The design highlights the breathability of the mesh and the support structures along the heel. The mood is energetic and athletic."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-KyHsNAddHS4uA5xE-MK8WXw6lGpEmVwxRLVlXBf9_yeXUWlYT9GOchBiPUloYelkr5XHzwaed6H8aNT-dlAfRWFkfvWHGManq_lpsE7PeN-wjeDgutwYs5IgZ24UZSHZCnGTAQy96tTNuNuRAFPhsw26B5vjkT69txwkJtNm4oRPmKzmrD7SRVfkNazI3LQEyRq3_dHIsujnt-wB6rs0tHR1stfDmJnd-pAhWh__GGCfGJS6eo3WEOwEbgIxLDElTr2yy2MFRdI"
+                />
+              </div>
+              <div class="mt-4">
+                <h3
+                  class="font-headline-md text-[16px] uppercase tracking-tight mb-1"
+                >
+                  Xtep Neon Pace
+                </h3>
+                <div class="flex items-center gap-2 mb-2">
+                  <div
+                    class="w-3 h-3 rounded-full bg-performance-neon border border-outline"
+                  ></div>
+                </div>
+                <p class="font-price-display text-price-display">NPR 11,200</p>
+              </div>
+            </div>
+          </div>
+          <!-- Load More -->
+          <div class="mt-section-gap flex flex-col items-center">
+            <p class="font-label-caps text-label-caps mb-6">
+              DISPLAYING 8 OF 142 PRODUCTS
+            </p>
+            <div class="w-full max-w-xs h-1 bg-surface-variant mb-10 relative">
+              <div class="absolute inset-y-0 left-0 bg-primary w-[5%]"></div>
+            </div>
+            <button
+              class="bg-primary text-white font-label-caps text-label-caps px-12 py-5 hover:bg-xtep-red transition-colors tracking-widest active:scale-95 duration-200"
+            >
+              LOAD MORE
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Recently Viewed Section -->
+      <section
+        class="mt-section-gap pt-section-gap border-t border-outline-variant"
+      >
+        <h2
+          class="font-headline-md text-headline-md uppercase mb-10 tracking-tight"
+        >
+          Recently Viewed
+        </h2>
+        <div class="relative group">
+          <div
+            class="flex gap-gutter overflow-x-auto hide-scrollbar snap-x snap-mandatory"
+          >
+            <div
+              class="min-w-[200px] flex-shrink-0 snap-start opacity-70 hover:opacity-100 transition-opacity"
+            >
+              <div class="aspect-square bg-surface-alt mb-4">
+                <img
+                  class="w-full h-full object-cover mix-blend-multiply"
+                  data-alt="Small thumbnail of a red performance running shoe."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4faX6UYzt9vDV6jkm0p4EsaouP-gmX9lFLzjZ9v10MMhB-Q1xrZbIMe3jy0Iv0Q9GX2s-ayxZyE5WvD6-cYfyAnteI5Z68xaTC5Vkd4AmmReW2p7p4gagxV6qw7KVQDOolEtm2Rq61c93uSD0OiJ-AJer-e3tZW04BU8RMmJimQyKQr-1Y85XctaEwviNTSSn96ieuZkHNxZwQNbKlc9Li2bmDmWEJvduc6O4YjW2Ps1ljyLQydfzYPsjTtG9-boc-Fpe2jsNSdI"
+                />
+              </div>
+              <h4 class="font-label-caps text-[12px] uppercase">
+                160X 5.0 PRO
+              </h4>
+              <p class="font-price-display text-sm">NPR 22,500</p>
+            </div>
+            <div
+              class="min-w-[200px] flex-shrink-0 snap-start opacity-70 hover:opacity-100 transition-opacity"
+            >
+              <div class="aspect-square bg-surface-alt mb-4">
+                <img
+                  class="w-full h-full object-cover mix-blend-multiply"
+                  data-alt="Small thumbnail of a black performance running shoe."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGyQTrIGk9_BBwrOCMFFbG0dogzDraJUAnpZibWZ10VkNhG-9HoRUEO5u9zUhgvfTUwCYCzOzttUbLkyUqBLFH-aEjQaGI-Y_fwGVv90qA3iDM4fPEXCNydUs2qGgCPswcG2CMxQnw6SXP9eMit5I_KRwQtQk3IjKcZDpAcfRgIyrPuyIygbuk4rbfthMcqB88V6ZhkP6GF7DLUBrLQjbXeVBWgx0WhqQANsywfE276XbhrjbLeSO-PfbPG-K1CsKHcig19MjXwCA"
+                />
+              </div>
+              <h4 class="font-label-caps text-[12px] uppercase">
+                Ultra Fast Ace
+              </h4>
+              <p class="font-price-display text-sm">NPR 14,800</p>
+            </div>
+            <div
+              class="min-w-[200px] flex-shrink-0 snap-start opacity-70 hover:opacity-100 transition-opacity"
+            >
+              <div class="aspect-square bg-surface-alt mb-4">
+                <img
+                  class="w-full h-full object-cover mix-blend-multiply"
+                  data-alt="Small thumbnail of a lime performance running shoe."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4tGpp4zN7aTJ_bxKsnBoJOzhkASd5IdWD10FONGgSuxb-oiDQ9gbwOj0BEVYsI4LtiE1SiWU5ok_mBn60dAAH9afhaVrrmbytEftx1_fTXT-_7d0L3eLy-CeFbHg3gFq3JBqI7RnmAh00YwwVKhqItULKzDxxczokSpWQ9kN2USSTc3YrfnqFyzmUal-o3V3QwJPBVR8DCX8DfmCGLOYfwNo7aVMXoiul3Qf06F1nMtVqhIsjSc2si4M6oolA9eTYYnFQjmyQTjE"
+                />
+              </div>
+              <h4 class="font-label-caps text-[12px] uppercase">
+                Ace Cushioning
+              </h4>
+              <p class="font-price-display text-sm">NPR 16,200</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-primary dark:bg-black full-width mt-section-gap">
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-section-gap w-full"
+      >
+        <div class="flex flex-col gap-8">
+          <span class="font-display-hero text-headline-md text-on-primary"
+            >XTEP NEPAL</span
+          >
+          <p class="font-body-md text-surface-variant opacity-70">
+            Pushing the boundaries of performance engineering in Nepal. Global
+            tech, local speed.
+          </p>
+          <div class="flex gap-4">
+            <span class="material-symbols-outlined text-on-primary"
+              >social_leaderboard</span
+            >
+            <span class="material-symbols-outlined text-on-primary"
+              >photo_camera</span
+            >
+            <span class="material-symbols-outlined text-on-primary"
+              >play_circle</span
+            >
+          </div>
+        </div>
+        <div class="space-y-6">
+          <h4 class="font-label-caps text-on-primary tracking-widest">SHOP</h4>
+          <ul
+            class="space-y-4 font-label-caps text-surface-variant opacity-70 uppercase"
+          >
+            <li>
+              <a
+                class="hover:text-performance-neon hover:opacity-100 transition-opacity hover:underline"
+                href="#"
+                >Running</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-performance-neon hover:opacity-100 transition-opacity hover:underline"
+                href="#"
+                >Training</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-performance-neon hover:opacity-100 transition-opacity hover:underline"
+                href="#"
+                >Basketball</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-performance-neon hover:opacity-100 transition-opacity hover:underline"
+                href="#"
+                >Lifestyle</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="space-y-6">
+          <h4 class="font-label-caps text-on-primary tracking-widest">
+            SUPPORT
+          </h4>
+          <ul
+            class="space-y-4 font-label-caps text-surface-variant opacity-70 uppercase"
+          >
+            <li>
+              <a
+                class="hover:text-performance-neon hover:opacity-100 transition-opacity hover:underline"
+                href="#"
+                >Store Locator</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-performance-neon hover:opacity-100 transition-opacity hover:underline"
+                href="#"
+                >Size Guide</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-performance-neon hover:opacity-100 transition-opacity hover:underline"
+                href="#"
+                >Shipping &amp; Returns</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-performance-neon hover:opacity-100 transition-opacity hover:underline"
+                href="#"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="space-y-6">
+          <h4 class="font-label-caps text-on-primary tracking-widest">LEGAL</h4>
+          <ul
+            class="space-y-4 font-label-caps text-surface-variant opacity-70 uppercase"
+          >
+            <li>
+              <a
+                class="hover:text-performance-neon hover:opacity-100 transition-opacity hover:underline"
+                href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-performance-neon hover:opacity-100 transition-opacity hover:underline"
+                href="#"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="px-margin-desktop py-8 border-t border-asphalt-gray flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p
+          class="font-label-caps text-label-caps text-surface-variant opacity-70"
+        >
+          © 2024 XTEP NEPAL. ALL RIGHTS RESERVED.
+        </p>
+        <div class="flex gap-4 items-center">
+          <span
+            class="font-label-caps text-label-caps text-surface-variant opacity-70"
+            >ACCEPTED PAYMENTS</span
+          >
+          <span class="material-symbols-outlined text-surface-variant"
+            >payments</span
+          >
+          <span class="material-symbols-outlined text-surface-variant"
+            >credit_card</span
+          >
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Micro-interaction for size selection
+      document
+        .querySelectorAll("section:nth-of-type(2) button")
+        .forEach((btn) => {
+          btn.addEventListener("click", function () {
+            if (!this.classList.contains("opacity-30")) {
+              document
+                .querySelectorAll("section:nth-of-type(2) button")
+                .forEach((b) => b.classList.remove("active-filter-border"));
+              this.classList.add("active-filter-border");
+            }
+          });
+        });
+
+      // Simple smooth scroll for carousel
+      const carousel = document.querySelector(".snap-x");
+      if (carousel) {
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        carousel.addEventListener("mousedown", (e) => {
+          isDown = true;
+          startX = e.pageX - carousel.offsetLeft;
+          scrollLeft = carousel.scrollLeft;
+        });
+        carousel.addEventListener("mouseleave", () => (isDown = false));
+        carousel.addEventListener("mouseup", () => (isDown = false));
+        carousel.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - carousel.offsetLeft;
+          const walk = (x - startX) * 2;
+          carousel.scrollLeft = scrollLeft - walk;
+        });
+      }
+    </script>
+  </body>
+</html>

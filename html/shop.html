@@ -1,0 +1,833 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&amp;family=Inter:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#c6c6c7",
+              "on-primary": "#ffffff",
+              "on-tertiary-container": "#fdfdfd",
+              background: "#fbf9f9",
+              "error-container": "#ffdad6",
+              error: "#ba1a1a",
+              "on-secondary-container": "#636262",
+              "surface-bright": "#fbf9f9",
+              outline: "#936e69",
+              "on-secondary-fixed": "#1c1b1b",
+              primary: "#bc0002",
+              "on-tertiary-fixed-variant": "#454747",
+              "secondary-container": "#e2dfde",
+              "on-background": "#1b1c1c",
+              "surface-variant": "#e4e2e2",
+              "tertiary-fixed": "#e2e2e2",
+              "surface-tint": "#c00002",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f2f0f0",
+              "surface-container-high": "#e9e8e7",
+              "secondary-fixed-dim": "#c8c6c5",
+              "on-primary-fixed": "#410000",
+              "primary-fixed-dim": "#ffb4a8",
+              "on-tertiary-fixed": "#1a1c1c",
+              surface: "#fbf9f9",
+              "on-primary-container": "#fffbff",
+              "on-tertiary": "#ffffff",
+              "primary-fixed": "#ffdad5",
+              "inverse-surface": "#303031",
+              "on-secondary-fixed-variant": "#474746",
+              secondary: "#5f5e5e",
+              "surface-container": "#efeded",
+              "on-surface": "#1b1c1c",
+              "tertiary-container": "#737575",
+              "inverse-primary": "#ffb4a8",
+              "secondary-fixed": "#e5e2e1",
+              "surface-container-highest": "#e4e2e2",
+              "surface-dim": "#dbdad9",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#930001",
+              tertiary: "#5b5c5d",
+              "on-error-container": "#93000a",
+              "outline-variant": "#e8bcb6",
+              "on-surface-variant": "#5e3f3a",
+              "primary-container": "#e61911",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#f5f3f3",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "stack-lg": "32px",
+              gutter: "24px",
+              "container-max": "1280px",
+              "stack-md": "16px",
+              "section-gap": "120px",
+              "margin-desktop": "64px",
+              "stack-sm": "8px",
+              "margin-mobile": "20px",
+            },
+            fontFamily: {
+              "headline-lg-mobile": ["Montserrat"],
+              "stat-lg": ["Montserrat"],
+              "headline-lg": ["Montserrat"],
+              "body-md": ["Inter"],
+              "headline-md": ["Montserrat"],
+              "label-bold": ["Montserrat"],
+              "body-lg": ["Inter"],
+              "display-hero": ["Montserrat"],
+            },
+            fontSize: {
+              "headline-lg-mobile": [
+                "32px",
+                { lineHeight: "1.2", fontWeight: "800" },
+              ],
+              "stat-lg": [
+                "56px",
+                {
+                  lineHeight: "1",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "900",
+                },
+              ],
+              "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "800" }],
+              "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+              "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "700" }],
+              "label-bold": [
+                "14px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "0.05em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+              "display-hero": [
+                "72px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "900",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .shear-hover:hover {
+        transform: skewX(-5deg);
+        transition: transform 0.3s ease;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-white"
+  >
+    <!-- Top Navigation Bar -->
+    <header
+      class="bg-surface border-b border-outline-variant top-0 sticky z-50"
+    >
+      <nav
+        class="flex justify-between items-center w-full px-margin-desktop max-w-[1440px] mx-auto h-[80px]"
+      >
+        <div
+          class="text-headline-md font-headline-md font-black tracking-tighter text-on-surface"
+        >
+          XTEP NEPAL
+        </div>
+        <div class="hidden md:flex gap-8 items-center">
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors text-label-bold font-label-bold"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="text-primary font-bold border-b-2 border-primary pb-1 text-label-bold font-label-bold"
+            href="#"
+            >Shop</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors text-label-bold font-label-bold"
+            href="#"
+            >Xtep Stories</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors text-label-bold font-label-bold"
+            href="#"
+            >Xtep Lab</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors text-label-bold font-label-bold"
+            href="#"
+            >Store Locator</a
+          >
+        </div>
+        <div class="flex items-center gap-6">
+          <button
+            class="p-2 hover:bg-surface-container-low transition-all duration-200"
+          >
+            <span class="material-symbols-outlined" data-icon="search"
+              >search</span
+            >
+          </button>
+          <button
+            class="p-2 hover:bg-surface-container-low transition-all duration-200 relative"
+          >
+            <span class="material-symbols-outlined" data-icon="shopping_cart"
+              >shopping_cart</span
+            >
+            <span
+              class="absolute top-0 right-0 bg-primary-container text-white text-[12px] w-4 h-4 rounded-full flex items-center justify-center"
+              >2</span
+            >
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-10"
+    >
+      <!-- Breadcrumbs -->
+      <nav
+        class="flex gap-2 text-label-bold font-label-bold text-on-surface-variant mb-8"
+      >
+        <span class="hover:text-primary cursor-pointer">Shop</span>
+        <span>/</span>
+        <span class="hover:text-primary cursor-pointer"
+          >Performance Running</span
+        >
+        <span>/</span>
+        <span class="text-primary">Xtep 160X 5.0 Pro</span>
+      </nav>
+      <!-- PDP Hero Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+        <!-- Left: Multi-angle Gallery -->
+        <div class="md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div
+            class="md:col-span-2 bg-surface-container-low aspect-[4/3] flex items-center justify-center overflow-hidden"
+          >
+            <img
+              class="w-full h-full object-cover mix-blend-multiply"
+              data-alt="A high-performance Xtep marathon running shoe in vibrant white and neon green, captured in a dramatic professional studio lighting setup. The shoe is positioned mid-air to showcase its aerodynamic profile and carbon fiber midsole plate. The background is a clean, neutral architectural space with sharp shadows, emphasizing the technical engineering and elite athletic nature of the footwear. Vivid red accents on the heel and logo contrast against the bright, modern light-mode environment."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYbNs7KQLZYKC2Jn3rZW2d8ahk6mKEE1PMm3e4qwF03HZmvpGC2fxDYLFRgdxAwo1AAQrP7SP-Uxy4X_3QydmOcCuR3UaFn7l3sof7XtqdZ14yXiqE_Vgubpl3FXIL_aDbGKgkt3YF1Hz7iTUPc_zXX3TFDHwNOb_a4l95ZxLYtAKB9HR_RKyIkEODNXeIKAOaZuwRw6D7p6SkDCoqZLubpvh0Z9H1JMXhTpa9vqwcR813wqNwHq7zIGD7BkEfelSuzHEp6wun03c"
+            />
+          </div>
+          <div
+            class="bg-surface-container-low aspect-square flex items-center justify-center overflow-hidden"
+          >
+            <img
+              class="w-full h-full object-cover mix-blend-multiply"
+              data-alt="Detailed close-up shot of the heel structure of a premium running shoe, focusing on the high-density foam cushioning and carbon plate integration. The lighting is crisp and technical, highlighting the textures of the breathable mesh upper and the aggressive tread pattern of the outsole. The scene maintains a minimalist athletic aesthetic with a palette of white, asphalt gray, and performance neon. The mood is precise and focused on material innovation."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCebUXQh9I03sY_nK9vea1P0UsjLJpcXUg5Ta6C41kjqtFHIyig3X1d2oWzAdCuoI00GfuEvGQqEGP8zVj1pTfhB1N2ErX3Dp_Euxk5hH3wLOsr3NHtG9excImpJ1Rlyhe1VLYzxuZzGKp79EGdWkPVUvZhKE_9D6aynkSj9qGJnjli_vPkeIvE5CRih5oymNAhv6gpprbIclRzfAnBUDyXA7gGw4AJ2osUF83xhdtJw1ZX1_pzGSDqFDOjfgK_TYHwf3uyC92AIIs"
+            />
+          </div>
+          <div
+            class="bg-surface-container-low aspect-square flex items-center justify-center overflow-hidden"
+          >
+            <img
+              class="w-full h-full object-cover mix-blend-multiply"
+              data-alt="The outsole of a professional-grade running sneaker presented in a top-down view to highlight the technical traction pattern designed for high-speed road racing. The colors are stark white and deep black with neon yellow highlights on the stress points. The composition is symmetrical and blueprint-like, set against a clean studio background that reflects a high-end corporate prestige and sporty energy."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT_97Xnwplz5COoJH5w35u9Z4VyFAKLdjT7MWSiGfyDbmsFQuwITCVhfu7CIU00NWY9V3VaB48W-hzqb6TaybbTWNoHI0BgQO81AbejfVTsYfIXPx80JXCQUd6I41CYEkwlHtaX6Sj2I9GZteLtIsF2ol4Of0jQjO1RYNy4uw72KVzf2d-PeqniUABlQGOvnUq_s0H-e9F5Z2Vh3aPsK8SihcoXApQqxaoUO_gowUhPv20HYqrZXY6sJBFr6WMJv85E5PZ7vPbGNE"
+            />
+          </div>
+        </div>
+        <!-- Right: Product Info -->
+        <div class="md:col-span-4 sticky top-[100px] flex flex-col gap-8">
+          <div>
+            <div class="flex gap-2 mb-4">
+              <span
+                class="bg-primary-container text-white px-3 py-1 text-label-bold font-label-bold"
+                >NEW ARRIVAL</span
+              >
+              <span
+                class="bg-surface-container-highest text-on-surface px-3 py-1 text-label-bold font-label-bold uppercase"
+                >LAB TESTED</span
+              >
+            </div>
+            <h1 class="text-headline-lg font-headline-lg uppercase mb-2">
+              160X 5.0 Pro
+            </h1>
+            <p class="text-body-lg font-body-lg text-on-surface-variant">
+              Carbon-Fiber Marathon Racing Shoe for Elite Performance
+            </p>
+          </div>
+          <div class="text-headline-md font-headline-md text-primary-container">
+            NPR 24,999.00
+          </div>
+          <!-- Size Selector -->
+          <div>
+            <div class="flex justify-between items-center mb-4">
+              <span class="text-label-bold font-label-bold text-on-surface"
+                >SELECT SIZE (EU)</span
+              >
+              <a
+                class="text-label-bold font-label-bold text-on-surface-variant underline"
+                href="#"
+                >SIZE GUIDE</a
+              >
+            </div>
+            <div class="grid grid-cols-4 gap-2">
+              <button
+                class="border border-outline h-12 flex items-center justify-center font-label-bold hover:bg-primary-container hover:text-white transition-all"
+              >
+                40
+              </button>
+              <button
+                class="border border-outline h-12 flex items-center justify-center font-label-bold hover:bg-primary-container hover:text-white transition-all"
+              >
+                41
+              </button>
+              <button
+                class="border-2 border-primary-container h-12 flex items-center justify-center font-label-bold bg-primary-container text-white"
+              >
+                42
+              </button>
+              <button
+                class="border border-outline h-12 flex items-center justify-center font-label-bold hover:bg-primary-container hover:text-white transition-all"
+              >
+                43
+              </button>
+              <button
+                class="border border-outline h-12 flex items-center justify-center font-label-bold hover:bg-primary-container hover:text-white transition-all"
+              >
+                44
+              </button>
+              <button
+                class="border border-outline h-12 flex items-center justify-center font-label-bold text-outline-variant cursor-not-allowed"
+                disabled=""
+              >
+                45
+              </button>
+            </div>
+          </div>
+          <!-- Action Buttons -->
+          <div class="flex flex-col gap-4">
+            <button
+              class="bg-primary-container text-white h-[64px] font-headline-md text-headline-md uppercase tracking-wide hover:bg-on-background transition-all shear-hover flex items-center justify-center gap-2"
+            >
+              Add to Cart
+              <span class="material-symbols-outlined" data-icon="shopping_bag"
+                >shopping_bag</span
+              >
+            </button>
+            <button
+              class="bg-white border-2 border-primary-container text-primary-container h-[64px] font-label-bold text-label-bold uppercase tracking-widest hover:bg-surface-container-low transition-all"
+            >
+              Find in Store
+            </button>
+          </div>
+          <!-- Product Features -->
+          <div class="border-t border-outline-variant pt-8">
+            <div class="grid grid-cols-2 gap-y-4 gap-x-8">
+              <div>
+                <span
+                  class="text-label-bold font-label-bold text-on-surface-variant block mb-1"
+                  >WEIGHT</span
+                >
+                <span class="font-bold">190g (Size 42)</span>
+              </div>
+              <div>
+                <span
+                  class="text-label-bold font-label-bold text-on-surface-variant block mb-1"
+                  >OFFSET</span
+                >
+                <span class="font-bold">8mm</span>
+              </div>
+              <div>
+                <span
+                  class="text-label-bold font-label-bold text-on-surface-variant block mb-1"
+                  >PLATE</span
+                >
+                <span class="font-bold">Full-Length Carbon</span>
+              </div>
+              <div>
+                <span
+                  class="text-label-bold font-label-bold text-on-surface-variant block mb-1"
+                  >MIDSOLE</span
+                >
+                <span class="font-bold">XTEP ACE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Section Gap -->
+      <div class="h-section-gap"></div>
+      <!-- Xtep Lab Deep Dive -->
+      <section
+        class="bg-inverse-surface text-white -mx-margin-mobile md:-mx-margin-desktop px-margin-mobile md:px-margin-desktop py-section-gap"
+      >
+        <div class="max-w-[1440px] mx-auto">
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8"
+          >
+            <div class="max-w-2xl">
+              <span
+                class="text-primary-container font-label-bold text-label-bold tracking-widest block mb-4"
+                >ENGINEERING THE FASTEST</span
+              >
+              <h2
+                class="text-headline-lg font-headline-lg uppercase leading-tight"
+              >
+                XTEP LAB: PERFORMANCE DYNAMICS
+              </h2>
+            </div>
+            <div
+              class="text-tertiary-fixed-dim font-label-bold text-label-bold"
+            >
+              DATASET ID: XP-160X-V5.PR
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+            <div
+              class="relative aspect-video bg-surface-container-highest overflow-hidden group"
+            >
+              <img
+                class="w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700"
+                data-alt="A technical cross-section diagram of a high-performance midsole, rendered in a futuristic blueprint style. The image features architectural line-work and glowing neon highlights that trace the internal carbon fiber plate and kinetic energy return paths. The color scheme is dominated by deep blacks and cool grays, punctuated by performance-neon accents that symbolize energy and speed. The environment is dark and laboratory-like, emphasizing scientific precision and advanced material research."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD405SdgNR-SwToeP-FB6Rxvn2CzUIB-n93v2Oa4FZZ5clhHoO8E-P3UcD7sz6XVhli2mdEVJhoJJPPAhafp9aK7OYNmBANf91MVo9BLcDKxdDOEeXeEooD0-9Eq7l57Tfu7HsiTsS5zIlohD5_6Tq_z2HYqH3af-2XN1XEbjmGOpDXKfQc5d02HguvHq4KioBDhE4lCg7f87wcJSIoKsy8NXK47S8aIdHQJ2_NyqAZvYQZ8tIDurjNw-SyscwAZH1AgxvueXPjZDU"
+              />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <button
+                  class="w-20 h-20 bg-primary-container rounded-full flex items-center justify-center text-white hover:scale-110 transition-transform"
+                >
+                  <span
+                    class="material-symbols-outlined !text-4xl"
+                    data-icon="play_arrow"
+                    style="font-variation-settings: &quot;FILL&quot; 1"
+                    >play_arrow</span
+                  >
+                </button>
+              </div>
+            </div>
+            <div class="flex flex-col gap-12">
+              <div class="flex gap-6 items-start">
+                <span
+                  class="text-primary-container font-display-hero !text-4xl leading-none"
+                  >01</span
+                >
+                <div>
+                  <h3 class="text-headline-md font-headline-md uppercase mb-2">
+                    Dual-Density ACE Foam
+                  </h3>
+                  <p class="text-tertiary-fixed font-body-md">
+                    Engineered for 85% energy return, our proprietary
+                    supercritical foam provides explosive propulsion while
+                    maintaining structural integrity over 500km.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6 items-start">
+                <span
+                  class="text-primary-container font-display-hero !text-4xl leading-none"
+                  >02</span
+                >
+                <div>
+                  <h3 class="text-headline-md font-headline-md uppercase mb-2">
+                    T700 Carbon Plate
+                  </h3>
+                  <p class="text-tertiary-fixed font-body-md">
+                    Spoon-shaped architectural carbon fiber geometry provides
+                    lateral stability and maximizes the leverage of the Achilles
+                    tendon during toe-off.
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-6 items-start">
+                <span
+                  class="text-primary-container font-display-hero !text-4xl leading-none"
+                  >03</span
+                >
+                <div>
+                  <h3 class="text-headline-md font-headline-md uppercase mb-2">
+                    Wind-Tunnel Tested Upper
+                  </h3>
+                  <p class="text-tertiary-fixed font-body-md">
+                    Monofilament mesh construction reduces drag by 3% compared
+                    to traditional knit, ensuring thermal regulation even in
+                    Nepal's peak summer conditions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Technical Stats Grid -->
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 gap-gutter mt-24 pt-24 border-t border-secondary"
+          >
+            <div class="text-center">
+              <div
+                class="text-primary-container text-headline-lg font-headline-lg mb-2"
+              >
+                +12%
+              </div>
+              <div class="text-label-bold font-label-bold text-tertiary-fixed">
+                RUNNING ECONOMY
+              </div>
+            </div>
+            <div class="text-center">
+              <div
+                class="text-primary-container text-headline-lg font-headline-lg mb-2"
+              >
+                -15g
+              </div>
+              <div class="text-label-bold font-label-bold text-tertiary-fixed">
+                WEIGHT REDUCTION
+              </div>
+            </div>
+            <div class="text-center">
+              <div
+                class="text-primary-container text-headline-lg font-headline-lg mb-2"
+              >
+                800N
+              </div>
+              <div class="text-label-bold font-label-bold text-tertiary-fixed">
+                MAX COMPRESSION
+              </div>
+            </div>
+            <div class="text-center">
+              <div
+                class="text-primary-container text-headline-lg font-headline-lg mb-2"
+              >
+                2:07:33
+              </div>
+              <div class="text-label-bold font-label-bold text-tertiary-fixed">
+                PB POTENTIAL
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Product Reviews Section -->
+      <section class="py-section-gap">
+        <div class="flex items-center justify-between mb-12">
+          <h2 class="text-headline-md font-headline-md uppercase">
+            Field Reports
+          </h2>
+          <button
+            class="bg-primary-container text-white px-8 py-3 text-label-bold font-label-bold uppercase tracking-widest hover:bg-on-background transition-colors"
+          >
+            Write a Review
+          </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          <div
+            class="border border-outline-variant p-8 flex flex-col gap-4 bg-surface-container-lowest"
+          >
+            <div class="flex text-primary">
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+            </div>
+            <h4 class="font-bold text-lg font-headline-md">
+              Unmatched Propellation
+            </h4>
+            <p class="text-on-surface-variant font-body-md">
+              Used these for the Kathmandu Half Marathon. The energy return on
+              the final 5k was incredible. Best racing shoe I've owned.
+            </p>
+            <div class="text-label-bold font-label-bold text-outline mt-auto">
+              SUMIT R. • VERIFIED BUYER
+            </div>
+          </div>
+          <div
+            class="border border-outline-variant p-8 flex flex-col gap-4 bg-surface-container-lowest"
+          >
+            <div class="flex text-primary">
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span class="material-symbols-outlined" data-icon="star"
+                >star</span
+              >
+            </div>
+            <h4 class="font-bold text-lg font-headline-md">
+              Technical Masterpiece
+            </h4>
+            <p class="text-on-surface-variant font-body-md">
+              The lock-down is perfect. A bit stiff for easy runs, but that's
+              expected for a carbon plate pro model. Absolute speed monster.
+            </p>
+            <div class="text-label-bold font-label-bold text-outline mt-auto">
+              PRERANA K. • VERIFIED BUYER
+            </div>
+          </div>
+          <div
+            class="border border-outline-variant p-8 flex flex-col gap-4 bg-surface-container-lowest"
+          >
+            <div class="flex text-primary">
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+              <span
+                class="material-symbols-outlined"
+                data-icon="star"
+                style="font-variation-settings: &quot;FILL&quot; 1"
+                >star</span
+              >
+            </div>
+            <h4 class="font-bold text-lg font-headline-md">Elite Quality</h4>
+            <p class="text-on-surface-variant font-body-md">
+              The 5.0 Pro is a huge step up. Lighter and more aggressive.
+              Packaging was premium too. Fast delivery in Lalitpur.
+            </p>
+            <div class="text-label-bold font-label-bold text-outline mt-auto">
+              ARJUN T. • VERIFIED BUYER
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-inverse-surface text-on-primary border-t border-secondary w-full py-section-gap"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-[1440px] mx-auto"
+      >
+        <div class="md:col-span-1">
+          <div
+            class="text-headline-md font-headline-md font-black text-primary-container mb-6"
+          >
+            XTEP NEPAL
+          </div>
+          <p class="text-tertiary-fixed text-body-md mb-8">
+            Engineering the future of athleticism with cutting-edge lab research
+            and elite performance gear.
+          </p>
+          <div class="flex gap-4">
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-primary-container"
+              data-icon="public"
+              >public</span
+            >
+            <span
+              class="material-symbols-outlined cursor-pointer hover:text-primary-container"
+              data-icon="mail"
+              >mail</span
+            >
+          </div>
+        </div>
+        <div>
+          <h4 class="text-label-bold font-label-bold text-white mb-6">
+            SUPPORT
+          </h4>
+          <ul class="flex flex-col gap-4 text-tertiary-fixed">
+            <li
+              class="hover:text-primary-container transition-colors duration-300 cursor-pointer font-body-md"
+            >
+              Customer Service
+            </li>
+            <li
+              class="hover:text-primary-container transition-colors duration-300 cursor-pointer font-body-md"
+            >
+              Shipping &amp; Returns
+            </li>
+            <li
+              class="hover:text-primary-container transition-colors duration-300 cursor-pointer font-body-md"
+            >
+              Privacy Policy
+            </li>
+            <li
+              class="hover:text-primary-container transition-colors duration-300 cursor-pointer font-body-md"
+            >
+              Terms of Service
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-label-bold font-label-bold text-white mb-6">
+            THE LAB
+          </h4>
+          <ul class="flex flex-col gap-4 text-tertiary-fixed">
+            <li
+              class="hover:text-primary-container transition-colors duration-300 cursor-pointer font-body-md"
+            >
+              Xtep Lab Tech
+            </li>
+            <li
+              class="hover:text-primary-container transition-colors duration-300 cursor-pointer font-body-md"
+            >
+              Sustainability
+            </li>
+            <li
+              class="hover:text-primary-container transition-colors duration-300 cursor-pointer font-body-md"
+            >
+              Elite Athletes
+            </li>
+            <li
+              class="hover:text-primary-container transition-colors duration-300 cursor-pointer font-body-md"
+            >
+              Nepal Community
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-label-bold font-label-bold text-white mb-6">
+            NEWSLETTER
+          </h4>
+          <p class="text-tertiary-fixed text-body-md mb-4">
+            Join the Lab. Get early access to drop dates.
+          </p>
+          <div class="flex">
+            <input
+              class="bg-secondary-container border-none px-4 py-3 text-on-background w-full focus:ring-1 focus:ring-primary-container rounded-none"
+              placeholder="Email Address"
+              type="email"
+            />
+            <button
+              class="bg-primary-container text-white px-4 hover:bg-white hover:text-primary-container transition-colors"
+            >
+              <span class="material-symbols-outlined" data-icon="arrow_forward"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="max-w-[1440px] mx-auto px-margin-desktop mt-20 pt-10 border-t border-secondary text-label-bold font-label-bold text-tertiary-fixed"
+      >
+        © 2024 XTEP NEPAL. ALL RIGHTS RESERVED. OFFICIAL NEPAL IMPORTER INFO.
+      </div>
+    </footer>
+    <script>
+      // Simple Interaction for Size Selection
+      document.querySelectorAll("button.border-outline").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          document.querySelectorAll(".grid.grid-cols-4 button").forEach((b) => {
+            if (b.classList.contains("bg-primary-container")) {
+              b.classList.remove(
+                "bg-primary-container",
+                "text-white",
+                "border-2",
+                "border-primary-container",
+              );
+              b.classList.add("border", "border-outline");
+            }
+          });
+          this.classList.remove("border", "border-outline");
+          this.classList.add(
+            "bg-primary-container",
+            "text-white",
+            "border-2",
+            "border-primary-container",
+          );
+        });
+      });
+
+      // Sticky Nav shadow on scroll
+      window.addEventListener("scroll", () => {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.classList.add("shadow-sm");
+        } else {
+          header.classList.remove("shadow-sm");
+        }
+      });
+    </script>
+  </body>
+</html>

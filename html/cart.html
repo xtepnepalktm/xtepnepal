@@ -1,0 +1,585 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shopping Cart | XTEP NEPAL</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=JetBrains+Mono:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;family=Sora:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-background": "#1a1c1c",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#93000a",
+              "on-surface": "#1a1c1c",
+              "performance-neon": "#D1FF00",
+              "surface-alt": "#F5F5F5",
+              "on-secondary-fixed-variant": "#930007",
+              "surface-container": "#eeeeee",
+              "inverse-primary": "#c6c6c6",
+              "on-surface-variant": "#4c4546",
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#ffdad5",
+              "on-tertiary": "#ffffff",
+              background: "#f9f9f9",
+              error: "#ba1a1a",
+              "on-error": "#ffffff",
+              "outline-variant": "#cfc4c5",
+              "secondary-fixed-dim": "#ffb4aa",
+              "on-primary-fixed-variant": "#474747",
+              tertiary: "#000000",
+              "on-tertiary-container": "#738e00",
+              "secondary-container": "#e90614",
+              "surface-tint": "#5e5e5e",
+              primary: "#000000",
+              "on-secondary-container": "#fffbff",
+              "primary-fixed": "#e2e2e2",
+              "surface-container-highest": "#e2e2e2",
+              "on-tertiary-fixed": "#171e00",
+              "xtep-red": "#E60012",
+              "on-primary-container": "#848484",
+              outline: "#7e7576",
+              "surface-bright": "#f9f9f9",
+              "tertiary-fixed-dim": "#aed500",
+              "primary-container": "#1b1b1b",
+              "surface-container-low": "#f3f3f3",
+              "on-tertiary-fixed-variant": "#3d4d00",
+              surface: "#f9f9f9",
+              "inverse-surface": "#2f3131",
+              "on-primary": "#ffffff",
+              "surface-container-high": "#e8e8e8",
+              "tertiary-container": "#171e00",
+              "surface-dim": "#dadada",
+              secondary: "#bc000c",
+              "tertiary-fixed": "#c7f300",
+              "primary-fixed-dim": "#c6c6c6",
+              "inverse-on-surface": "#f1f1f1",
+              "on-primary-fixed": "#1b1b1b",
+              "surface-variant": "#e2e2e2",
+              "asphalt-gray": "#333333",
+              "on-secondary-fixed": "#410001",
+              "on-secondary": "#ffffff",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "margin-mobile": "20px",
+              "margin-desktop": "64px",
+              gutter: "24px",
+              unit: "4px",
+              "section-gap": "120px",
+            },
+            fontFamily: {
+              "body-lg": ["Hanken Grotesk"],
+              "label-caps": ["JetBrains Mono"],
+              "headline-md": ["Sora"],
+              "price-display": ["Sora"],
+              "headline-lg": ["Sora"],
+              "display-hero": ["Sora"],
+              "headline-lg-mobile": ["Sora"],
+              "body-md": ["Hanken Grotesk"],
+            },
+            fontSize: {
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "label-caps": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.1em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "price-display": [
+                "20px",
+                { lineHeight: "24px", fontWeight: "700" },
+              ],
+              "headline-lg": [
+                "48px",
+                {
+                  lineHeight: "52px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "display-hero": [
+                "84px",
+                {
+                  lineHeight: "90px",
+                  letterSpacing: "-0.04em",
+                  fontWeight: "800",
+                },
+              ],
+              "headline-lg-mobile": [
+                "32px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .cart-item-hover:hover .item-controls {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .item-controls {
+        transition: all 0.3s ease;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body-md selection:bg-performance-neon selection:text-primary"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface dark:bg-on-background border-b border-outline-variant dark:border-outline h-20 flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-full"
+    >
+      <div class="flex items-center gap-12">
+        <a
+          class="text-headline-md font-headline-md font-black tracking-tighter text-primary dark:text-on-primary"
+          href="#"
+          >XTEP NEPAL</a
+        >
+        <div class="hidden md:flex gap-8">
+          <a
+            class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-performance-neon transition-colors duration-200 font-label-caps text-label-caps"
+            href="#"
+            >Running</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-performance-neon transition-colors duration-200 font-label-caps text-label-caps"
+            href="#"
+            >Training</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-performance-neon transition-colors duration-200 font-label-caps text-label-caps"
+            href="#"
+            >Lifestyle</a
+          >
+          <a
+            class="text-on-surface-variant dark:text-surface-variant font-medium hover:text-secondary dark:hover:text-performance-neon transition-colors duration-200 font-label-caps text-label-caps"
+            href="#"
+            >Store Locator</a
+          >
+        </div>
+      </div>
+      <div class="flex items-center gap-6">
+        <div class="hidden lg:flex items-center border-b border-primary py-1">
+          <span class="material-symbols-outlined text-primary">search</span>
+          <input
+            class="bg-transparent border-none focus:ring-0 font-label-caps text-label-caps uppercase placeholder:text-outline"
+            placeholder="SEARCH PERFORMANCE"
+            type="text"
+          />
+        </div>
+        <button
+          class="relative scale-95 active:opacity-80 transition-transform"
+        >
+          <span
+            class="material-symbols-outlined text-primary dark:text-on-primary"
+            >shopping_cart</span
+          >
+          <span
+            class="absolute -top-2 -right-2 bg-xtep-red text-white text-[12px] w-4 h-4 rounded-full flex items-center justify-center font-bold"
+            >2</span
+          >
+        </button>
+        <button class="scale-95 active:opacity-80 transition-transform">
+          <span
+            class="material-symbols-outlined text-primary dark:text-on-primary"
+            >person</span
+          >
+        </button>
+      </div>
+    </nav>
+    <main
+      class="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto"
+    >
+      <header class="mb-12">
+        <h1
+          class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-2"
+        >
+          Your Performance Lab
+        </h1>
+        <p class="font-label-caps text-label-caps text-on-surface-variant">
+          2 ITEMS IN CART — ENGINEERED IN NEPAL
+        </p>
+      </header>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+        <!-- Left Column: Cart Items -->
+        <div class="lg:col-span-8 space-y-gutter">
+          <!-- Product Card 1 -->
+          <div
+            class="group flex flex-col md:flex-row gap-6 p-4 bg-surface-container-lowest border border-outline-variant hover:border-primary transition-colors"
+          >
+            <div
+              class="w-full md:w-48 h-48 bg-surface-alt overflow-hidden flex-shrink-0"
+            >
+              <img
+                alt="Xtep 160X 5.0 PRO"
+                class="w-full h-full object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+                data-alt="A high-performance Xtep 160X 5.0 PRO marathon running shoe in a stark white and neon lime colorway. The shoe is positioned dynamically against a clean, minimalist off-white background with professional studio lighting. The focus is on the carbon plate technology and the technical mesh upper, embodying a premium athletic aesthetic with high contrast and sharp details."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuXuAF6rbKQTSeBmdLECT88LZVhuqdQru4RfdtNG6CtJ5Cz80SOl171W71tMaVZ-R2FiFbz-A6QMjBmW5C3gbHbTmbug_7B5wJzB_CJwkm81ea62ETdbMnfym_VukbQlWheIsXY9ijKE8kkAkvSlZDjN5aCIwVdYb9ddJzm0Z6ue0Z24kTnxIK7KaUixvQBZQwAgjJCvCchTnM2-r1oTPER1-Sf3CPDGDLs7IJx6QBgDmbE58_MU8hBprXr_3S542syDHMBhnPTWA"
+              />
+            </div>
+            <div class="flex-grow flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-start">
+                  <h3 class="font-headline-md text-headline-md uppercase">
+                    Xtep 160X 5.0 PRO
+                  </h3>
+                  <button
+                    class="text-outline hover:text-error transition-colors"
+                  >
+                    <span class="material-symbols-outlined">delete</span>
+                  </button>
+                </div>
+                <p
+                  class="font-label-caps text-label-caps text-on-surface-variant mt-1"
+                >
+                  COLOR: WHITE / NEON LIME
+                </p>
+                <p
+                  class="font-label-caps text-label-caps text-on-surface-variant"
+                >
+                  SIZE: 42 EU
+                </p>
+              </div>
+              <div class="mt-6 flex flex-wrap justify-between items-end">
+                <div class="flex items-center border border-outline">
+                  <button
+                    class="px-3 py-1 hover:bg-surface-container transition-colors"
+                    onclick="this.parentNode.querySelector('input').stepDown()"
+                  >
+                    -
+                  </button>
+                  <input
+                    class="w-12 text-center border-none focus:ring-0 font-body-md font-bold bg-transparent"
+                    min="1"
+                    type="number"
+                    value="1"
+                  />
+                  <button
+                    class="px-3 py-1 hover:bg-surface-container transition-colors"
+                    onclick="this.parentNode.querySelector('input').stepUp()"
+                  >
+                    +
+                  </button>
+                </div>
+                <span class="font-price-display text-price-display"
+                  >NPR 18,500</span
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Product Card 2 -->
+          <div
+            class="group flex flex-col md:flex-row gap-6 p-4 bg-surface-container-lowest border border-outline-variant hover:border-primary transition-colors"
+          >
+            <div
+              class="w-full md:w-48 h-48 bg-surface-alt overflow-hidden flex-shrink-0"
+            >
+              <img
+                alt="Xtep Dynamic Trainer"
+                class="w-full h-full object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-105"
+                data-alt="A sleek black Xtep urban training sneaker with red tactical accents. The sneaker sits on a pure white surface with a slight architectural shadow. Lighting is cinematic and sharp, highlighting the premium synthetic materials and reinforced heel structure. The vibe is aggressive performance meets urban utility, perfectly aligned with a high-end streetwear design system."
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFeZ3cjJpmnw_JIs7kuWbuOQoSm1ahKT2689P2RojYcehppIKxmmdsgZ3lZM5b6_TkMZFg2wKw7pG4KHKtvr3yGXWIMy1qtKDIb8hAykObYmTbE1V9oqsbQkqvnYq74Zw8JZCedLv4F4l1kXAzR3UyDZ3xVCwqUvEusZ3x5JXH3zwswfTEdQavdwTSRFyzRak3hPTFEn-hJYx8mgNLL2pA11tF8Lhgv8eCgaJxdzanQJqP6OnB8OLveIHhOFSU84iKKmPhi3n3nEY"
+              />
+            </div>
+            <div class="flex-grow flex flex-col justify-between">
+              <div>
+                <div class="flex justify-between items-start">
+                  <h3 class="font-headline-md text-headline-md uppercase">
+                    Xtep Dynamic Trainer
+                  </h3>
+                  <button
+                    class="text-outline hover:text-error transition-colors"
+                  >
+                    <span class="material-symbols-outlined">delete</span>
+                  </button>
+                </div>
+                <p
+                  class="font-label-caps text-label-caps text-on-surface-variant mt-1"
+                >
+                  COLOR: BLACK / PHANTOM RED
+                </p>
+                <p
+                  class="font-label-caps text-label-caps text-on-surface-variant"
+                >
+                  SIZE: 43 EU
+                </p>
+              </div>
+              <div class="mt-6 flex flex-wrap justify-between items-end">
+                <div class="flex items-center border border-outline">
+                  <button
+                    class="px-3 py-1 hover:bg-surface-container transition-colors"
+                    onclick="this.parentNode.querySelector('input').stepDown()"
+                  >
+                    -
+                  </button>
+                  <input
+                    class="w-12 text-center border-none focus:ring-0 font-body-md font-bold bg-transparent"
+                    min="1"
+                    type="number"
+                    value="1"
+                  />
+                  <button
+                    class="px-3 py-1 hover:bg-surface-container transition-colors"
+                    onclick="this.parentNode.querySelector('input').stepUp()"
+                  >
+                    +
+                  </button>
+                </div>
+                <span class="font-price-display text-price-display"
+                  >NPR 12,900</span
+                >
+              </div>
+            </div>
+          </div>
+          <a
+            class="inline-flex items-center gap-2 group mt-8 font-label-caps text-label-caps hover:text-secondary transition-colors"
+            href="#"
+          >
+            <span
+              class="material-symbols-outlined transition-transform group-hover:-translate-x-1"
+              >arrow_back</span
+            >
+            CONTINUE SHOPPING
+          </a>
+        </div>
+        <!-- Right Column: Order Summary -->
+        <div class="lg:col-span-4 sticky top-24">
+          <div class="bg-primary text-on-primary p-8 shadow-xl">
+            <h2
+              class="font-headline-md text-headline-md uppercase mb-8 border-b border-on-primary/20 pb-4"
+            >
+              Order Summary
+            </h2>
+            <div class="space-y-4 mb-8">
+              <div class="flex justify-between font-body-md">
+                <span class="opacity-70">SUBTOTAL</span>
+                <span>NPR 31,400</span>
+              </div>
+              <div class="flex justify-between font-body-md">
+                <span class="opacity-70">ESTIMATED SHIPPING</span>
+                <span>NPR 250</span>
+              </div>
+              <div class="flex justify-between font-body-md">
+                <span class="opacity-70">TAX (VAT 13%)</span>
+                <span>NPR 4,082</span>
+              </div>
+            </div>
+            <div
+              class="flex justify-between items-end border-t border-on-primary/20 pt-6 mb-10"
+            >
+              <span class="font-label-caps text-label-caps"
+                >ESTIMATED TOTAL</span
+              >
+              <span
+                class="font-display-hero text-headline-md md:text-[32px] leading-none"
+                >NPR 35,732</span
+              >
+            </div>
+            <div class="space-y-4">
+              <div class="flex gap-2">
+                <input
+                  class="flex-grow bg-on-primary/10 border-on-primary/20 text-on-primary placeholder:text-on-primary/40 focus:ring-performance-neon focus:border-performance-neon font-label-caps text-label-caps h-14"
+                  placeholder="PROMO CODE"
+                  type="text"
+                />
+                <button
+                  class="bg-surface-container-lowest text-primary px-6 font-label-caps text-label-caps hover:bg-performance-neon transition-colors duration-300"
+                >
+                  APPLY
+                </button>
+              </div>
+              <button
+                class="w-full bg-performance-neon text-primary py-5 font-headline-md text-headline-md uppercase tracking-tighter hover:bg-white transition-all duration-300 active:scale-[0.98]"
+              >
+                Proceed to Checkout
+              </button>
+              <p
+                class="text-center font-label-caps text-[12px] opacity-50 uppercase tracking-widest mt-4"
+              >
+                Safe &amp; Secure Transactions via Fonepay / Khalti
+              </p>
+            </div>
+          </div>
+          <!-- Local Advantage Chip -->
+          <div
+            class="mt-6 flex items-center gap-4 p-4 border border-outline-variant bg-surface-container-low"
+          >
+            <span class="material-symbols-outlined text-xtep-red"
+              >local_shipping</span
+            >
+            <div>
+              <p class="font-label-caps text-label-caps">FAST NEPAL DELIVERY</p>
+              <p class="text-[11px] text-on-surface-variant">
+                Arrives in 2-4 business days within Kathmandu Valley.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="w-full mt-section-gap bg-primary dark:bg-surface-container-lowest text-on-primary dark:text-on-surface"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-16 w-full"
+      >
+        <div class="col-span-1 md:col-span-1">
+          <h2
+            class="text-headline-lg font-headline-lg font-black text-on-primary dark:text-on-surface leading-none mb-6"
+          >
+            XTEP
+          </h2>
+          <p class="font-body-md text-body-md opacity-70">
+            Redefining performance since 2001. Now engineered for the peaks of
+            Nepal.
+          </p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4
+            class="font-label-caps text-label-caps text-performance-neon mb-2"
+          >
+            EXPLORE
+          </h4>
+          <a
+            class="text-surface-variant dark:text-on-surface-variant hover:text-performance-neon dark:hover:text-secondary transition-colors font-body-md"
+            href="#"
+            >Running Gear</a
+          >
+          <a
+            class="text-surface-variant dark:text-on-surface-variant hover:text-performance-neon dark:hover:text-secondary transition-colors font-body-md"
+            href="#"
+            >Training Essentials</a
+          >
+          <a
+            class="text-surface-variant dark:text-on-surface-variant hover:text-performance-neon dark:hover:text-secondary transition-colors font-body-md"
+            href="#"
+            >Size Guide</a
+          >
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4
+            class="font-label-caps text-label-caps text-performance-neon mb-2"
+          >
+            SUPPORT
+          </h4>
+          <a
+            class="text-surface-variant dark:text-on-surface-variant hover:text-performance-neon dark:hover:text-secondary transition-colors font-body-md"
+            href="#"
+            >Privacy Policy</a
+          >
+          <a
+            class="text-surface-variant dark:text-on-surface-variant hover:text-performance-neon dark:hover:text-secondary transition-colors font-body-md"
+            href="#"
+            >Terms of Service</a
+          >
+          <a
+            class="text-surface-variant dark:text-on-surface-variant hover:text-performance-neon dark:hover:text-secondary transition-colors font-body-md"
+            href="#"
+            >Shipping &amp; Returns</a
+          >
+        </div>
+        <div class="flex flex-col gap-4">
+          <h4
+            class="font-label-caps text-label-caps text-performance-neon mb-2"
+          >
+            CONNECT
+          </h4>
+          <a
+            class="text-surface-variant dark:text-on-surface-variant hover:text-performance-neon dark:hover:text-secondary transition-colors font-body-md"
+            href="#"
+            >Contact Us</a
+          >
+          <a
+            class="text-surface-variant dark:text-on-surface-variant hover:text-performance-neon dark:hover:text-secondary transition-colors font-body-md"
+            href="#"
+            >Instagram</a
+          >
+          <a
+            class="text-surface-variant dark:text-on-surface-variant hover:text-performance-neon dark:hover:text-secondary transition-colors font-body-md"
+            href="#"
+            >Facebook</a
+          >
+        </div>
+      </div>
+      <div
+        class="px-margin-mobile md:px-margin-desktop py-8 border-t border-on-primary/10"
+      >
+        <p class="font-label-caps text-label-caps opacity-50">
+          © 2024 XTEP NEPAL. ENGINEERED FOR PERFORMANCE.
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Quantity interaction logic
+      document.querySelectorAll('input[type="number"]').forEach((input) => {
+        input.addEventListener("change", function () {
+          if (this.value < 1) this.value = 1;
+          // Add micro-interaction or update subtotal here if needed
+          console.log("Cart updated");
+        });
+      });
+
+      // Hover effect for promo button
+      const promoBtn = document.querySelector(
+        "button.bg-surface-container-lowest",
+      );
+      promoBtn?.addEventListener("mouseenter", () => {
+        promoBtn.style.transform = "skewX(-5deg)";
+      });
+      promoBtn?.addEventListener("mouseleave", () => {
+        promoBtn.style.transform = "skewX(0deg)";
+      });
+    </script>
+  </body>
+</html>

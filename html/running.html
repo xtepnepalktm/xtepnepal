@@ -1,0 +1,678 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>XTEP NEPAL | OWN THE ROAD</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;700&amp;family=JetBrains+Mono:wght@600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;family=Sora:wght@100..900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container": "#eeeeee",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed": "#1b1b1b",
+              "primary-container": "#1b1b1b",
+              "on-secondary-fixed-variant": "#930007",
+              primary: "#000000",
+              "tertiary-fixed-dim": "#aed500",
+              outline: "#7e7576",
+              "on-tertiary-fixed-variant": "#3d4d00",
+              "primary-fixed": "#e2e2e2",
+              "inverse-on-surface": "#f1f1f1",
+              "xtep-red": "#E60012",
+              "tertiary-container": "#171e00",
+              "on-primary": "#ffffff",
+              "surface-alt": "#F5F5F5",
+              "on-tertiary-container": "#738e00",
+              "on-background": "#1a1c1c",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed": "#410001",
+              "surface-container-high": "#e8e8e8",
+              "on-surface-variant": "#4c4546",
+              "surface-container-low": "#f3f3f3",
+              "on-secondary": "#ffffff",
+              "performance-neon": "#D1FF00",
+              surface: "#f9f9f9",
+              "secondary-container": "#e90614",
+              "surface-bright": "#f9f9f9",
+              error: "#ba1a1a",
+              "surface-dim": "#dadada",
+              "secondary-fixed": "#ffdad5",
+              "on-tertiary-fixed": "#171e00",
+              "on-error": "#ffffff",
+              "outline-variant": "#cfc4c5",
+              "inverse-surface": "#2f3131",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#e2e2e2",
+              "surface-tint": "#5e5e5e",
+              "inverse-primary": "#c6c6c6",
+              "on-secondary-container": "#fffbff",
+              tertiary: "#000000",
+              "on-primary-container": "#848484",
+              secondary: "#bc000c",
+              "surface-variant": "#e2e2e2",
+              "secondary-fixed-dim": "#ffb4aa",
+              "primary-fixed-dim": "#c6c6c6",
+              "tertiary-fixed": "#c7f300",
+              "asphalt-gray": "#333333",
+              background: "#f9f9f9",
+              "on-primary-fixed-variant": "#474747",
+              "on-surface": "#1a1c1c",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "24px",
+              unit: "4px",
+              "section-gap": "120px",
+              "margin-mobile": "20px",
+              "margin-desktop": "64px",
+            },
+            fontFamily: {
+              "price-display": ["Sora"],
+              "label-caps": ["JetBrains Mono"],
+              "display-hero": ["Sora"],
+              "body-lg": ["Hanken Grotesk"],
+              "headline-lg": ["Sora"],
+              "headline-md": ["Sora"],
+              "body-md": ["Hanken Grotesk"],
+              "headline-lg-mobile": ["Sora"],
+            },
+            fontSize: {
+              "price-display": [
+                "20px",
+                { lineHeight: "24px", fontWeight: "700" },
+              ],
+              "label-caps": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.1em",
+                  fontWeight: "600",
+                },
+              ],
+              "display-hero": [
+                "84px",
+                {
+                  lineHeight: "90px",
+                  letterSpacing: "-0.04em",
+                  fontWeight: "800",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "headline-lg": [
+                "48px",
+                {
+                  lineHeight: "52px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "headline-lg-mobile": [
+                "32px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .shear-hover:hover {
+        transform: skewX(-12deg);
+      }
+      .hide-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .hide-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body-md selection:bg-performance-neon selection:text-primary overflow-x-hidden"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="flex justify-between items-center px-margin-desktop py-4 w-full sticky top-0 z-50 bg-surface-container-lowest dark:bg-primary border-b border-outline-variant transition-all duration-300 ease-in-out"
+    >
+      <div class="flex items-center gap-8">
+        <span
+          class="font-headline-md text-headline-md font-extrabold tracking-tighter text-secondary"
+          >XTEP NEPAL</span
+        >
+        <div class="hidden md:flex items-center gap-6">
+          <a
+            class="font-body-md text-body-md text-secondary border-b-2 border-secondary pb-1 hover:opacity-80 transition-opacity"
+            href="#"
+            >Running</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:opacity-80 transition-opacity"
+            href="#"
+            >Training</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:opacity-80 transition-opacity"
+            href="#"
+            >Lifestyle</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:opacity-80 transition-opacity"
+            href="#"
+            >Xtep Lab</a
+          >
+          <a
+            class="font-body-md text-body-md text-on-surface-variant hover:text-primary hover:opacity-80 transition-opacity"
+            href="#"
+            >Store Locator</a
+          >
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div
+          class="hidden lg:flex items-center border-b border-primary py-1 mr-4"
+        >
+          <input
+            class="bg-transparent border-none focus:ring-0 font-label-caps text-label-caps placeholder:text-outline p-0 uppercase"
+            placeholder="SEARCH PERFORMANCE"
+            type="text"
+          />
+          <span
+            class="material-symbols-outlined text-primary"
+            data-icon="search"
+            >search</span
+          >
+        </div>
+        <button class="hover:opacity-80 transition-opacity">
+          <span class="material-symbols-outlined" data-icon="person"
+            >person</span
+          >
+        </button>
+        <button class="hover:opacity-80 transition-opacity relative">
+          <span class="material-symbols-outlined" data-icon="shopping_bag"
+            >shopping_bag</span
+          >
+          <span
+            class="absolute -top-1 -right-1 bg-secondary text-on-primary text-[12px] w-4 h-4 rounded-full flex items-center justify-center font-bold"
+            >2</span
+          >
+        </button>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <header
+      class="relative w-full h-[921px] overflow-hidden flex items-center px-margin-desktop"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          class="w-full h-full object-cover"
+          data-alt="A cinematic, high-speed photograph of an elite marathoner in mid-stride on a winding mountain road in Nepal. The runner is wearing advanced Xtep athletic gear, with dust kicking up from their high-performance shoes. The morning sun creates a high-contrast lighting effect with long shadows, emphasizing the muscular tension and forward momentum. The background shows sharp Himalayan peaks under a clear blue sky."
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKGCFVFChD7ppZBwYsgnxAkCHLu2rB2UUGaup8iV7kGfqv-S3npFYZt_CWtog40c76R58B-9K7JafUjkgGiCOVRjUb5JgNAMnKtSXsvM_-ctQNVGyUm8LsaSQaeGpAPnSVkb8njn0C772-68KOCLhWNH9Ew0D1njHUf8EYDc2_68Zu2hJ9TlbgiD55_Sn0JfPlM__J7cCNUZ-C47KFoXTCoxQ30d0eTfvHnUK-A9GrQ6I6e0KbR4Sl5rLrxItFOKyjTAbOQCiTRcU"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent"
+        ></div>
+      </div>
+      <div class="relative z-10 max-w-4xl">
+        <h1 class="font-display-hero text-display-hero text-white mb-8">
+          OWN<br />THE ROAD
+        </h1>
+        <div class="flex flex-wrap gap-4">
+          <button
+            class="bg-performance-neon text-primary px-10 py-4 font-headline-md uppercase tracking-wider transition-all hover:bg-white hover:scale-105 active:scale-95"
+          >
+            Shop Footwear
+          </button>
+          <button
+            class="bg-primary text-white px-10 py-4 font-headline-md uppercase tracking-wider transition-all hover:bg-secondary hover:scale-105 active:scale-95 border border-white/20"
+          >
+            Shop Apparel
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Sub-Nav Pills -->
+    <section
+      class="py-12 bg-white flex justify-center overflow-x-auto hide-scrollbar border-b border-surface-container"
+    >
+      <div class="flex gap-4 px-margin-mobile">
+        <button
+          class="px-8 py-2 rounded-full border border-primary text-primary font-label-caps hover:bg-primary hover:text-white transition-colors whitespace-nowrap"
+        >
+          MEN
+        </button>
+        <button
+          class="px-8 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
+        >
+          WOMEN
+        </button>
+        <button
+          class="px-8 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
+        >
+          PROFESSIONAL
+        </button>
+        <button
+          class="px-8 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
+        >
+          BEGINNER
+        </button>
+        <button
+          class="px-8 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
+        >
+          APPAREL
+        </button>
+        <button
+          class="px-8 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-caps hover:border-primary hover:text-primary transition-colors whitespace-nowrap"
+        >
+          ACCESSORIES
+        </button>
+      </div>
+    </section>
+    <!-- Xtep Lab Block -->
+    <section
+      class="w-full bg-asphalt-gray py-section-gap px-margin-desktop grid md:grid-cols-2 gap-16 items-center"
+    >
+      <div class="relative group">
+        <div
+          class="absolute inset-0 bg-performance-neon/10 blur-3xl rounded-full scale-75 group-hover:scale-100 transition-transform duration-700"
+        ></div>
+        <img
+          class="relative z-10 w-full hover:scale-105 transition-transform duration-500"
+          data-alt="An exploded 3D technical graphic of a professional Xtep running shoe against a dark charcoal background. The image highlights a glowing carbon fiber plate and neon-colored responsive foam layers being separated to show the internal engineering. High-tech digital callouts and blueprint-style lines point to specific propulsion technologies. The lighting is cold, blue-toned, and sharp, reflecting a high-performance laboratory setting."
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyNxKxq3whweCRmbtE_wPx6zPQK5Jy6B6gz6gIWBDoIDdRghP9SvHa6NDG0q3KbsOYiRIhwqhydJGsN_pNGJIuJt5Ys2S4UUqhmZ_GMbnv3Ajijjb5G5QbciwBijnsSX6zc-rtPwQ3IT3hHb4YLf1eLgzFxmUyDL_AdbJ5rYz05US3HberhQxgDHSlaOWRWd-xiqwg4pJrrS7Be5D0dPpouvmkULh8m-61j0SRBfeQ-lW9WyxCbLiJ5KvuBz6NR5PClMy3s8zrjHU"
+        />
+      </div>
+      <div class="text-white space-y-6">
+        <span
+          class="font-label-caps text-performance-neon text-label-caps tracking-[0.4em] uppercase"
+          >XTEP LAB TECHNOLOGY</span
+        >
+        <h2 class="font-headline-lg text-headline-lg">
+          THE SCIENCE OF<br />PROPULSION
+        </h2>
+        <p
+          class="font-body-lg text-body-lg text-surface-container max-w-lg leading-relaxed"
+        >
+          Engineered in the Xtep Lab, our signature carbon plate technology and
+          hyper-responsive foam deliver unmatched energy return. Designed for
+          the elite, refined for the everyday athlete.
+        </p>
+        <a
+          class="inline-flex items-center gap-4 font-headline-md text-performance-neon hover:gap-6 transition-all group"
+          href="#"
+        >
+          EXPLORE XTEP LAB
+          <span
+            class="material-symbols-outlined group-hover:translate-x-1 transition-transform"
+            data-icon="arrow_forward"
+            >arrow_forward</span
+          >
+        </a>
+      </div>
+    </section>
+    <!-- Best Sellers Carousel -->
+    <section class="py-section-gap px-margin-desktop bg-white">
+      <div class="flex justify-between items-end mb-16">
+        <div>
+          <span
+            class="font-label-caps text-secondary text-label-caps block mb-2 uppercase"
+            >Curation</span
+          >
+          <h2 class="font-headline-lg text-headline-lg">
+            TOP RATED IN RUNNING
+          </h2>
+        </div>
+        <div class="flex gap-2">
+          <button
+            class="w-12 h-12 border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+          >
+            <span class="material-symbols-outlined" data-icon="chevron_left"
+              >chevron_left</span
+            >
+          </button>
+          <button
+            class="w-12 h-12 border border-outline-variant flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+          >
+            <span class="material-symbols-outlined" data-icon="chevron_right"
+              >chevron_right</span
+            >
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+        <!-- Product Card 1 -->
+        <div class="group cursor-pointer">
+          <div
+            class="aspect-[4/5] bg-surface-alt relative overflow-hidden mb-6"
+          >
+            <img
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              data-alt="Studio shot of a professional Xtep marathon racing shoe in white and vibrant red. The shoe is positioned mid-air against a clean light gray background. It features a sleek, aerodynamic profile with a thick, textured midsole and a translucent mesh upper. The lighting is bright and uniform, highlighting the high-quality synthetic materials."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBi6FumGolBM_yVSULq7ANZIepj0M0uwbAYPUg8MMEIwuw9rw-IjucsnE3dmweHhsWxr9JMNPsWKGLtlWxEKCkOKB5BCFqldLTtdr-utY5OWQaMULnV_1usSC-ffx6HxhSMO710mYNJC57yagj0DLUVuECurL28kZaxyzgtIYwt6tnCu0L1jPGW5uL__YHeHgeHp-abWBiTnm_sCedWRJ_wv4wM38Biim4Tecmg9HGPbQdhMMrtpmFU_eAiVB8LBIlAewIhlXqc9vU"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-4 bg-primary/90 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all"
+            >
+              <button
+                class="w-full py-3 bg-secondary text-white font-label-caps uppercase hover:bg-xtep-red transition-colors"
+              >
+                Quick Add
+              </button>
+            </div>
+            <span
+              class="absolute top-4 left-4 bg-performance-neon px-3 py-1 font-label-caps text-[12px]"
+              >NEW ARRIVAL</span
+            >
+          </div>
+          <h3 class="font-headline-md text-headline-md mb-1 uppercase">
+            160X 5.0 PRO
+          </h3>
+          <p class="font-price-display text-price-display text-primary">
+            NPR 18,500
+          </p>
+        </div>
+        <!-- Product Card 2 -->
+        <div class="group cursor-pointer">
+          <div
+            class="aspect-[4/5] bg-surface-alt relative overflow-hidden mb-6"
+          >
+            <img
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              data-alt="A sleek black Xtep running shoe for daily training. The shoe features breathable fabric construction with subtle reflective accents on the heel. It is shot in a professional studio setting on a minimalist gray surface with soft shadow definition. The overall aesthetic is tactical and premium."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdsnCch4kj6Khn5LocOpFo7aBbbotu3QYlTPmunWRI0wu7HtvtYHkVev9erX3HWhYxFNnTdCETO9ESslnjwEG-PV1BZKMfHXXzBjNDV297UTs8-1eBpZcKcNRISADC3h_pk6kJZ_Qw-Q0ClZoubfYcQLabGuzETSko18Oeh45HiNvrvbbJDuSxKmoOeGtxNG23qcSyNh3e1v5rJhv195jH4JpTF5bI4Ebhi5VhyoGWMUxQxKXnXCDvematFbllwSDO7UVnGQK16mQ"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-4 bg-primary/90 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all"
+            >
+              <button
+                class="w-full py-3 bg-secondary text-white font-label-caps uppercase hover:bg-xtep-red transition-colors"
+              >
+                Quick Add
+              </button>
+            </div>
+          </div>
+          <h3 class="font-headline-md text-headline-md mb-1 uppercase">
+            GHOST SPEED II
+          </h3>
+          <p class="font-price-display text-price-display text-primary">
+            NPR 12,900
+          </p>
+        </div>
+        <!-- Product Card 3 -->
+        <div class="group cursor-pointer">
+          <div
+            class="aspect-[4/5] bg-surface-alt relative overflow-hidden mb-6"
+          >
+            <img
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              data-alt="Top view of an Xtep high-performance stability running shoe in neon green and charcoal gray. The design features a complex lacing system and a reinforced heel counter. The studio lighting emphasizes the layered textures of the technical mesh and supportive overlays."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOogiS4p0nXTqUA1laYooHR5-GcTn9EwFZmc5ENnnPK6vSK0GaNm0b7clMGTQ6-6krqEJjuycZJZ0X95YVkliiHKIHcnMQXY0TZf15Nlpf4wUX5x_3XlQ9fkkI9OL1xK-xiOb-N816Dn4CXA9SB3aTeKsvC8UEAgEm1w1xx_7eluIW2IJOK3SdYo0v2FcQWVgu6WKgLX5NIvc8VKhs0ruQviYHzKpVmDtZzghOuDTIJqMOyk6ZmbfyUxOb4HMcVFTXrlCoakv3uRw"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-4 bg-primary/90 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all"
+            >
+              <button
+                class="w-full py-3 bg-secondary text-white font-label-caps uppercase hover:bg-xtep-red transition-colors"
+              >
+                Quick Add
+              </button>
+            </div>
+          </div>
+          <h3 class="font-headline-md text-headline-md mb-1 uppercase">
+            ULTRA REACT 3
+          </h3>
+          <p class="font-price-display text-price-display text-primary">
+            NPR 14,200
+          </p>
+        </div>
+        <!-- Product Card 4 -->
+        <div class="group cursor-pointer">
+          <div
+            class="aspect-[4/5] bg-surface-alt relative overflow-hidden mb-6"
+          >
+            <img
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              data-alt="A close-up shot of an Xtep lightweight race shoe in sky blue. The focus is on the intricate knit upper and the aggressive traction pattern on the outsole. The lighting is cinematic, coming from the side to create deep shadows and bright highlights on the technical fabric."
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHKcRMnfv3dVeG076knUzBECtk6y0Gqz1XW8g_dAeGsNbLD7jGgmORlHrrq1LliX64uaTk1G_fcGyVdK1uXVGR1goA19EDO2LqxIayN8FGBnUwr2VCoi7ZaNK7cHjp1dWwIYOBRsdCbIK1IO1fpCfykJz_zxiNwQ_AnYni-Zvdboq8D7_0QXxZvFeq7hqEjzt3-5vOXNI-CWynXIYypKWilrE_jZ9IxbjWuvsK4rbckdoiWWlba2dSUlMNy50j4BDz3py_w9sqIbs"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 p-4 bg-primary/90 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all"
+            >
+              <button
+                class="w-full py-3 bg-secondary text-white font-label-caps uppercase hover:bg-xtep-red transition-colors"
+              >
+                Quick Add
+              </button>
+            </div>
+            <span
+              class="absolute top-4 left-4 bg-primary text-white px-3 py-1 font-label-caps text-[12px]"
+              >BEST VALUE</span
+            >
+          </div>
+          <h3 class="font-headline-md text-headline-md mb-1 uppercase">
+            PACE NITRO 500
+          </h3>
+          <p class="font-price-display text-price-display text-primary">
+            NPR 9,500
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Athlete Story -->
+    <section class="w-full bg-white flex flex-col md:flex-row min-h-[716px]">
+      <div class="md:w-1/2 relative h-[512px] md:h-auto overflow-hidden">
+        <img
+          class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
+          data-alt="A powerful portrait of an elite professional runner standing in a rain-slicked stadium at dusk. The athlete is focused and intense, wearing an Xtep technical racing jersey and compression tights. Dramatic stadium spotlights create flare and a moody atmosphere, highlighting water droplets on their face and gear. The scene captures the raw dedication of a top-tier performer."
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkCYS6afLmLkc0NEfw7NHKQ0gPA99PF-X7U-72q9SAnskeQQONhtjExefE2atsDK626Acj8NuHo3scxmwcxdIrjARmmCwYgdYsrMYXjfV5rLs25WLEt5Dpl8qLjASdScAMIu6tIo5c-9o3ym5C3J9lQFAeyWtxhr29yUbFtMolCZGrto96AfmTgbDiJAn3wlL0u2MxlJMFNojuIamDJ1wv8CtNzChBt4uJFvDboBvxkvOMB2kOPgi7L0fK4ODL1nX39Avk56nsY5g"
+        />
+      </div>
+      <div
+        class="md:w-1/2 flex items-center justify-center p-margin-desktop bg-surface-alt relative"
+      >
+        <div
+          class="absolute top-0 right-0 w-32 h-32 bg-performance-neon -z-0 translate-x-1/2 -translate-y-1/2 rotate-45 opacity-50"
+        ></div>
+        <div class="relative z-10 max-w-lg">
+          <span
+            class="material-symbols-outlined text-secondary text-6xl mb-8"
+            data-icon="format_quote"
+            >format_quote</span
+          >
+          <blockquote
+            class="font-headline-lg text-headline-lg italic mb-8 leading-tight"
+          >
+            "SPEED IS A SCIENCE. PERFORMANCE IS A CHOICE."
+          </blockquote>
+          <p class="font-body-lg text-body-lg mb-10 text-on-surface-variant">
+            Born from the rigorous testing of the Xtep Lab, our elite gear is
+            designed for those who refuse to settle for second place.
+          </p>
+          <button
+            class="bg-primary text-white px-12 py-4 font-headline-md uppercase tracking-widest hover:bg-secondary transition-all"
+          >
+            Shop Their Look
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Collection Grid -->
+    <section class="py-section-gap px-margin-desktop bg-white">
+      <h2 class="font-headline-lg text-headline-lg text-center mb-16">
+        BORN TO RUN
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div class="aspect-square relative overflow-hidden group">
+          <img
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            data-alt="High-action shot of trail running shoes on rocky mountain terrain."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmoNJnS3y7kSy2xvpEP20DIrDOybEacJXnXaENEVauvAqd4mAiBcILAcZ560FLlTl806uxpxtsv37Z4EOHapr0siZ9ZEEv_3SKen4w8weooVVZSre7tR8sG0YQCdHalIInr4wtrH8RTco1dqJMYwIxsOFSVcP2NqvQFYEuqGYbZdejSm7gBgXL6W0E6TdODFXDtxscqKPW5adH-9GoRaD7i4wNGSduaT_NgCvuuSO-y6aERtXnUnI8yuf1-7g6-tx8WoVR0BWehcw"
+          />
+        </div>
+        <div class="aspect-square relative overflow-hidden group">
+          <img
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            data-alt="Close up of a runner's legs in Xtep compression apparel."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiXQgjVw6xVvjy0obMBYYFzM-YuamdY7ZYCLfg5Ixl-K90HY4qhxoAS2OBeuYges6fGAwkhCoG8-H9CTn6eS8mJ7uHzHV2IJWL7X1PnJWKIKeQQKqLWnMyLXv5BUsaRlgL080O9_oroGexQbS-Rteza7qLEPRZ34FxzvStZhv8R_9Ojfn_aGAyu3PmPxTuJvCLIdgm-xBFN4_kIjCTG1NzikGDk-3IWeprZ1HVH7Kw2niXHDb7F3tnozH5L3qDnFsu4hYu99McO60"
+          />
+        </div>
+        <div class="aspect-square relative overflow-hidden group">
+          <img
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            data-alt="Dynamic shot of a runner sprinting on a city track."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTUqbVzlmvecHKMQBpzQ8lDv8KSVGaZmU-fvHcUnOwKmRSJIU9p3oIvOXhT8W_SBWWCUL1ozj3LXnWw3UFd47CXTpyHHNuGU2xIKXauO0dwHVznUi3HPEd-XX-6rN4SD02kvPqHVpQxK39UMGsvLa8VRR5Pwjyz8rzSv6Y0rMiZSKGvOlkAR9UAnPRCpGni9DmoEhyBubaPiIazBFHSLKbyIfwUfKTG_G8GQ4YokEb8km7Sdn3jOGeJ-91nqQ_ddSCBcByBosgTDg"
+          />
+        </div>
+        <div class="aspect-square relative overflow-hidden group md:col-span-2">
+          <img
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            data-alt="A wide cinematic landscape of athletes running through misty hills in Nepal."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw9HDV5A9XtCa_gxGi3mW1zlKTX1CNudJstWcxHB9txrqNRpUaZtLda5Jc4oi5wvjlDCfjMgT5azGPzo6FqlfUk11US6of9WWXO9ds12vEsu0FyeJ6XkJoGY-RzyYzJGYbqyM6UBxaXqBHwf5B-yUkkD4GvH6F6i7W1L0SiHTMgFtUWp2wnJmPw4G3aDLsCc3pUK5ritxVU0eq-qwvdghfElUarDNS_Ui4ybzb-2ZkPBhgFcebgvLHNTt8ryp_iPiUuGgIqoUM6n4"
+          />
+        </div>
+        <div class="aspect-square relative overflow-hidden group">
+          <img
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            data-alt="Xtep accessories including a running watch and hydro-pack."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQa5m0Jwjg6ahFVAtXqxTy3Y0uXQR3_ZONoOQTpmsOB9RanLXRicaCk4gE9Zo-tXdZ3lAEuLM14qgsaSo5AyfiHi7zhL8Fyb_1ZImOWoR4PIFZJT0IYFuV-Urrx7isFSGy0f0EJO0p7PLNaNGckgZvYFxearT6WKyoYxxunlbOBdH1JoaEWYTb1RG-o3T-bscM_wrg10K2-r3W_8UH2-plvNsNrqkfxevGOhUM9izd7ilLUtazwFK1qGSPLdaHZpC1zjWB2wN1MPc"
+          />
+        </div>
+        <div class="aspect-square relative overflow-hidden group">
+          <img
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            data-alt="Atmospheric shot of running shoes in a high-tech gym setting."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHRuVB6xQgz3ZzVpJSwwn02YqH3xYCIsuuxAJkcLMlLGEZawi7r98V4jrmtCR7bcl90RX37yH0xYm909jyRtHSrF46k9biH5NYWP-Hvdg7pv5WVgKxz57PCP67wputyyLaSwVjG2bR9vjY0Hw5kPaDZ3G0cADd2esWCpda9rPgqlJJoSZpTB8atMifgPA4lpI2UpUTlKz_J9nTf6RG6wkFjQ0uWke5y-mRAMqfKrQyVquQlkr46Aj0t4L9jZAwVrwRkGFrCDeOLbA"
+          />
+        </div>
+        <div class="aspect-square relative overflow-hidden group md:col-span-2">
+          <img
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            data-alt="Modern retail store interior of Xtep showing high-end display units."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzT1fmHgonaprmX5mf5RPq_o5Q99mntu4T-zbUN5zp5J4L8VSQ7kcAyaV0-6xITahxaOWJJX2C-eboBu2xIu-phd8ppwNujcXzmlNGV_jLZMA3YAllJM5AKRg_UPZuSjWEwCZ1M-91U5rRakszHg1U7vEXbUUWLfdnjsfzDK4LerZGUOYwk9pnBu1zUpJDvfnqO4UVvGc5if5hUD360btc_B8e2_3VQXTbdlr9C1Bd8BI2QZMbfnGO9LzdWoR4xSesV8rhvg8RJV4"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Footer CTA -->
+    <a
+      class="block w-full bg-secondary text-on-primary py-24 text-center group relative overflow-hidden transition-all duration-500 hover:bg-xtep-red"
+      href="#"
+    >
+      <div
+        class="absolute inset-0 bg-white/5 opacity-0 group-hover:opacity-100 transition-opacity"
+      ></div>
+      <span
+        class="relative z-10 font-display-hero text-[40px] md:text-display-hero uppercase tracking-tighter transition-all group-hover:scale-105 inline-block"
+      >
+        View All Running Products
+      </span>
+    </a>
+    <!-- Footer -->
+    <footer
+      class="w-full px-margin-desktop py-section-gap flex flex-col items-center text-center bg-primary dark:bg-surface-container text-on-primary dark:text-on-surface"
+    >
+      <div class="font-headline-lg text-headline-lg text-on-primary mb-12">
+        XTEP NEPAL
+      </div>
+      <div class="flex flex-wrap justify-center gap-8 mb-16">
+        <a
+          class="font-label-caps text-label-caps text-on-primary-container hover:text-secondary transition-colors uppercase"
+          href="#"
+          >Terms of Service</a
+        >
+        <a
+          class="font-label-caps text-label-caps text-on-primary-container hover:text-secondary transition-colors uppercase"
+          href="#"
+          >Privacy Policy</a
+        >
+        <a
+          class="font-label-caps text-label-caps text-on-primary-container hover:text-secondary transition-colors uppercase"
+          href="#"
+          >Shipping Info</a
+        >
+        <a
+          class="font-label-caps text-label-caps text-on-primary-container hover:text-secondary transition-colors uppercase"
+          href="#"
+          >Returns</a
+        >
+        <a
+          class="font-label-caps text-label-caps text-on-primary-container hover:text-secondary transition-colors uppercase"
+          href="#"
+          >Contact Us</a
+        >
+      </div>
+      <div
+        class="w-full max-w-4xl border-t border-white/10 pt-12 text-on-primary-container opacity-60"
+      >
+        <p class="font-label-caps text-label-caps uppercase">
+          © 2024 XTEP NEPAL. ALL RIGHTS RESERVED. ENGINEERED FOR PEAK
+          PERFORMANCE.
+        </p>
+      </div>
+    </footer>
+    <script>
+      // Simple intersection observer for reveal effects
+      const observerOptions = {
+        threshold: 0.1,
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("opacity-100", "translate-y-0");
+            entry.target.classList.remove("opacity-0", "translate-y-10");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll("section").forEach((section) => {
+        section.classList.add(
+          "transition-all",
+          "duration-1000",
+          "opacity-0",
+          "translate-y-10",
+        );
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>

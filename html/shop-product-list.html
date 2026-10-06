@@ -1,0 +1,942 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>XTEP NEPAL | High-Performance Sportswear</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&amp;family=Inter:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#c6c6c7",
+              "on-primary": "#ffffff",
+              "on-tertiary-container": "#fdfdfd",
+              background: "#fbf9f9",
+              "error-container": "#ffdad6",
+              error: "#ba1a1a",
+              "on-secondary-container": "#636262",
+              "surface-bright": "#fbf9f9",
+              outline: "#936e69",
+              "on-secondary-fixed": "#1c1b1b",
+              primary: "#bc0002",
+              "on-tertiary-fixed-variant": "#454747",
+              "secondary-container": "#e2dfde",
+              "on-background": "#1b1c1c",
+              "surface-variant": "#e4e2e2",
+              "tertiary-fixed": "#e2e2e2",
+              "surface-tint": "#c00002",
+              "on-error": "#ffffff",
+              "inverse-on-surface": "#f2f0f0",
+              "surface-container-high": "#e9e8e7",
+              "secondary-fixed-dim": "#c8c6c5",
+              "on-primary-fixed": "#410000",
+              "on-tertiary-fixed": "#1a1c1c",
+              surface: "#fbf9f9",
+              "on-primary-container": "#fffbff",
+              "on-tertiary": "#ffffff",
+              "primary-fixed": "#ffdad5",
+              "inverse-surface": "#303031",
+              "on-secondary-fixed-variant": "#474746",
+              secondary: "#5f5e5e",
+              "surface-container": "#efeded",
+              "on-surface": "#1b1c1c",
+              "tertiary-container": "#737575",
+              "inverse-primary": "#ffb4a8",
+              "secondary-fixed": "#e5e2e1",
+              "surface-container-highest": "#e4e2e2",
+              "surface-dim": "#dbdad9",
+              "surface-container-lowest": "#ffffff",
+              "on-primary-fixed-variant": "#930001",
+              tertiary: "#5b5c5d",
+              "on-error-container": "#93000a",
+              "outline-variant": "#e8bcb6",
+              "on-surface-variant": "#5e3f3a",
+              "primary-container": "#e61911",
+              "on-secondary": "#ffffff",
+              "surface-container-low": "#f5f3f3",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "stack-lg": "32px",
+              gutter: "24px",
+              "container-max": "1280px",
+              "stack-md": "16px",
+              "section-gap": "120px",
+              "margin-desktop": "64px",
+              "stack-sm": "8px",
+              "margin-mobile": "20px",
+            },
+            fontFamily: {
+              "headline-lg-mobile": ["Montserrat"],
+              "stat-lg": ["Montserrat"],
+              "headline-lg": ["Montserrat"],
+              "body-md": ["Inter"],
+              "headline-md": ["Montserrat"],
+              "label-bold": ["Montserrat"],
+              "body-lg": ["Inter"],
+              "display-hero": ["Montserrat"],
+            },
+            fontSize: {
+              "headline-lg-mobile": [
+                "32px",
+                { lineHeight: "1.2", fontWeight: "800" },
+              ],
+              "stat-lg": [
+                "56px",
+                {
+                  lineHeight: "1",
+                  letterSpacing: "-0.01em",
+                  fontWeight: "900",
+                },
+              ],
+              "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "800" }],
+              "body-md": ["16px", { lineHeight: "1.5", fontWeight: "400" }],
+              "headline-md": ["24px", { lineHeight: "1.3", fontWeight: "700" }],
+              "label-bold": [
+                "14px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "0.05em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+              "display-hero": [
+                "72px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "900",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .product-card-hover:hover .add-to-bag-overlay {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .image-zoom:hover img {
+        transform: scale(1.05);
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #dbdad9;
+      }
+      .filter-transition {
+        transition:
+          max-height 0.3s ease-in-out,
+          opacity 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+    <!-- Top Navigation Bar -->
+    <header
+      class="bg-surface-container-lowest border-b border-surface-container-highest sticky top-0 z-50"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin-desktop max-w-[1440px] mx-auto h-[80px]"
+      >
+        <a
+          class="text-headline-md font-headline-md font-black tracking-tighter text-on-surface"
+          href="#"
+          >XTEP NEPAL</a
+        >
+        <nav class="hidden md:flex items-center gap-8">
+          <a
+            class="text-label-bold font-label-bold text-on-surface-variant hover:text-primary transition-colors uppercase"
+            href="#"
+            >Home</a
+          >
+          <a
+            class="text-label-bold font-label-bold text-primary border-b-2 border-primary pb-1 uppercase"
+            href="#"
+            >Shop</a
+          >
+          <a
+            class="text-label-bold font-label-bold text-on-surface-variant hover:text-primary transition-colors uppercase"
+            href="#"
+            >Xtep Stories</a
+          >
+          <a
+            class="text-label-bold font-label-bold text-on-surface-variant hover:text-primary transition-colors uppercase"
+            href="#"
+            >Xtep Lab</a
+          >
+          <a
+            class="text-label-bold font-label-bold text-on-surface-variant hover:text-primary transition-colors uppercase"
+            href="#"
+            >Store Locator</a
+          >
+        </nav>
+        <div class="flex items-center gap-6">
+          <div
+            class="hidden lg:flex items-center border-b border-outline px-2 py-1"
+          >
+            <span class="material-symbols-outlined text-outline text-[20px]"
+              >search</span
+            >
+            <input
+              class="bg-transparent border-none focus:ring-0 text-label-bold placeholder:text-outline-variant w-[160px] uppercase"
+              placeholder="Search Lab Tech"
+              type="text"
+            />
+          </div>
+          <button
+            class="relative hover:bg-surface-container-low transition-all duration-200 p-2"
+          >
+            <span class="material-symbols-outlined text-on-surface"
+              >shopping_cart</span
+            >
+            <span
+              class="absolute top-0 right-0 bg-primary text-on-primary text-[12px] w-4 h-4 flex items-center justify-center rounded-full font-bold"
+              >2</span
+            >
+          </button>
+          <button class="md:hidden">
+            <span class="material-symbols-outlined">menu</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main
+      class="max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop py-12"
+    >
+      <!-- Page Header -->
+      <div
+        class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6"
+      >
+        <div>
+          <nav
+            class="flex items-center gap-2 mb-4 text-label-bold text-on-surface-variant uppercase"
+          >
+            <span>Home</span>
+            <span class="material-symbols-outlined text-[14px]"
+              >chevron_right</span
+            >
+            <span class="text-on-surface">Shop All</span>
+          </nav>
+          <h1
+            class="text-headline-lg font-headline-lg uppercase tracking-tight text-on-surface"
+          >
+            Engineered for Performance
+          </h1>
+        </div>
+        <div class="flex items-center gap-4">
+          <p class="text-label-bold text-on-surface-variant uppercase">
+            128 Products Found
+          </p>
+          <div class="relative group">
+            <button
+              class="flex items-center gap-2 border border-outline px-4 py-2 text-label-bold uppercase"
+            >
+              Sort By: Newest
+              <span class="material-symbols-outlined text-[18px]"
+                >expand_more</span
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row gap-gutter">
+        <!-- Sidebar Filters -->
+        <aside class="w-full md:w-[280px] shrink-0">
+          <div
+            class="sticky top-[112px] space-y-8 h-[calc(100vh-140px)] overflow-y-auto pr-4 custom-scrollbar"
+          >
+            <!-- Category -->
+            <div>
+              <button
+                class="flex items-center justify-between w-full py-2 border-b border-outline mb-4 group"
+                onclick="toggleFilter('category-content')"
+              >
+                <span class="text-label-bold font-bold uppercase"
+                  >Category</span
+                >
+                <span
+                  class="material-symbols-outlined transition-transform duration-300"
+                  id="category-icon"
+                  >remove</span
+                >
+              </button>
+              <div
+                class="space-y-3 filter-transition overflow-hidden"
+                id="category-content"
+              >
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input
+                    class="w-4 h-4 rounded-none border-outline focus:ring-0 checked:bg-primary"
+                    type="checkbox"
+                  />
+                  <span
+                    class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors"
+                    >Running Shoes</span
+                  >
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input
+                    class="w-4 h-4 rounded-none border-outline focus:ring-0 checked:bg-primary"
+                    type="checkbox"
+                  />
+                  <span
+                    class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors"
+                    >Training Apparel</span
+                  >
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input
+                    class="w-4 h-4 rounded-none border-outline focus:ring-0 checked:bg-primary"
+                    type="checkbox"
+                  />
+                  <span
+                    class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors"
+                    >Lab Series</span
+                  >
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input
+                    class="w-4 h-4 rounded-none border-outline focus:ring-0 checked:bg-primary"
+                    type="checkbox"
+                  />
+                  <span
+                    class="text-body-md text-on-surface-variant group-hover:text-primary transition-colors"
+                    >Accessories</span
+                  >
+                </label>
+              </div>
+            </div>
+            <!-- Tech -->
+            <div>
+              <button
+                class="flex items-center justify-between w-full py-2 border-b border-outline mb-4 group"
+                onclick="toggleFilter('tech-content')"
+              >
+                <span class="text-label-bold font-bold uppercase"
+                  >Xtep Tech</span
+                >
+                <span
+                  class="material-symbols-outlined transition-transform duration-300"
+                  id="tech-icon"
+                  >remove</span
+                >
+              </button>
+              <div
+                class="flex flex-wrap gap-2 filter-transition"
+                id="tech-content"
+              >
+                <button
+                  class="px-3 py-1 border border-outline-variant text-[11px] font-label-bold hover:bg-primary hover:text-on-primary transition-all uppercase"
+                >
+                  Carbon Plate
+                </button>
+                <button
+                  class="px-3 py-1 border border-outline-variant text-[11px] font-label-bold hover:bg-primary hover:text-on-primary transition-all uppercase"
+                >
+                  Feather Foam
+                </button>
+                <button
+                  class="px-3 py-1 border border-outline-variant text-[11px] font-label-bold hover:bg-primary hover:text-on-primary transition-all uppercase"
+                >
+                  Reactive Coil
+                </button>
+                <button
+                  class="px-3 py-1 border border-outline-variant text-[11px] font-label-bold hover:bg-primary hover:text-on-primary transition-all uppercase"
+                >
+                  Dynamic Shell
+                </button>
+              </div>
+            </div>
+            <!-- Price -->
+            <div>
+              <button
+                class="flex items-center justify-between w-full py-2 border-b border-outline mb-4 group"
+                onclick="toggleFilter('price-content')"
+              >
+                <span class="text-label-bold font-bold uppercase"
+                  >Price (NPR)</span
+                >
+                <span
+                  class="material-symbols-outlined transition-transform duration-300"
+                  id="price-icon"
+                  >remove</span
+                >
+              </button>
+              <div class="space-y-4 filter-transition" id="price-content">
+                <div class="flex flex-col gap-2">
+                  <input
+                    class="w-full accent-primary h-1.5 bg-surface-variant rounded-full"
+                    max="45000"
+                    min="2000"
+                    step="500"
+                    type="range"
+                  />
+                  <div
+                    class="flex justify-between text-label-bold text-on-surface-variant font-bold"
+                  >
+                    <span>NPR 2,000</span>
+                    <span>NPR 45,000</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Size -->
+            <div>
+              <button
+                class="flex items-center justify-between w-full py-2 border-b border-outline mb-4 group"
+                onclick="toggleFilter('size-content')"
+              >
+                <span class="text-label-bold font-bold uppercase"
+                  >Size (US)</span
+                >
+                <span
+                  class="material-symbols-outlined transition-transform duration-300"
+                  id="size-icon"
+                  >remove</span
+                >
+              </button>
+              <div
+                class="grid grid-cols-4 gap-2 filter-transition"
+                id="size-content"
+              >
+                <button
+                  class="h-10 border border-outline-variant flex items-center justify-center text-label-bold hover:border-primary transition-colors"
+                >
+                  7
+                </button>
+                <button
+                  class="h-10 border border-outline-variant flex items-center justify-center text-label-bold hover:border-primary transition-colors"
+                >
+                  8
+                </button>
+                <button
+                  class="h-10 border border-primary flex items-center justify-center text-label-bold bg-primary text-on-primary"
+                >
+                  9
+                </button>
+                <button
+                  class="h-10 border border-outline-variant flex items-center justify-center text-label-bold hover:border-primary transition-colors"
+                >
+                  10
+                </button>
+                <button
+                  class="h-10 border border-outline-variant flex items-center justify-center text-label-bold hover:border-primary transition-colors"
+                >
+                  11
+                </button>
+                <button
+                  class="h-10 border border-outline-variant flex items-center justify-center text-label-bold hover:border-primary transition-colors"
+                >
+                  12
+                </button>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <!-- Product Grid -->
+        <section class="flex-1">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-gutter"
+          >
+            <!-- Product Card 1 -->
+            <div class="group product-card-hover cursor-pointer">
+              <div
+                class="relative overflow-hidden bg-surface-container-low aspect-[3/4] mb-4 image-zoom"
+              >
+                <div class="absolute top-4 left-4 z-10 flex flex-col gap-2">
+                  <span
+                    class="bg-primary text-on-primary px-3 py-1 text-[12px] font-label-bold font-bold uppercase"
+                    >New Arrival</span
+                  >
+                  <span
+                    class="bg-on-surface text-surface px-3 py-1 text-[12px] font-label-bold font-bold uppercase"
+                    >Lab Tested</span
+                  >
+                </div>
+                <img
+                  alt="XTEP 160X 5.0 PRO"
+                  class="w-full h-full object-cover transition-transform duration-700"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBizGjacgW6B5aComZzBZhW9nMnxt_rqWXzJYNR14ABX1Tz8Hk78dmL7ywsvW4A0ZFiU_oB1JSh27y08Vo8XNnL3NKfSchYM6E2OmkZVQAxLZej5r9jHSwSYZQ6lhmY4W046mdVflA7xRGZNd6NsmBmXbnwumuOgoimVnDVwvrjqOxurhd6ud03YsgPvOHPTqisAo6SUNzBgumyTeS1JfRsZ5WB6iEztpqr-adpo4CsHZPK67mHD4c0bIECW2zfsJO_9WtSP3DhNik"
+                />
+                <div
+                  class="add-to-bag-overlay absolute inset-0 bg-primary/90 opacity-0 transition-all duration-300 flex items-center justify-center translate-y-4"
+                >
+                  <button
+                    class="bg-on-primary text-primary px-8 py-3 text-label-bold font-bold flex items-center gap-2 hover:scale-105 transition-transform uppercase"
+                  >
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    Add to Bag
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-label-bold text-on-surface-variant uppercase text-[12px]"
+                  >Marathon Performance</span
+                >
+                <h3
+                  class="font-headline-md text-[20px] leading-tight uppercase text-on-surface"
+                >
+                  XTEP 160X 5.0 PRO
+                </h3>
+                <p class="font-headline-md text-[18px] text-primary mt-2">
+                  NPR 38,500
+                </p>
+              </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="group product-card-hover cursor-pointer">
+              <div
+                class="relative overflow-hidden bg-surface-container-low aspect-[3/4] mb-4 image-zoom"
+              >
+                <img
+                  alt="XTEP JORAN 2.0"
+                  class="w-full h-full object-cover transition-transform duration-700"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj87z3UCWNN1wmFBGsS20MSOlC9UAAEK8p13gH_6VdZnLbvdmcKm8yX_PXaP-2ycaJ9xn7RCAzAixnXS7mClduwqyliz2JKoXWGLkwh8vPCyjfDHb_Ac9d1CjJ-Wv3YoqGIxck1qr6rerPzSMZydgrq-GebAMHJhUHoU_o6Os_BKgEOLG40qRkKrU_RgjzzjnrNnzLP4Lx5_ui2QBCNUNBC20dKYkl8-RSEoy_ZP03JjKBUUcbLLPSWWIwJV_UjZkPaCjVN7llLXk"
+                />
+                <div
+                  class="add-to-bag-overlay absolute inset-0 bg-primary/90 opacity-0 transition-all duration-300 flex items-center justify-center translate-y-4"
+                >
+                  <button
+                    class="bg-on-primary text-primary px-8 py-3 text-label-bold font-bold flex items-center gap-2 hover:scale-105 transition-transform uppercase"
+                  >
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    Add to Bag
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-label-bold text-on-surface-variant uppercase text-[12px]"
+                  >Daily Trainer</span
+                >
+                <h3
+                  class="font-headline-md text-[20px] leading-tight uppercase text-on-surface"
+                >
+                  XTEP JORAN 2.0
+                </h3>
+                <p class="font-headline-md text-[18px] text-primary mt-2">
+                  NPR 12,400
+                </p>
+              </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="group product-card-hover cursor-pointer">
+              <div
+                class="relative overflow-hidden bg-surface-container-low aspect-[3/4] mb-4 image-zoom"
+              >
+                <div class="absolute top-4 left-4 z-10">
+                  <span
+                    class="bg-primary text-on-primary px-3 py-1 text-[12px] font-label-bold font-bold uppercase"
+                    >Limited Drop</span
+                  >
+                </div>
+                <img
+                  alt="XTEP REACTION PRO"
+                  class="w-full h-full object-cover transition-transform duration-700"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ_Z9P3PJaXYJ24TYtbooXmheATcttfkRYeq313HmnuVQjLxWsja_0OuvhN8tNp_8xi6qt2Io_ShIdR8ATpKcPoc4Ien4ZluN0cTInJ7uMjfXSj_5dAzZr1uM_AAsCHnkquw4VR_i1QmBBjRLy_x75YmdHUht43ARUoJLD-kzQAdKF1ctUEI3Oraqurza-lb9WanlxIFuxJPEVp6-B4UwIecrkCwRP5T0eKZrb3PVc8gUPPd5wYPlrDS2Q2houkf02PbBF04GOjpU"
+                />
+                <div
+                  class="add-to-bag-overlay absolute inset-0 bg-primary/90 opacity-0 transition-all duration-300 flex items-center justify-center translate-y-4"
+                >
+                  <button
+                    class="bg-on-primary text-primary px-8 py-3 text-label-bold font-bold flex items-center gap-2 hover:scale-105 transition-transform uppercase"
+                  >
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    Add to Bag
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-label-bold text-on-surface-variant uppercase text-[12px]"
+                  >Elite Training</span
+                >
+                <h3
+                  class="font-headline-md text-[20px] leading-tight uppercase text-on-surface"
+                >
+                  XTEP REACTION PRO
+                </h3>
+                <p class="font-headline-md text-[18px] text-primary mt-2">
+                  NPR 18,900
+                </p>
+              </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="group product-card-hover cursor-pointer">
+              <div
+                class="relative overflow-hidden bg-surface-container-low aspect-[3/4] mb-4 image-zoom"
+              >
+                <img
+                  alt="COMPRESSION TECH TEE"
+                  class="w-full h-full object-cover transition-transform duration-700"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4HOeNoVjnOya0qotoiRtJCTKJZjbuooXWQfENuyaPu_XoV39_NLYeKwnZcCv5V4wZFBh-7AQN00rmfVBYXBfKY-Tfn1oTEyXgT-ldu6HTUczAr5aYmVOh4frNIk-JfKgf4yY_rkwv_rW5srQ-6w3v96wOnoGsfGluNThMR05ZBQfj7rHNOk8tGc1hq9sneBBebB84bdo2cosRcszV9qBdKK0D_xnuc1_7b06NmmI1vdcIkRPwUyMZwZEE6Gn4SHDtoH0yJ858iws"
+                />
+                <div
+                  class="add-to-bag-overlay absolute inset-0 bg-primary/90 opacity-0 transition-all duration-300 flex items-center justify-center translate-y-4"
+                >
+                  <button
+                    class="bg-on-primary text-primary px-8 py-3 text-label-bold font-bold flex items-center gap-2 hover:scale-105 transition-transform uppercase"
+                  >
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    Add to Bag
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-label-bold text-on-surface-variant uppercase text-[12px]"
+                  >Training Apparel</span
+                >
+                <h3
+                  class="font-headline-md text-[20px] leading-tight uppercase text-on-surface"
+                >
+                  Compression Tech Tee
+                </h3>
+                <p class="font-headline-md text-[18px] text-primary mt-2">
+                  NPR 4,500
+                </p>
+              </div>
+            </div>
+            <!-- Product Card 5 -->
+            <div class="group product-card-hover cursor-pointer">
+              <div
+                class="relative overflow-hidden bg-surface-container-low aspect-[3/4] mb-4 image-zoom"
+              >
+                <img
+                  alt="XTEP FEATHER RUN"
+                  class="w-full h-full object-cover transition-transform duration-700"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQwdg6ONvsr08Cdomz5FY1Bzza8rQenugDZCHeKbdsQnEouVokKuzLajYfHgP3oHX5oI0MsBwQKCFa6OPLN6yEdx7L90F0L8f5J5c7ZFcCg5r2oXcPV9k4YLSgm_A12i7SBTf3eZMJ-phT0286_Ad2HR6jX9NKIqqahqyxxIRl36lMLNpT3O6VkWdq5uamAur0c8ow22_T5kOp9k3Q8E52vLDX3Wrkx-HUR5G-9wjp4WKMjvgRm6U3VThlNCZfhpFoXzp4S98I5_k"
+                />
+                <div
+                  class="add-to-bag-overlay absolute inset-0 bg-primary/90 opacity-0 transition-all duration-300 flex items-center justify-center translate-y-4"
+                >
+                  <button
+                    class="bg-on-primary text-primary px-8 py-3 text-label-bold font-bold flex items-center gap-2 hover:scale-105 transition-transform uppercase"
+                  >
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    Add to Bag
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-label-bold text-on-surface-variant uppercase text-[12px]"
+                  >Ultra Lightweight</span
+                >
+                <h3
+                  class="font-headline-md text-[20px] leading-tight uppercase text-on-surface"
+                >
+                  XTEP FEATHER RUN
+                </h3>
+                <p class="font-headline-md text-[18px] text-primary mt-2">
+                  NPR 9,800
+                </p>
+              </div>
+            </div>
+            <!-- Product Card 6 -->
+            <div class="group product-card-hover cursor-pointer">
+              <div
+                class="relative overflow-hidden bg-surface-container-low aspect-[3/4] mb-4 image-zoom"
+              >
+                <img
+                  alt="AEROKNIT SHORTS"
+                  class="w-full h-full object-cover transition-transform duration-700"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7Lnyx0abR8uO-XPhfzrfdUamlI01gd3KAmxemsoumE7J2dVDOcFLdNl3aWtQtGhBJvxilp7S-Vz5EjD2zAX0R55ajajQ0d6D9XI8xwu7AIYKnMGpzcNM4LLdz1b8x3e_Gv9RoEsEj8GlxMu2FpY9nOIesZZx9NZHQkS51IaAplnspaBeOWSF-IOibp8-pXZoBjxxI7fKGMFAp_WqijcMI_vDT2PNLHuGxko0FvFKS8OsRDdYRxvIj6aG1JALJNQRaKq5sG0qHmMc"
+                />
+                <div
+                  class="add-to-bag-overlay absolute inset-0 bg-primary/90 opacity-0 transition-all duration-300 flex items-center justify-center translate-y-4"
+                >
+                  <button
+                    class="bg-on-primary text-primary px-8 py-3 text-label-bold font-bold flex items-center gap-2 hover:scale-105 transition-transform uppercase"
+                  >
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    Add to Bag
+                  </button>
+                </div>
+              </div>
+              <div class="flex flex-col gap-1">
+                <span
+                  class="text-label-bold text-on-surface-variant uppercase text-[12px]"
+                  >Training Apparel</span
+                >
+                <h3
+                  class="font-headline-md text-[20px] leading-tight uppercase text-on-surface"
+                >
+                  AEROKNIT SHORTS
+                </h3>
+                <p class="font-headline-md text-[18px] text-primary mt-2">
+                  NPR 3,200
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Pagination -->
+          <div class="mt-20 flex justify-center items-center gap-4">
+            <button
+              class="w-12 h-12 flex items-center justify-center border border-outline hover:bg-primary hover:text-on-primary transition-colors"
+            >
+              <span class="material-symbols-outlined">chevron_left</span>
+            </button>
+            <div class="flex gap-2">
+              <button
+                class="w-12 h-12 flex items-center justify-center bg-primary text-on-primary font-bold"
+              >
+                1
+              </button>
+              <button
+                class="w-12 h-12 flex items-center justify-center border border-outline hover:border-primary text-on-surface transition-colors"
+              >
+                2
+              </button>
+              <button
+                class="w-12 h-12 flex items-center justify-center border border-outline hover:border-primary text-on-surface transition-colors"
+              >
+                3
+              </button>
+              <span
+                class="w-12 h-12 flex items-center justify-center text-on-surface-variant"
+                >...</span
+              >
+              <button
+                class="w-12 h-12 flex items-center justify-center border border-outline hover:border-primary text-on-surface transition-colors"
+              >
+                8
+              </button>
+            </div>
+            <button
+              class="w-12 h-12 flex items-center justify-center border border-outline hover:bg-primary hover:text-on-primary transition-colors"
+            >
+              <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer
+      class="bg-inverse-surface text-inverse-on-surface w-full py-section-gap mt-24 border-t border-surface-container-highest"
+    >
+      <div
+        class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-[1440px] mx-auto"
+      >
+        <div class="flex flex-col gap-6">
+          <span
+            class="text-headline-lg font-headline-lg font-black text-primary"
+            >XTEP</span
+          >
+          <p class="text-body-md opacity-80 font-body-md">
+            Pushing the boundaries of sports engineering in Nepal. From elite
+            marathons to urban street culture.
+          </p>
+          <div class="flex gap-4">
+            <a class="hover:text-primary transition-colors" href="#"
+              ><span class="material-symbols-outlined"
+                >social_leaderboard</span
+              ></a
+            >
+            <a class="hover:text-primary transition-colors" href="#"
+              ><span class="material-symbols-outlined">camera</span></a
+            >
+            <a class="hover:text-primary transition-colors" href="#"
+              ><span class="material-symbols-outlined">video_library</span></a
+            >
+          </div>
+        </div>
+        <div>
+          <h4
+            class="text-label-bold font-bold mb-6 tracking-widest text-primary uppercase"
+          >
+            Shop
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-body-md hover:text-primary transition-all duration-300 block hover:translate-x-1"
+                href="#"
+                >Running Shoes</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-body-md hover:text-primary transition-all duration-300 block hover:translate-x-1"
+                href="#"
+                >Training Gear</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-body-md hover:text-primary transition-all duration-300 block hover:translate-x-1"
+                href="#"
+                >Xtep Lab Series</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-body-md hover:text-primary transition-all duration-300 block hover:translate-x-1"
+                href="#"
+                >New Arrivals</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-label-bold font-bold mb-6 tracking-widest text-primary uppercase"
+          >
+            Support
+          </h4>
+          <ul class="space-y-4">
+            <li>
+              <a
+                class="text-body-md hover:text-primary transition-all duration-300 block hover:translate-x-1"
+                href="#"
+                >Customer Service</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-body-md hover:text-primary transition-all duration-300 block hover:translate-x-1"
+                href="#"
+                >Shipping &amp; Returns</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-body-md hover:text-primary transition-all duration-300 block hover:translate-x-1"
+                href="#"
+                >Privacy Policy</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-body-md hover:text-primary transition-all duration-300 block hover:translate-x-1"
+                href="#"
+                >Terms of Service</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h4
+            class="text-label-bold font-bold mb-6 tracking-widest text-primary uppercase"
+          >
+            Stay Updated
+          </h4>
+          <p class="text-body-md mb-4 opacity-80">
+            Join the Lab for exclusive drops and performance insights.
+          </p>
+          <form class="flex flex-col gap-2">
+            <input
+              class="bg-transparent border-b border-surface-container-highest py-2 focus:ring-0 focus:border-primary transition-colors text-label-bold text-on-primary placeholder:text-surface-dim uppercase"
+              placeholder="Email Address"
+              type="email"
+            />
+            <button
+              class="bg-primary text-on-primary py-3 font-bold text-label-bold hover:bg-surface-bright hover:text-primary transition-colors mt-2 uppercase"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      <div
+        class="px-margin-desktop max-w-[1440px] mx-auto mt-12 pt-8 border-t border-surface-container-highest/30 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p class="text-[12px] font-label-bold opacity-60 uppercase">
+          © 2024 XTEP NEPAL. ALL RIGHTS RESERVED. OFFICIAL NEPAL IMPORTER INFO.
+        </p>
+        <div class="flex gap-6 items-center">
+          <span class="text-[12px] font-label-bold opacity-60">VISA</span>
+          <span class="text-[12px] font-label-bold opacity-60">MASTERCARD</span>
+          <span class="text-[12px] font-label-bold opacity-60">ESEWA</span>
+          <span class="text-[12px] font-label-bold opacity-60">KHALTI</span>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function toggleFilter(id) {
+        const content = document.getElementById(id);
+        const icon = document.getElementById(id.replace("-content", "-icon"));
+
+        if (
+          content.style.maxHeight === "0px" ||
+          content.classList.contains("hidden-state")
+        ) {
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.style.opacity = "1";
+          content.classList.remove("hidden-state");
+          icon.style.transform = "rotate(0deg)";
+          icon.innerText = "remove";
+        } else {
+          content.style.maxHeight = "0px";
+          content.style.opacity = "0";
+          content.classList.add("hidden-state");
+          icon.style.transform = "rotate(180deg)";
+          icon.innerText = "add";
+        }
+      }
+
+      // Initialize filters as open
+      document.addEventListener("DOMContentLoaded", () => {
+        const filters = [
+          "category-content",
+          "tech-content",
+          "price-content",
+          "size-content",
+        ];
+        filters.forEach((id) => {
+          const content = document.getElementById(id);
+          if (content) {
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.opacity = "1";
+          }
+        });
+      });
+
+      // Hover effect micro-interaction for cards
+      const cards = document.querySelectorAll(".product-card-hover");
+      cards.forEach((card) => {
+        card.addEventListener("mouseenter", () => {
+          const overlay = card.querySelector(".add-to-bag-overlay");
+          if (overlay) {
+            overlay.style.opacity = "1";
+            overlay.style.transform = "translateY(0)";
+          }
+        });
+        card.addEventListener("mouseleave", () => {
+          const overlay = card.querySelector(".add-to-bag-overlay");
+          if (overlay) {
+            overlay.style.opacity = "0";
+            overlay.style.transform = "translateY(16px)";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

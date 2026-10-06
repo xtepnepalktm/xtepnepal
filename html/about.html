@@ -1,0 +1,768 @@
+<!doctype html>
+
+<html class="scroll-smooth" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About Us | XTEP NEPAL</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;600&amp;family=JetBrains+Mono:wght@600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              tertiary: "#000000",
+              "asphalt-gray": "#333333",
+              "on-primary": "#ffffff",
+              "surface-dim": "#dadada",
+              "inverse-surface": "#2f3131",
+              "surface-container": "#eeeeee",
+              "xtep-red": "#E60012",
+              "primary-fixed-dim": "#c6c6c6",
+              "on-surface-variant": "#4c4546",
+              "tertiary-fixed-dim": "#aed500",
+              "tertiary-fixed": "#c7f300",
+              "on-primary-fixed": "#1b1b1b",
+              "on-primary-container": "#848484",
+              error: "#ba1a1a",
+              "surface-container-lowest": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-tertiary": "#ffffff",
+              background: "#f9f9f9",
+              "on-background": "#1a1c1c",
+              "on-error": "#ffffff",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#f9f9f9",
+              "on-primary-fixed-variant": "#474747",
+              "on-secondary-container": "#fffbff",
+              "surface-tint": "#5e5e5e",
+              "surface-variant": "#e2e2e2",
+              "on-error-container": "#93000a",
+              "surface-container-low": "#f3f3f3",
+              surface: "#f9f9f9",
+              "secondary-fixed": "#ffdad5",
+              "inverse-primary": "#c6c6c6",
+              "surface-container-highest": "#e2e2e2",
+              primary: "#000000",
+              "on-tertiary-fixed-variant": "#3d4d00",
+              "on-tertiary-container": "#738e00",
+              "surface-alt": "#F5F5F5",
+              "surface-container-high": "#e8e8e8",
+              "inverse-on-surface": "#f1f1f1",
+              "on-secondary-fixed-variant": "#930007",
+              "outline-variant": "#cfc4c5",
+              "performance-neon": "#D1FF00",
+              "tertiary-container": "#171e00",
+              outline: "#7e7576",
+              "primary-container": "#1b1b1b",
+              "on-tertiary-fixed": "#171e00",
+              "secondary-fixed-dim": "#ffb4aa",
+              "on-surface": "#1a1c1c",
+              "on-secondary-fixed": "#410001",
+              "secondary-container": "#e90614",
+              "primary-fixed": "#e2e2e2",
+              secondary: "#bc000c",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "margin-desktop": "64px",
+              gutter: "24px",
+              "margin-mobile": "20px",
+              unit: "4px",
+              "section-gap": "120px",
+            },
+            fontFamily: {
+              "headline-lg-mobile": ["Sora"],
+              "label-caps": ["JetBrains Mono"],
+              "body-md": ["Hanken Grotesk"],
+              "price-display": ["Sora"],
+              "headline-md": ["Sora"],
+              "display-hero": ["Sora"],
+              "headline-lg": ["Sora"],
+              "body-lg": ["Hanken Grotesk"],
+            },
+            fontSize: {
+              "headline-lg-mobile": [
+                "32px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "label-caps": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.1em",
+                  fontWeight: "600",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "price-display": [
+                "20px",
+                { lineHeight: "24px", fontWeight: "700" },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "display-hero": [
+                "84px",
+                {
+                  lineHeight: "90px",
+                  letterSpacing: "-0.04em",
+                  fontWeight: "800",
+                },
+              ],
+              "headline-lg": [
+                "48px",
+                {
+                  lineHeight: "52px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .kinetic-bg {
+        background-image: radial-gradient(
+          circle at 2px 2px,
+          rgba(0, 0, 0, 0.05) 1px,
+          transparent 0
+        );
+        background-size: 40px 40px;
+      }
+    </style>
+  </head>
+  <body class="bg-background text-primary font-body-md overflow-x-hidden">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface border-b border-surface-variant transition-all duration-300"
+      id="main-nav"
+    >
+      <div class="flex items-center gap-8">
+        <span
+          class="font-headline-md text-headline-md font-extrabold tracking-tighter text-primary"
+          >XTEP NEPAL</span
+        >
+        <div class="hidden md:flex gap-6 items-center">
+          <a
+            class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors"
+            href="#"
+            >HERITAGE</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors"
+            href="#"
+            >TECHNOLOGY</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors"
+            href="#"
+            >AMBASSADORS</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors"
+            href="#"
+            >STORES</a
+          >
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="p-2">
+          <span class="material-symbols-outlined">location_on</span>
+        </button>
+        <button class="p-2">
+          <span class="material-symbols-outlined">shopping_bag</span>
+        </button>
+        <button class="md:hidden p-2">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
+    <!-- Hero Banner -->
+    <section
+      class="relative h-screen w-full flex items-center justify-start overflow-hidden pt-20"
+    >
+      <div class="absolute inset-0 z-0">
+        <img
+          alt="Marathon Starting Line"
+          class="w-full h-full object-cover"
+          data-alt="A cinematic, wide-angle shot of a vibrant marathon starting line at sunrise. Professional athletes in sleek sportswear are poised for the race, with a hazy atmospheric background of a modern city. The lighting is high-contrast with warm golden hues, embodying a premium athletic aesthetic that matches the Xtep Nepal brand identity."
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBX5z74t5YIezx0Pj2ct2IYmPgghsefomcCxWagypZRnKgqaS6FNXtrWQaw2DrCWkk0nAPK98MOQCU_AJAC2ipRWvYESU9RXU0sw8qBSC3rI-AX-0atuCyY2zZ2eeJg2K4eJrJX2_otnLhZkp26wrz5qzPZ_jqBIiV7fclYGPv9qFK_gBpEfUH84jSR12RWurnOWzSySKr2W6kTZYvdIdMG-5qAeo2V6_NYH1RMwOke2-YAm_7Xc-ZYyDMc7LtmZ1lY54qL_OVJRs"
+        />
+        <div class="absolute inset-0 bg-black/40"></div>
+      </div>
+      <div
+        class="relative z-10 px-margin-mobile md:px-margin-desktop w-full max-w-4xl"
+      >
+        <p
+          class="font-label-caps text-label-caps text-performance-neon mb-4 tracking-[0.2em]"
+        >
+          POWERING NEPAL
+        </p>
+        <h1
+          class="font-display-hero text-headline-lg-mobile md:text-display-hero text-on-primary mb-6 leading-tight"
+        >
+          MAKE SPORTS STAND OUT.
+        </h1>
+        <p class="font-body-lg text-body-lg text-on-primary/90 max-w-2xl">
+          To become the world's leading performance and fashion sportswear
+          brand—now powering professional athletes and urban enthusiasts across
+          Nepal with precision engineering.
+        </p>
+      </div>
+    </section>
+    <!-- Global Heritage Stats Bar -->
+    <section
+      class="bg-primary text-on-primary py-16 px-margin-mobile md:px-margin-desktop border-b border-asphalt-gray"
+    >
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-gutter text-center"
+      >
+        <div class="flex flex-col items-center">
+          <span
+            class="font-display-hero text-[40px] md:text-[64px] leading-none mb-2"
+            >1987</span
+          >
+          <span
+            class="font-label-caps text-label-caps text-surface-dim uppercase tracking-widest"
+            >Established</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <span
+            class="font-display-hero text-[40px] md:text-[64px] leading-none mb-2"
+            >30+</span
+          >
+          <span
+            class="font-label-caps text-label-caps text-surface-dim uppercase tracking-widest"
+            >Countries</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <span
+            class="font-display-hero text-[40px] md:text-[64px] leading-none mb-2"
+            >8500+</span
+          >
+          <span
+            class="font-label-caps text-label-caps text-surface-dim uppercase tracking-widest"
+            >Global Stores</span
+          >
+        </div>
+        <div class="flex flex-col items-center">
+          <span
+            class="font-display-hero text-[40px] md:text-[64px] leading-none mb-2"
+            >20+</span
+          >
+          <span
+            class="font-label-caps text-label-caps text-surface-dim uppercase tracking-widest"
+            >Major Honors</span
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Heritage Story -->
+    <section
+      class="py-section-gap px-margin-mobile md:px-margin-desktop kinetic-bg"
+    >
+      <div class="flex flex-col md:flex-row gap-16 items-center">
+        <div
+          class="w-full md:w-1/2 aspect-square relative group overflow-hidden"
+        >
+          <img
+            alt="Global Manufacturing"
+            class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+            data-alt="A high-tech, modern manufacturing facility for athletic footwear. The image shows robotic arms and precision assembly lines in a clean, minimalist factory setting. The lighting is sterile and blue-toned, emphasizing technological innovation and global scale, framed within the high-contrast professional aesthetic of Xtep Global Legacy."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuABEe2vm-V5_EgmgOzUWxgqOqTUkSbTptHprLgj7gbAmeZwDAj3r-dkraSG43r886wjW3wghY8rjCHNunVnJfNzBBr7-LUk-dRCVQmjgIusvAFY_LN6MnobG5FdZIE3_wbv-74uGH-YfPCMtAfDSUe0LtA5AyFHe-MZ_-UJnAcjtw4Pp4B5WVTOlp_d8VLFOzNfwCijr8tVjc2iCciWwvpPh5DEne4Ut8JBWztO3Ehi1-CQC38c7wZraYpwjle5EXHFw5sF5Q9Op8E"
+          />
+          <div class="absolute bottom-0 right-0 p-8 bg-primary text-on-primary">
+            <p class="font-label-caps text-label-caps">XTEP LAB CERTIFIED</p>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2">
+          <span
+            class="font-label-caps text-label-caps text-secondary mb-4 block"
+            >GLOBAL LEGACY</span
+          >
+          <h2 class="font-headline-lg text-headline-lg mb-8 leading-none">
+            EXPLORATION, INNOVATION &amp; FREEDOM.
+          </h2>
+          <p
+            class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed"
+          >
+            Xtep Group is one of the leading sports brands globally. Founded in
+            1987 and officially established in 2001, the group has evolved from
+            a footwear manufacturer into a tech-driven sportswear powerhouse
+            listed on the Hong Kong Stock Exchange.
+          </p>
+          <p
+            class="font-body-md text-body-md text-on-surface-variant mb-12 italic"
+          >
+            "We don't just create apparel; we engineer performance frameworks
+            that allow athletes to transcend their limits."
+          </p>
+          <div class="border-l-4 border-performance-neon pl-6">
+            <h4 class="font-headline-md text-headline-md mb-2">
+              The Internationalization Strategy
+            </h4>
+            <p class="font-body-md text-body-md">
+              Building a multi-brand ecosystem including Saucony, Merrell,
+              K-Swiss, and Palladium.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Xtep in Nepal (Prominent) -->
+    <section
+      class="bg-surface-alt py-section-gap px-margin-mobile md:px-margin-desktop"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+        <div class="lg:col-span-5 order-2 lg:order-1">
+          <h2 class="font-headline-lg text-headline-lg mb-8">XTEP IN NEPAL</h2>
+          <p
+            class="font-body-lg text-body-lg text-on-surface-variant mb-10 leading-relaxed"
+          >
+            Represented by authorized distributors, Xtep Nepal brings
+            world-class sports technology to the Himalayas. We are committed to
+            fostering the local running community and providing professional
+            gear tailored for the diverse terrain of Nepal.
+          </p>
+          <div class="flex flex-col gap-6">
+            <div
+              class="flex items-start gap-4 p-4 bg-on-primary border border-outline-variant"
+            >
+              <span class="material-symbols-outlined text-secondary"
+                >verified</span
+              >
+              <div>
+                <h5 class="font-headline-md text-body-lg font-bold">
+                  Authorized Representation
+                </h5>
+                <p class="text-on-surface-variant text-body-md">
+                  Official importer ensuring 100% genuine products with global
+                  warranty support.
+                </p>
+              </div>
+            </div>
+            <button
+              class="bg-primary text-on-primary py-4 px-8 font-label-caps text-label-caps self-start hover:bg-performance-neon hover:text-primary transition-all flex items-center gap-2"
+            >
+              PARTNER WITH US
+              <span class="material-symbols-outlined text-[16px]"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </div>
+        <div class="lg:col-span-7 order-1 lg:order-2 h-[500px]">
+          <img
+            alt="Kathmandu Showroom"
+            class="w-full h-full object-cover shadow-xl"
+            data-alt="A premium, modern Xtep showroom located in a high-end commercial district of Kathmandu. The interior features minimalist display racks with vibrant sneakers, sleek architectural lighting, and large windows reflecting the mountain landscape. The aesthetic is clean, professional, and sophisticated, emphasizing the brand's premium presence in Nepal."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPQiFSSzUVVZ0f8oWSgm6kMbvynBXlTRghw46ADmX0BObmI18yDsecpG_W408Z_gWbJ1Xw034VDwtDCjWuWcikjBSvKuji1-JBDeJQnEPRp6EZpFBoQ1IVDmrCmZShm6zTMVjVkpndrxAZUHQxMYVHJbpM7V5WjAZbeBh6uMBMUfNm30qmjS4iucyHfOBvb5x4yyBWvg4QbXWCr6ho26rZeSPYP9OT99uMhoe2s0q-BQ3gtJWhGRYnSWh9j2Cu6Jl9_dag9ZOKkEw"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- Technology & Innovation -->
+    <section
+      class="bg-tertiary text-on-primary py-section-gap px-margin-mobile md:px-margin-desktop"
+    >
+      <div class="text-center mb-20">
+        <span
+          class="font-label-caps text-label-caps text-performance-neon mb-4 block"
+          >THE ENGINEERING WING</span
+        >
+        <h2 class="font-headline-lg text-headline-lg">XTEP LAB TECHNOLOGY</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+        <div
+          class="p-10 border border-asphalt-gray hover:border-performance-neon transition-colors group"
+        >
+          <span
+            class="material-symbols-outlined text-performance-neon text-5xl mb-8 block"
+            >air</span
+          >
+          <h3 class="font-headline-md text-headline-md mb-4">FEATHER FOAM</h3>
+          <p class="font-body-md text-surface-dim opacity-80 mb-8">
+            Ultra-lightweight midsole compound designed for maximum energy
+            return with minimal mass for long-distance endurance.
+          </p>
+          <div
+            class="h-1 w-0 bg-performance-neon group-hover:w-full transition-all duration-500"
+          ></div>
+        </div>
+        <div
+          class="p-10 border border-asphalt-gray hover:border-performance-neon transition-colors group"
+        >
+          <span
+            class="material-symbols-outlined text-performance-neon text-5xl mb-8 block"
+            >bolt</span
+          >
+          <h3 class="font-headline-md text-headline-md mb-4">DYNAMIC FOAM</h3>
+          <p class="font-body-md text-surface-dim opacity-80 mb-8">
+            High-response cushioning system that adapts to your gait, providing
+            stability and propulsion in every stride.
+          </p>
+          <div
+            class="h-1 w-0 bg-performance-neon group-hover:w-full transition-all duration-500"
+          ></div>
+        </div>
+        <div
+          class="p-10 border border-asphalt-gray hover:border-performance-neon transition-colors group"
+        >
+          <span
+            class="material-symbols-outlined text-performance-neon text-5xl mb-8 block"
+            >cyclone</span
+          >
+          <h3 class="font-headline-md text-headline-md mb-4">REACTIVE COIL</h3>
+          <p class="font-body-md text-surface-dim opacity-80 mb-8">
+            Mechanical energy storage technology integrated into the heel to
+            absorb impact and redirect it as forward momentum.
+          </p>
+          <div
+            class="h-1 w-0 bg-performance-neon group-hover:w-full transition-all duration-500"
+          ></div>
+        </div>
+      </div>
+      <div class="mt-20 text-center">
+        <button
+          class="border-2 border-on-primary text-on-primary py-5 px-12 font-label-caps text-label-caps hover:bg-on-primary hover:text-primary transition-all"
+        >
+          DISCOVER XTEP LAB
+        </button>
+      </div>
+    </section>
+    <!-- Ambassadors -->
+    <section class="py-section-gap overflow-hidden">
+      <div class="px-margin-mobile md:px-margin-desktop mb-16">
+        <h2
+          class="font-headline-lg text-headline-lg-mobile md:text-headline-lg"
+        >
+          WORN BY CHAMPIONS.
+        </h2>
+        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          From basketball courts to professional marathons, Xtep is the choice
+          of elite athletes worldwide—now available in Nepal.
+        </p>
+      </div>
+      <div
+        class="flex gap-4 px-margin-mobile md:px-margin-desktop overflow-x-auto pb-8 no-scrollbar"
+      >
+        <div class="flex-none w-80 h-[450px] relative group overflow-hidden">
+          <img
+            alt="Jeremy Lin"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            data-alt="A dynamic shot of a professional basketball player in a high-intensity mid-air pose. The athlete is wearing official Xtep basketball gear. The lighting is dramatic and moody, set in a darkened arena with a single spotlight. The aesthetic is aggressive, athletic, and premium, aligned with the Xtep Global Ambassadors campaign."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOUyC2NYHp1frckRRmQQD7uEqkIqkLGsNP232vj41DLv1T1W8fpC6klJfQuNSYvse3Eq9NjTHp56qJ2jfZcdJQg1b6n6VNg4mbLykXPtJGWZQdP1mnrWkjICZDZhE594YsXF9fNGvptXtqUeK5c1thr1Ct2xs8QntVrSRzUPZcRaow_dVlm2jcutQ-e7DtRuyBs7UWp6rpEkvwlK5kCKnN0AAYLlKcUZy8zZd0bEzIWn-ChNyAaEC5F9WpfCcZQFxQzIaCJhB8eKc"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"
+          ></div>
+          <div class="absolute bottom-6 left-6">
+            <p class="font-label-caps text-label-caps text-performance-neon">
+              BASKETBALL
+            </p>
+            <p class="font-headline-md text-on-primary font-bold">JEREMY LIN</p>
+          </div>
+        </div>
+        <div class="flex-none w-80 h-[450px] relative group overflow-hidden">
+          <img
+            alt="Elite Runner"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            data-alt="A powerful image of a long-distance runner sprinting across a scenic coastal road. The runner is wearing high-performance Xtep marathon gear. The lighting is vibrant and natural, captured at the golden hour. The visual style is kinetic and inspiring, representing the professional marathon community that Xtep supports globally."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHyhFMTQCxQae_bz15OyfwZApks960h6S_S0MQnDBMWnCp5BV0GEgD9oc4b6Qm-GT08TfxzjWLYV3_Gwm6i2Q2DO8UzCPRSimDVLYIDG7JxAA55mO99Veaw2UiED5BLD9geIKbnDzoHxLvuXqDzJ8qlUfwD8dCb73tjQRDRoELAgDZPWCaU5Ld1Z7tGpe9vFp-JWRefOL4rJwEWr6HTazKKCbPQvsBMNxIRlXhM3CgJKXa4oLM84-cBjp9uJw2SMThZT6pu4ZMQ6c"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"
+          ></div>
+          <div class="absolute bottom-6 left-6">
+            <p class="font-label-caps text-label-caps text-performance-neon">
+              MARATHON
+            </p>
+            <p class="font-headline-md text-on-primary font-bold">
+              WORLD CHAMPIONS
+            </p>
+          </div>
+        </div>
+        <div class="flex-none w-80 h-[450px] relative group overflow-hidden">
+          <img
+            alt="Training Ambassador"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            data-alt="A fitness enthusiast performing a high-intensity workout in a modern industrial-style gym. The individual is wearing Xtep lifestyle and training apparel. The lighting is gritty and high-contrast, emphasizing muscle definition and technical fabric textures. The mood is determined and urban, targeting the performance-conscious consumer."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnkAMuKQ37aot_f0wYbjjNJuSUkXbYf5lwKDwShePjW_LTFCdRB0XIIxCcatG7zvzIwgMJxiT9ihKrudkFeFvlb5ouIIOgWSbEfwcxpR_VR3-9_B1g-jh7xBlxObT2iV-7pvfypcm9S7hRTuENfjTBEL08VEou2cHmSTDisdTPdQOLKczXpyRaJxtmHSeAmPLavRS0okP_6Z-F2BMn2ChqX-XaHGRQ0gvCB04KnLOmOblbOSbepAPkV28lqUapwOyaVSvVUWezP58"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"
+          ></div>
+          <div class="absolute bottom-6 left-6">
+            <p class="font-label-caps text-label-caps text-performance-neon">
+              TRAINING
+            </p>
+            <p class="font-headline-md text-on-primary font-bold">
+              URBAN ATHLETES
+            </p>
+          </div>
+        </div>
+        <div class="flex-none w-80 h-[450px] relative group overflow-hidden">
+          <img
+            alt="Lifestyle Ambassador"
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+            data-alt="A lifestyle shot of a fashion-forward individual in an urban city setting, wearing Xtep's fashion-sport fusion collection. The lighting is cool-toned and cinematic, reflecting a modern metropolitan aesthetic. The focus is on the sleek design and versatility of the apparel as both performance gear and high-street fashion."
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4vVTsl0eW0JeuVdASIXf8jO6NebMijAz_t8Ub-gLvREc50ljVemp9wln5f0vhgYptOlZ72NB3_V7LkTBQKr5lJh0vOe0Ww4n9wOnPDAaqjVljMKcmmxE-NGe6wBpv-3BW6-tWnPCTarOHOvVE9wrMdSHIktBcraWblIIdHN_9n2nGPigK69iPT8obh6hRHWoaFhXUYs6kM3D8ALDJruvted3DQngQf4v51JmbDnTJeUKYN048HzM4zeHdzIoFukht-lET1oiYwxE"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"
+          ></div>
+          <div class="absolute bottom-6 left-6">
+            <p class="font-label-caps text-label-caps text-performance-neon">
+              LIFESTYLE
+            </p>
+            <p class="font-headline-md text-on-primary font-bold">
+              STREET ICONS
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Nepal Store Locator -->
+    <section
+      class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low"
+    >
+      <div class="flex flex-col lg:flex-row gap-gutter bg-on-primary p-2">
+        <div class="lg:w-1/2 min-h-[400px] bg-surface-dim relative">
+          <div
+            class="absolute inset-0 flex items-center justify-center bg-gray-200"
+            data-location="Kathmandu, Nepal"
+            style=""
+          >
+            <div class="text-center p-8">
+              <span
+                class="material-symbols-outlined text-secondary text-6xl mb-4"
+                >map</span
+              >
+              <p class="font-headline-md text-headline-md">
+                Interactive Store Map
+              </p>
+              <p class="text-on-surface-variant">
+                Click to view location details in Kathmandu, Pokhara, and
+                Butwal.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="lg:w-1/2 p-10 flex flex-col justify-between">
+          <div>
+            <h2 class="font-headline-lg text-headline-lg mb-8">
+              LOCATE NEPAL OUTLETS
+            </h2>
+            <div class="space-y-8">
+              <div class="flex gap-4">
+                <span class="material-symbols-outlined text-secondary"
+                  >location_on</span
+                >
+                <div>
+                  <h5 class="font-headline-md text-body-lg font-bold">
+                    Xtep Kathmandu Flagship
+                  </h5>
+                  <p class="text-body-md text-on-surface-variant">
+                    Durbarmarg, Kathmandu. <br />Open Daily: 10:00 AM - 8:00 PM
+                  </p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <span class="material-symbols-outlined text-secondary"
+                  >corporate_fare</span
+                >
+                <div>
+                  <h5 class="font-headline-md text-body-lg font-bold">
+                    B2B &amp; Distribution Inquiry
+                  </h5>
+                  <p class="text-body-md text-on-surface-variant">
+                    Official Nepal Importer Office. <br />Email:
+                    distributor@xtepnepal.com
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-12 flex flex-wrap gap-4">
+            <button
+              class="bg-xtep-red text-on-primary py-4 px-10 font-label-caps text-label-caps hover:brightness-110 transition-all"
+            >
+              FIND A STORE NEAR YOU
+            </button>
+            <button
+              class="border-2 border-primary text-primary py-4 px-10 font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all"
+            >
+              CONTACT LAB
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer
+      class="w-full py-section-gap px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter bg-tertiary text-on-primary"
+    >
+      <div class="flex flex-col gap-8">
+        <span
+          class="font-headline-md text-headline-md font-black text-on-primary"
+          >XTEP NEPAL</span
+        >
+        <p class="font-body-md text-surface-dim opacity-70 max-w-sm">
+          The authorized distributor for Xtep performance and lifestyle products
+          in Nepal. Delivering high-performance footwear and apparel for
+          athletes across the Himalayas.
+        </p>
+        <div class="flex gap-4">
+          <a
+            class="w-10 h-10 border border-asphalt-gray flex items-center justify-center hover:bg-performance-neon hover:text-primary transition-all"
+            href="#"
+            >FB</a
+          >
+          <a
+            class="w-10 h-10 border border-asphalt-gray flex items-center justify-center hover:bg-performance-neon hover:text-primary transition-all"
+            href="#"
+            >IG</a
+          >
+          <a
+            class="w-10 h-10 border border-asphalt-gray flex items-center justify-center hover:bg-performance-neon hover:text-primary transition-all"
+            href="#"
+            >TW</a
+          >
+        </div>
+      </div>
+      <div class="grid grid-cols-2 gap-8">
+        <div class="flex flex-col gap-4">
+          <span class="font-label-caps text-label-caps text-performance-neon"
+            >SHOP</span
+          >
+          <a
+            class="text-surface-dim opacity-70 hover:text-performance-neon hover:translate-x-1 transition-all"
+            href="#"
+            >Heritage Series</a
+          >
+          <a
+            class="text-surface-dim opacity-70 hover:text-performance-neon hover:translate-x-1 transition-all"
+            href="#"
+            >Running Tech</a
+          >
+          <a
+            class="text-surface-dim opacity-70 hover:text-performance-neon hover:translate-x-1 transition-all"
+            href="#"
+            >Lifestyle Gear</a
+          >
+          <a
+            class="text-surface-dim opacity-70 hover:text-performance-neon hover:translate-x-1 transition-all"
+            href="#"
+            >Store Locator</a
+          >
+        </div>
+        <div class="flex flex-col gap-4">
+          <span class="font-label-caps text-label-caps text-performance-neon"
+            >CORPORATE</span
+          >
+          <a
+            class="text-surface-dim opacity-70 hover:text-performance-neon hover:translate-x-1 transition-all"
+            href="#"
+            >Xtep Lab</a
+          >
+          <a
+            class="text-surface-dim opacity-70 hover:text-performance-neon hover:translate-x-1 transition-all"
+            href="#"
+            >Sustainability</a
+          >
+          <a
+            class="text-surface-dim opacity-70 hover:text-performance-neon hover:translate-x-1 transition-all"
+            href="#"
+            >Contact Us</a
+          >
+          <a
+            class="text-surface-dim opacity-70 hover:text-performance-neon hover:translate-x-1 transition-all"
+            href="#"
+            >Privacy Policy</a
+          >
+        </div>
+      </div>
+      <div
+        class="md:col-span-2 pt-16 border-t border-asphalt-gray flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p class="font-body-md text-surface-dim opacity-70">
+          © 2024 XTEP NEPAL. AUTHORIZED DISTRIBUTOR.
+        </p>
+        <div class="flex gap-8">
+          <span class="text-xs text-surface-dim opacity-40"
+            >NPR CURRENCY DISPLAY</span
+          >
+          <span class="text-xs text-surface-dim opacity-40"
+            >KATHMANDU, NEPAL</span
+          >
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Navbar scroll effect
+      const nav = document.getElementById("main-nav");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+          nav.classList.add(
+            "h-16",
+            "bg-surface/95",
+            "backdrop-blur-md",
+            "shadow-md",
+          );
+          nav.classList.remove("h-20", "bg-surface");
+        } else {
+          nav.classList.remove(
+            "h-16",
+            "bg-surface/95",
+            "backdrop-blur-md",
+            "shadow-md",
+          );
+          nav.classList.add("h-20", "bg-surface");
+        }
+      });
+
+      // Simple parallax on scroll for hero
+      const heroImg = document.querySelector("section img");
+      window.addEventListener("scroll", () => {
+        const scroll = window.pageYOffset;
+        if (heroImg) heroImg.style.transform = `translateY(${scroll * 0.15}px)`;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,279 @@
+@import "tailwindcss";
+
+@theme {
+  --font-primary: "Helvetica", sans-serif;
+  --font-secondary: "Helvetica", sans-serif;
+}
+
+@import "./theme-contact.css";
+
+@import "./components/scrollbar/styles.css";
+
+@import "./components/lightbox/styles.css";
+
+@import "./components/chart/styles.css";
+
+/** **************************************
+* Baseline
+*************************************** */
+html {
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  overflow-anchor: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 800 !important;
+  font-family: var(--font-primary) !important;
+}
+body,
+#root,
+#root__layout {
+  font-family: var(--font-secondary);
+  font-weight: 600 !important;
+  letter-spacing: 0.03em;
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 100%;
+  flex-direction: column;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: none;
+}
+input[type="number"]::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+input[type="number"]::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+
+/** **************************************
+* Modern Tech Animations
+*************************************** */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgba(105, 80, 232, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(105, 80, 232, 0.5);
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Tech-focused utility classes */
+.tech-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--palette-primary-main),
+    var(--palette-secondary-main)
+  );
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.hover-lift {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+button,
+a,
+.MuiCard-root,
+.MuiButton-root,
+.MuiIconButton-root {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*:focus-visible {
+  outline: 2px solid var(--palette-primary-main);
+  outline-offset: 2px;
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: transparent !important;
+}
+
+.animate-border-root {
+  position: relative;
+  width: fit-content;
+  overflow: hidden;
+}
+
+.animate-border-root::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: var(--border-width, 2px);
+  background: var(--outline-color, currentColor);
+  /* Mask so only the border edge is visible, not the fill */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Moving border span: absolutely positioned gradient border layer */
+.animate-border-gradient {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  /* padding set inline via style prop = border width */
+  background: conic-gradient(from 0deg, currentColor, transparent 60%);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* in global.css */
+footer {
+  min-height: 200px; /* adjust to match your actual footer height */
+}
+
+/* reserve space for images before they load */
+.product-card img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: local("Helvetica");
+  size-adjust: 107%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap");
+
+/** **************************************
+* Nav active link
+*************************************** */
+:root {
+  /* Brand fallback used when the vendor has no primary colour configured. */
+  --nav-active-color: #e60012;
+}

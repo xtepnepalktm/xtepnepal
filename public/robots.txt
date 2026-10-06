@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Host
+Host: https://xtepnepal.com
+
+# Sitemaps
+Sitemap: https://xtepnepal.com/sitemap.xml

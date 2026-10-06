@@ -1,0 +1,620 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Store Locator | XTEP NEPAL</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;600&amp;family=JetBrains+Mono:wght@600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#738e00",
+              "on-tertiary": "#ffffff",
+              "on-surface-variant": "#4c4546",
+              "inverse-on-surface": "#f1f1f1",
+              "outline-variant": "#cfc4c5",
+              "surface-container": "#eeeeee",
+              "on-background": "#1a1c1c",
+              "surface-tint": "#5e5e5e",
+              "tertiary-fixed": "#c7f300",
+              "performance-neon": "#D1FF00",
+              "inverse-primary": "#c6c6c6",
+              "secondary-container": "#e90614",
+              "on-tertiary-fixed-variant": "#3d4d00",
+              "surface-container-high": "#e8e8e8",
+              "surface-bright": "#f9f9f9",
+              error: "#ba1a1a",
+              "on-primary": "#ffffff",
+              "asphalt-gray": "#333333",
+              "on-error": "#ffffff",
+              "surface-variant": "#e2e2e2",
+              "on-secondary-fixed-variant": "#930007",
+              "on-secondary": "#ffffff",
+              "tertiary-fixed-dim": "#aed500",
+              "on-surface": "#1a1c1c",
+              "inverse-surface": "#2f3131",
+              tertiary: "#000000",
+              "surface-container-low": "#f3f3f3",
+              "surface-container-highest": "#e2e2e2",
+              "primary-container": "#1b1b1b",
+              "xtep-red": "#E60012",
+              "surface-alt": "#F5F5F5",
+              surface: "#f9f9f9",
+              "tertiary-container": "#171e00",
+              "on-tertiary-fixed": "#171e00",
+              "secondary-fixed": "#ffdad5",
+              background: "#f9f9f9",
+              "primary-fixed-dim": "#c6c6c6",
+              "error-container": "#ffdad6",
+              "surface-container-lowest": "#ffffff",
+              "secondary-fixed-dim": "#ffb4aa",
+              outline: "#7e7576",
+              "on-error-container": "#93000a",
+              "on-secondary-container": "#fffbff",
+              "on-secondary-fixed": "#410001",
+              secondary: "#bc000c",
+              "surface-dim": "#dadada",
+              "on-primary-container": "#848484",
+              primary: "#000000",
+              "on-primary-fixed-variant": "#474747",
+              "on-primary-fixed": "#1b1b1b",
+              "primary-fixed": "#e2e2e2",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "margin-desktop": "64px",
+              gutter: "24px",
+              unit: "4px",
+              "section-gap": "120px",
+              "margin-mobile": "20px",
+            },
+            fontFamily: {
+              "price-display": ["Sora"],
+              "label-caps": ["JetBrains Mono"],
+              "headline-lg": ["Sora"],
+              "body-md": ["Hanken Grotesk"],
+              "body-lg": ["Hanken Grotesk"],
+              "display-hero": ["Sora"],
+              "headline-md": ["Sora"],
+              "headline-lg-mobile": ["Sora"],
+            },
+            fontSize: {
+              "price-display": [
+                "20px",
+                { lineHeight: "24px", fontWeight: "700" },
+              ],
+              "label-caps": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.1em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-lg": [
+                "48px",
+                {
+                  lineHeight: "52px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+              "display-hero": [
+                "84px",
+                {
+                  lineHeight: "90px",
+                  letterSpacing: "-0.04em",
+                  fontWeight: "800",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                { lineHeight: "32px", fontWeight: "600" },
+              ],
+              "headline-lg-mobile": [
+                "32px",
+                {
+                  lineHeight: "36px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      .store-list-scroll::-webkit-scrollbar {
+        width: 4px;
+      }
+      .store-list-scroll::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      .store-list-scroll::-webkit-scrollbar-thumb {
+        background: #e60012;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-background font-body-md selection:bg-xtep-red selection:text-white"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="bg-surface border-b border-outline-variant flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-16 sticky top-0 z-50"
+    >
+      <div
+        class="text-headline-md font-headline-md font-bold text-xtep-red tracking-tighter"
+      >
+        XTEP NEPAL
+      </div>
+      <div class="hidden md:flex items-center gap-8">
+        <a
+          class="text-on-surface font-label-caps text-label-caps hover:text-xtep-red transition-colors duration-200"
+          href="#"
+          >SHOP</a
+        >
+        <a
+          class="text-on-surface font-label-caps text-label-caps hover:text-xtep-red transition-colors duration-200"
+          href="#"
+          >RUNNING</a
+        >
+        <a
+          class="text-on-surface font-label-caps text-label-caps hover:text-xtep-red transition-colors duration-200"
+          href="#"
+          >BASKETBALL</a
+        >
+        <a
+          class="text-on-surface font-label-caps text-label-caps hover:text-xtep-red transition-colors duration-200"
+          href="#"
+          >LIFESTYLE</a
+        >
+        <a
+          class="text-xtep-red font-bold border-b-2 border-xtep-red pb-1 font-label-caps text-label-caps"
+          href="#"
+          >STORES</a
+        >
+      </div>
+      <div class="flex items-center gap-6">
+        <span
+          class="material-symbols-outlined text-primary cursor-pointer hover:text-xtep-red transition-colors"
+          data-icon="location_on"
+          >location_on</span
+        >
+        <span
+          class="material-symbols-outlined text-primary cursor-pointer hover:text-xtep-red transition-colors"
+          data-icon="shopping_cart"
+          >shopping_cart</span
+        >
+        <span
+          class="material-symbols-outlined text-primary cursor-pointer hover:text-xtep-red transition-colors"
+          data-icon="person"
+          >person</span
+        >
+      </div>
+    </nav>
+    <!-- Header Section -->
+    <header
+      class="py-16 md:py-24 text-center px-margin-mobile md:px-margin-desktop bg-surface-container-lowest"
+    >
+      <h1
+        class="font-headline-lg text-headline-lg uppercase mb-4 tracking-tighter"
+      >
+        FIND XTEP IN NEPAL
+      </h1>
+      <p
+        class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto"
+      >
+        Visit our official showrooms to experience world-class performance gear
+        and engineering excellence designed for the elite athlete in you.
+      </p>
+    </header>
+    <!-- Main Content: Split-Screen Store Locator -->
+    <main
+      class="flex flex-col md:flex-row h-[800px] border-t border-outline-variant overflow-hidden"
+    >
+      <!-- Left Sidebar: Store List -->
+      <aside
+        class="w-full md:w-[450px] bg-surface-alt flex flex-col border-r border-outline-variant"
+      >
+        <!-- Search Area -->
+        <div class="p-6 bg-white border-b border-outline-variant space-y-4">
+          <div class="relative group">
+            <span
+              class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-xtep-red"
+              data-icon="search"
+              >search</span
+            >
+            <input
+              class="w-full pl-10 pr-4 py-3 border-b border-black rounded-none focus:outline-none focus:border-xtep-red placeholder:font-label-caps placeholder:text-label-caps bg-transparent transition-all"
+              placeholder="Enter City or Area"
+              type="text"
+            />
+          </div>
+          <button
+            class="w-full flex items-center justify-center gap-2 bg-primary text-white py-3 font-label-caps text-label-caps hover:bg-asphalt-gray transition-colors group"
+          >
+            <span
+              class="material-symbols-outlined text-[18px]"
+              data-icon="my_location"
+              >my_location</span
+            >
+            USE MY CURRENT LOCATION
+          </button>
+        </div>
+        <!-- Scrollable Cards -->
+        <div class="flex-1 overflow-y-auto store-list-scroll p-4 space-y-4">
+          <!-- Active Store Card -->
+          <div
+            class="bg-white border-2 border-xtep-red p-6 shadow-sm relative transition-all"
+          >
+            <div
+              class="absolute top-4 right-4 bg-performance-neon text-primary px-2 py-1 text-[12px] font-bold font-label-caps"
+            >
+              FLAGSHIP
+            </div>
+            <h3 class="font-headline-md text-[20px] mb-2">
+              Xtep Flagship Store - Newroad
+            </h3>
+            <div class="space-y-2 mb-6">
+              <div class="flex gap-2 text-on-surface-variant">
+                <span
+                  class="material-symbols-outlined text-[18px] shrink-0"
+                  data-icon="pin_drop"
+                  >pin_drop</span
+                >
+                <p class="text-body-md text-sm">
+                  Pako, Newroad, Kathmandu, Nepal
+                </p>
+              </div>
+              <div class="flex gap-2 text-on-surface-variant">
+                <span
+                  class="material-symbols-outlined text-[18px] shrink-0"
+                  data-icon="schedule"
+                  >schedule</span
+                >
+                <p class="text-body-md text-sm">
+                  10:00 AM - 8:00 PM (Everyday)
+                </p>
+              </div>
+              <div class="flex gap-2 text-on-surface-variant">
+                <span
+                  class="material-symbols-outlined text-[18px] shrink-0"
+                  data-icon="call"
+                  >call</span
+                >
+                <p class="text-body-md text-sm">+977 01-XXXXXXX</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <button
+                class="bg-primary text-white py-2 font-label-caps text-[11px] hover:bg-asphalt-gray transition-colors"
+              >
+                GET DIRECTIONS
+              </button>
+              <button
+                class="border border-black text-black py-2 font-label-caps text-[11px] hover:bg-black hover:text-white transition-all"
+              >
+                CALL STORE
+              </button>
+            </div>
+          </div>
+          <!-- Store Card 2 -->
+          <div
+            class="bg-white border border-outline-variant p-6 hover:border-black transition-all"
+          >
+            <h3 class="font-headline-md text-[20px] mb-2">
+              Pokhara Lakeside Branch
+            </h3>
+            <div class="space-y-2 mb-6">
+              <div class="flex gap-2 text-on-surface-variant">
+                <span
+                  class="material-symbols-outlined text-[18px] shrink-0"
+                  data-icon="pin_drop"
+                  >pin_drop</span
+                >
+                <p class="text-body-md text-sm">
+                  Lakeside, Ward 6, Pokhara, Nepal
+                </p>
+              </div>
+              <div class="flex gap-2 text-on-surface-variant">
+                <span
+                  class="material-symbols-outlined text-[18px] shrink-0"
+                  data-icon="schedule"
+                  >schedule</span
+                >
+                <p class="text-body-md text-sm">09:00 AM - 7:00 PM</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <button
+                class="bg-primary text-white py-2 font-label-caps text-[11px] hover:bg-asphalt-gray transition-colors"
+              >
+                GET DIRECTIONS
+              </button>
+              <button
+                class="border border-black text-black py-2 font-label-caps text-[11px] hover:bg-black hover:text-white transition-all"
+              >
+                CALL STORE
+              </button>
+            </div>
+          </div>
+          <!-- Store Card 3 -->
+          <div
+            class="bg-white border border-outline-variant p-6 hover:border-black transition-all"
+          >
+            <h3 class="font-headline-md text-[20px] mb-2">
+              Butwal City Center
+            </h3>
+            <div class="space-y-2 mb-6">
+              <div class="flex gap-2 text-on-surface-variant">
+                <span
+                  class="material-symbols-outlined text-[18px] shrink-0"
+                  data-icon="pin_drop"
+                  >pin_drop</span
+                >
+                <p class="text-body-md text-sm">Amarpath, Butwal, Rupandehi</p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <button
+                class="bg-primary text-white py-2 font-label-caps text-[11px] hover:bg-asphalt-gray transition-colors"
+              >
+                GET DIRECTIONS
+              </button>
+              <button
+                class="border border-black text-black py-2 font-label-caps text-[11px] hover:bg-black hover:text-white transition-all"
+              >
+                CALL STORE
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- Right Side: Interactive Map Placeholder -->
+      <section
+        class="flex-1 relative bg-surface-container-high overflow-hidden"
+      >
+        <div
+          class="absolute inset-0 grayscale opacity-40 mix-blend-multiply bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] pointer-events-none"
+        ></div>
+        <!-- Map Visualization -->
+        <img
+          class="w-full h-full object-cover grayscale brightness-110"
+          data-alt="A detailed map visualization of Kathmandu and surrounding regions in Nepal. The map is presented in a minimalist high-contrast grayscale style to align with a premium athletic brand aesthetic. Red geometric pins represent physical store locations across the city grid. The atmosphere is modern, technical, and precise, resembling a tactical performance interface."
+          data-location="Kathmandu, Nepal"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRYPILwtY2i8WsPZWhCi2gGDY7ik_lAklIajy3sOr8QYEsoa3Fze8nJr6Gvb-cpmStb1U7W2g8Xck3bZXnZ5Ltl552GXEiSMJtNsdDAzjCGFdxu2QclHEuyJsHwJR4GTqN4OJK0MBI5rJB4fLlz1Oma5IknlKHWf_M5Yv9_bu8L0pdSyHPTSPyyTzD9NJIf24mPoQybcIRWI6T1D8etOe0E9xwgOowgUAs7kG88apxZguwMLolXO1Rt4DqVFYcixX_l11dLqBxouQ"
+        />
+        <!-- Branded Pins Overlay (Simulated) -->
+        <div class="absolute inset-0 pointer-events-none">
+          <!-- Pin 1 with Tooltip -->
+          <div
+            class="absolute top-1/2 left-[48%] pointer-events-auto cursor-pointer flex flex-col items-center"
+          >
+            <div
+              class="bg-white p-4 shadow-xl border-t-4 border-xtep-red mb-2 min-w-[200px]"
+            >
+              <p class="font-label-caps text-[12px] text-xtep-red mb-1">
+                CURRENTLY SELECTED
+              </p>
+              <h4 class="font-headline-md text-sm mb-2">
+                Xtep Newroad Flagship
+              </h4>
+              <button
+                class="text-primary font-bold text-xs underline decoration-performance-neon underline-offset-4 flex items-center gap-1 group"
+              >
+                View Details
+                <span
+                  class="material-symbols-outlined text-[14px] group-hover:translate-x-1 transition-transform"
+                  data-icon="chevron_right"
+                  >chevron_right</span
+                >
+              </button>
+            </div>
+            <div
+              class="w-10 h-10 bg-xtep-red rounded-full border-4 border-white flex items-center justify-center shadow-lg"
+            >
+              <span
+                class="material-symbols-outlined text-white text-xl"
+                data-icon="bolt"
+                >bolt</span
+              >
+            </div>
+          </div>
+          <!-- Random Pins -->
+          <div
+            class="absolute top-[30%] left-[60%] pointer-events-auto cursor-pointer"
+          >
+            <div
+              class="w-8 h-8 bg-black rounded-full border-2 border-white flex items-center justify-center shadow-md hover:bg-xtep-red transition-colors"
+            >
+              <span
+                class="material-symbols-outlined text-white text-sm"
+                data-icon="location_on"
+                >location_on</span
+              >
+            </div>
+          </div>
+          <div
+            class="absolute top-[70%] left-[40%] pointer-events-auto cursor-pointer"
+          >
+            <div
+              class="w-8 h-8 bg-black rounded-full border-2 border-white flex items-center justify-center shadow-md hover:bg-xtep-red transition-colors"
+            >
+              <span
+                class="material-symbols-outlined text-white text-sm"
+                data-icon="location_on"
+                >location_on</span
+              >
+            </div>
+          </div>
+        </div>
+        <!-- Map Controls -->
+        <div class="absolute right-8 bottom-8 flex flex-col gap-2">
+          <button
+            class="w-12 h-12 bg-white border border-outline-variant flex items-center justify-center hover:bg-performance-neon transition-colors"
+          >
+            <span class="material-symbols-outlined" data-icon="add">add</span>
+          </button>
+          <button
+            class="w-12 h-12 bg-white border border-outline-variant flex items-center justify-center hover:bg-performance-neon transition-colors"
+          >
+            <span class="material-symbols-outlined" data-icon="remove"
+              >remove</span
+            >
+          </button>
+          <button
+            class="w-12 h-12 bg-white border border-outline-variant flex items-center justify-center hover:bg-performance-neon transition-colors mt-4"
+          >
+            <span class="material-symbols-outlined" data-icon="layers"
+              >layers</span
+            >
+          </button>
+        </div>
+      </section>
+    </main>
+    <!-- B2B Section -->
+    <section
+      class="bg-primary px-margin-mobile md:px-margin-desktop py-24 text-white"
+    >
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12"
+      >
+        <div class="space-y-6 max-w-xl">
+          <h2
+            class="font-headline-lg text-headline-lg uppercase leading-none tracking-tighter"
+          >
+            Expand with Xtep.<br />Become an Official Retail Partner.
+          </h2>
+          <p class="font-body-lg text-body-lg text-surface-variant">
+            Join the fastest-growing global sportswear network. We are seeking
+            ambitious partners to bring our "Xtep Lab" engineering philosophy to
+            more cities across Nepal. Benefit from world-class supply chain and
+            marketing support.
+          </p>
+        </div>
+        <div class="shrink-0">
+          <button
+            class="bg-xtep-red text-white px-10 py-5 font-label-caps text-label-caps tracking-[2px] hover:bg-white hover:text-black transition-all duration-300 transform hover:skew-x-[-12deg]"
+          >
+            SUBMIT WHOLESALE / FRANCHISE INQUIRY
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer
+      class="bg-primary dark:bg-tertiary-container w-full px-margin-mobile md:px-margin-desktop py-20 grid grid-cols-1 md:grid-cols-2 gap-gutter text-on-primary"
+    >
+      <div class="space-y-12">
+        <div class="text-headline-md font-headline-md font-black text-surface">
+          XTEP NEPAL
+        </div>
+        <div class="space-y-4">
+          <p class="font-label-caps text-label-caps text-surface-variant">
+            HEADQUARTERS
+          </p>
+          <p class="font-body-md text-body-md opacity-80">
+            Kathmandu, Nepal<br />Performance Center Building, 4th Floor
+          </p>
+        </div>
+        <div class="font-label-caps text-label-caps opacity-50">
+          © 2024 XTEP NEPAL. ENGINEERED FOR PERFORMANCE.
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row justify-between gap-12">
+        <div class="flex flex-col gap-4">
+          <p class="font-label-caps text-label-caps text-performance-neon">
+            QUICK LINKS
+          </p>
+          <a
+            class="font-label-caps text-label-caps text-surface-variant hover:text-performance-neon transition-all duration-300 hover:underline decoration-performance-neon underline-offset-4"
+            href="#"
+            >PRIVACY POLICY</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-surface-variant hover:text-performance-neon transition-all duration-300 hover:underline decoration-performance-neon underline-offset-4"
+            href="#"
+            >TERMS OF SERVICE</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-surface-variant hover:text-performance-neon transition-all duration-300 hover:underline decoration-performance-neon underline-offset-4"
+            href="#"
+            >FRANCHISE INQUIRY</a
+          >
+        </div>
+        <div class="flex flex-col gap-4">
+          <p class="font-label-caps text-label-caps text-performance-neon">
+            SUPPORT
+          </p>
+          <a
+            class="font-label-caps text-label-caps text-surface-variant hover:text-performance-neon transition-all duration-300 hover:underline decoration-performance-neon underline-offset-4"
+            href="#"
+            >SIZE GUIDE</a
+          >
+          <a
+            class="font-label-caps text-label-caps text-performance-neon font-bold transition-all duration-300 hover:underline decoration-performance-neon underline-offset-4"
+            href="#"
+            >STORE LOCATOR</a
+          >
+          <div class="flex gap-4 mt-4">
+            <span
+              class="material-symbols-outlined text-surface hover:text-performance-neon cursor-pointer transition-colors"
+              data-icon="public"
+              >public</span
+            >
+            <span
+              class="material-symbols-outlined text-surface hover:text-performance-neon cursor-pointer transition-colors"
+              data-icon="smartphone"
+              >smartphone</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // Simple micro-interaction for active card switching (simulated)
+      const cards = document.querySelectorAll(".store-list-scroll > div");
+      cards.forEach((card) => {
+        card.addEventListener("click", () => {
+          cards.forEach((c) => {
+            c.classList.remove("border-2", "border-xtep-red");
+            c.classList.add("border", "border-outline-variant");
+          });
+          card.classList.remove("border", "border-outline-variant");
+          card.classList.add("border-2", "border-xtep-red");
+        });
+      });
+    </script>
+  </body>
+</html>
